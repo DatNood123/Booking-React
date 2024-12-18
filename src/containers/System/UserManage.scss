@@ -1,0 +1,145 @@
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+#customers tr:nth-child(odd){
+    background-color: #f2f2f2;
+}
+  
+#customers tr:hover {
+    background-color: #ddd;
+}
+  
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+
+.red {
+    border: 1px solid red;
+}
+
+.btn-outline{
+    text-align: center;
+
+    .btn-edit {
+        font-size: 16px;
+        width: 50px;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: orangered;
+    
+        &:hover{
+            background-color: transparent !important;
+            color: orange !important;
+        }
+    }
+
+    .btn-delete {
+        font-size: 16px;
+        width: 50px;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: red;
+    
+        &:hover{
+            background-color: transparent !important;
+            color: rgb(209, 45, 30) !important;
+        }
+    }
+}
+
+.btn-new-user{
+    float: right;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    margin-right: 5px;
+}
+
+.modal-user-container{
+    .modal-content{
+        .modal-header{
+            .modal-title {
+                margin-right: auto;
+            }
+            button{
+                background: transparent !important;
+                border: none;
+                color: white;
+                font-size: 25px;
+            }
+        }
+    }
+    .model-user-body {
+        .email-password{
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            .input-container {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+        
+                input {
+                    border: 1px solid gray;
+                    border-radius: 5px;
+                    outline: none;
+                    height: 30px;
+                    padding: 5px;
+                }
+            }
+        }
+
+        .input-name{
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            .input-container {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+        
+                input {
+                    border: 1px solid gray;
+                    border-radius: 5px;
+                    outline: none;
+                    height: 30px;
+                    padding: 5px;
+                }
+            }
+        }
+
+        .input-container-address {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 10px;
+    
+            input {
+                border: 1px solid gray;
+                border-radius: 5px;
+                outline: none;
+                height: 30px;
+                padding: 5px;
+            }
+        }
+        
+    }
+    
+}
+    
+    
+
+

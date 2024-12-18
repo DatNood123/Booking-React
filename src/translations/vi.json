@@ -1,4 +1,26 @@
 {
+    "homeheader": {
+        "specialty": "Chuyên Khoa",
+        "searchdoctor": "Tìm bác sĩ theo chuyên khoa",
+        "health-facility": "Cơ sở y tế",
+        "select-room": "Chọn bệnh viện - phòng khám",
+        "doctor": "Bác Sĩ",
+        "select-doctor": "Chọn bác sĩ giỏi",
+        "fee": "Gói Khám",
+        "choose-fee": "Chọn gói khám phù hợp",
+        "support": "Hỗ trợ",
+        "pro-process": "QUY TRÌNH CHUYÊN NGHIỆP"
+    },
+    "banner": {
+        "title1": "QUY TRÌNH CHUYÊN NGHIỆP",
+        "title2": "CHUYÊN MÔN CAO - GIÁ CẢ HỢP LÝ",
+        "specialist": "Khám Chuyên Khoa",
+        "remote": "Khám Từ Xa",
+        "general": "Khám Tổng Quát",
+        "medical-test": "Xét Nghiệm Y Học",
+        "metal-health": "Sức Khỏe Tinh Thần",
+        "dental": "Khám Nha Khoa"
+    },
     "common": {
         "add": "Thêm",
         "edit": "Sửa",

@@ -1,4 +1,26 @@
 {
+    "homeheader": {
+        "specialty": "Medical Specialty",
+        "searchdoctor": "Find doctor by specialty",
+        "health-facility": "Health Facility",
+        "select-room": "Select room",
+        "doctor": "Doctor",
+        "select-doctor": "Choose a good doctor",
+        "fee": "Service",
+        "choose-fee": "Choose a suitable service",
+        "support": "Support",
+        "pro-process": "PROFESSIONAL PROCESS"
+    },
+    "banner": {
+        "title1": "PROFESSIONAL PROCESS",
+        "title2": "HIGH EXPERTISE - REASONABLE PRICE",
+        "specialist": "Specialist Examination",
+        "remote": "Telemedicine",
+        "general": "General Examination",
+        "medical-test": "Medical Examination",
+        "metal-health": "Mental Health",
+        "dental": "Dental Examination"
+    },
     "common": {
         "add": "Add",
         "edit": "Edit",

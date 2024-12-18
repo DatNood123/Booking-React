@@ -1,0 +1,106 @@
+.login-background{
+    height: 100vh;
+    background: linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% );
+    
+    .login-container{
+        height: 460px;
+        width: 400px;
+        margin: auto;
+        border-radius: 15px;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        .login-content{
+            padding: 15px;
+
+            .text-login{
+                font-size: 40px;
+                font-weight: bold;
+                margin-bottom: 30px;
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            .login-input{
+                margin: 7px 0;
+
+                .form-control{
+                    height: 40px;
+                }
+
+                .custom-input-password{
+                    position: relative;
+                    
+                    i{
+                        position: absolute;
+                        right: 10px;
+                        top: 14px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .btn-login{
+                width: 100%;
+                margin: 10px 0;
+                height: 40px;
+                border-radius: 10px;
+                border: none;
+                outline: none;
+                background: linear-gradient( 109.6deg, rgba(9,111,224,1) 11.2%,  rgba(61,245,167,1) 91.1%  );
+                color: white;
+            }
+
+            .forgot-password{
+                font-size: 12px;
+            }
+
+            .text-other-login{
+                display: block;
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            .social-login{
+                display: flex;
+                justify-content: center;
+                margin-top: 10px;
+                
+
+                .google{
+                    font-size: 20px;
+                    background: rgb(234, 26, 26);
+                    border-radius: 50%;
+                    height: 40px;
+                    width: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    margin-right: 10px;
+                }
+
+                .facebook{
+                    font-size: 20px;
+                    background: rgb(23, 29, 192);
+                    border-radius: 50%;
+                    height: 40px;
+                    width: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                }
+            }
+        }
+    }
+
+}
+
+.red {
+    border: 2px solid red;
+}
