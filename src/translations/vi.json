@@ -21,6 +21,29 @@
         "metal-health": "Sức Khỏe Tinh Thần",
         "dental": "Khám Nha Khoa"
     },
+    "specialty": {
+        "popular-spceialty": "Chuyên Khoa Phổ Biến",
+        "more": "Xem thêm"
+    },
+    "facility": {
+        "good-facility": "Cơ Sở Y Tế Nổi Bật",
+        "more": "Xem thêm"
+    },
+    "doctor": {
+        "good-doctor": "Bác Sĩ Nổi Bật",
+        "more": "Xem thêm"
+    },
+    "handbook": {
+        "handbook": "Cẩm Nang",
+        "more": "Xem thêm"
+    },
+    "about": {
+        "about-peachbooking": "Truyền thông nói gì về Peach Booking?",
+        "saying": "Peach Booking là một dịch vụ đặt lịch hẹn khám bệnh trực tuyến tiện lợi và dễ sử dụng, mang đến một giải pháp hiện đại cho những ai mong muốn tiết kiệm thời gian khi cần thăm khám bác sĩ. Dịch vụ này cho phép người dùng nhanh chóng tìm kiếm và đặt lịch hẹn với các bác sĩ, phòng khám, bệnh viện trên toàn quốc mà không cần phải gọi điện hay trực tiếp đến nơi."
+    },
+    "footer": {
+        "more": "Xem thêm thông tin tại đây"
+    },
     "common": {
         "add": "Thêm",
         "edit": "Sửa",

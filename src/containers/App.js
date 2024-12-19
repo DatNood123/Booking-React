@@ -19,6 +19,7 @@ import System from '../routes/System';
 
 import { CustomToastCloseButton } from '../components/CustomToast';
 import HomePage from './HomePage/HomePage.js'
+import CustomScrollbars from '../components/CustomScrollbars.js';
 
 class App extends Component {
 
@@ -47,15 +48,17 @@ class App extends Component {
                     <div className="main-container">
 
                         {this.props.isLoggedIn && <Header />}
+                        <div className="content-container">
+                            <CustomScrollbars style={{ height: '100vh', width: '100%' }}>
+                                <Switch>
+                                    <Route path={path.HOME} exact component={(Home)} />
+                                    <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
+                                    <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
+                                    <Route path={path.HOMEPAGE} component={HomePage} />
+                                </Switch>
+                            </CustomScrollbars>
 
-                        <span className="content-container">
-                            <Switch>
-                                <Route path={path.HOME} exact component={(Home)} />
-                                <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
-                                <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
-                                <Route path={path.HOMEPAGE} component={HomePage} />
-                            </Switch>
-                        </span>
+                        </div>
 
                         <ToastContainer
                             className="toast-container" toastClassName="toast-item" bodyClassName="toast-item-body"
@@ -65,7 +68,7 @@ class App extends Component {
                         />
                     </div>
                 </Router>
-            </Fragment>
+            </Fragment >
         )
     }
 }

@@ -21,6 +21,29 @@
         "metal-health": "Mental Health",
         "dental": "Dental Examination"
     },
+    "specialty": {
+        "popular-spceialty": "Common Specialties",
+        "more": "More"
+    },
+    "facility": {
+        "good-facility": "Outstanding Medical Facilities",
+        "more": "More"
+    },
+    "doctor": {
+        "good-doctor": "Outstanding Doctor",
+        "more": "More"
+    },
+    "handbook": {
+        "handbook": "Handbook",
+        "more": "More"
+    },
+    "about": {
+        "about-peachbooking": "What the media says about Peach Booking?",
+        "saying": "Peach Booking is a convenient and easy-to-use online appointment booking service, providing a modern solution for those who want to save time when visiting doctors. This service allows users to quickly search for and schedule appointments with doctors, clinics, and hospitals nationwide, without the need to make phone calls or visit in person."
+    },
+    "footer": {
+        "more": "See more information here"
+    },
     "common": {
         "add": "Add",
         "edit": "Edit",

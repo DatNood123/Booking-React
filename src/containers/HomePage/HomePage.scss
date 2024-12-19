@@ -1,0 +1,355 @@
+.slick-prev{
+    left: -10px !important;
+    z-index: 1000;
+    height: 48px !important;
+    width: 44px !important;
+    background: rgb(255, 6, 143) !important;
+    border: 2px solid wheat !important;
+    border-radius: 10px;
+    margin-top: 10px;
+
+    &:hover {
+        background: grey !important;
+    }
+}
+
+.slick-prev:before{
+    font-family: FontAwesome !important;
+    color: rgb(255, 255, 255) !important;  
+}
+
+.slick-next{
+    right: -10px !important;
+    z-index: 1000;
+    height: 48px !important;
+    width: 44px !important;
+    background: rgb(255, 6, 143) !important;
+    border: 2px solid wheat !important;
+    border-radius: 10px;
+}
+
+.slick-next:before{
+    font-family: FontAwesome !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+.neon-border-pink {
+    width: 120px;
+    height: 120px;
+    box-shadow: 0 0 5px 2px #ff00ff, 0 0 10px 5px #ff00ff, 0 0 20px 10px #ff00ff; 
+
+}
+
+.neon-border-red {
+    width: 120px;
+    height: 120px;
+    box-shadow: 0 0 5px 2px #ff5a5a, 0 0 10px 5px #f26767, 0 0 20px 10px #ff0000;
+}
+
+.neon-border-blue {
+    width: 120px;
+    height: 120px;
+    box-shadow: 0 0 5px 2px #0000ff, 0 0 10px 5px #0000ff, 0 0 20px 10px #0000ff;
+}
+
+.neon-border-green {
+    width: 120px;
+    height: 120px;
+    box-shadow: 0 0 5px 2px #00ff00, 0 0 10px 5px #00ff00, 0 0 20px 10px #00ff00; /* Viền neon màu xanh lá */
+
+}
+
+.neon-border-purple {
+    width: 120px;
+    height: 120px;
+    box-shadow: 0 0 5px 2px #8a2be2, 0 0 10px 5px #8a2be2, 0 0 20px 10px #8a2be2; /* Viền neon màu tím */
+}
+
+.neon-border-red-blue {
+    width: 120px;
+    height: 120px;
+    box-shadow: 0 0 5px 2px #4ef490, 0 0 10px 5px #56f59b, 0 0 20px 10px #00e792; /* Ánh sáng neon quanh viền */
+}
+
+.section-share{
+    &.section-specialty{
+        background: rgb(255, 238, 238);
+    }
+
+    &.section-medical-facility{
+        background: rgb(255, 255, 255);
+    }
+
+    &.section-oustanding-doctor{
+        background: rgb(255, 238, 238);
+    }
+
+    &.section-hankbook{
+        background: rgb(255, 255, 255);
+    }
+    
+    &.section-about{
+        background: rgb(255, 238, 238);
+    }
+
+    .section-body{
+        .section-custome{
+            .bg-image{
+                border-radius: 10px !important;
+                height: 200px;
+                width: 320px;
+                background-repeat: no-repeat !important;
+                background-color: white;
+                background-size: cover !important;
+                background-position: center center !important;
+
+                &.section-specialty1{
+                    background-image: url("../../assets/specialty/specialty.jpg");
+                }
+
+                &.section-specialty2{
+                    background-image: url("../../assets/specialty/specialty2.jpg");
+                }
+
+                &.section-specialty3{
+                    background-image: url("../../assets/specialty/specialty3.jpg");
+                }
+
+                &.section-specialty4{
+                    background-image: url("../../assets/specialty/specialty4.jpg");
+                }
+
+                &.section-specialty5{
+                    background-image: url("../../assets/specialty/specialty5.jpg");
+                }
+
+                &.section-specialty6{
+                    background-image: url("../../assets/specialty/specialty6.jpg");
+                }
+
+                &.section-medical1{
+                    background-image: url("../../assets/medical-facility/medical1.jpg");
+                }
+
+                &.section-medical2{
+                    background-image: url("../../assets/medical-facility/medical2.png");
+                }
+
+                &.section-medical3{
+                    background-image: url("../../assets/medical-facility/medical3.png");
+                }
+
+                &.section-medical4{
+                    background-image: url("../../assets/medical-facility/medical4.jpg");
+                }
+
+                &.section-medical5{
+                    background-image: url("../../assets/medical-facility/medical5.jpg");
+                }
+
+                &.section-medical6{
+                    background-image: url("../../assets/medical-facility/medical6.jpg");
+                }
+
+                &.section-doctor1{
+                    background-image: url('../../assets/outstanding-doctor/doctor1.jpg');
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50% !important;
+                }
+
+                &.section-doctor2{
+                    background-image: url('../../assets/outstanding-doctor/doctor2.jpg');
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50% !important;
+                }
+
+                &.section-doctor3{
+                    background-image: url('../../assets/outstanding-doctor/doctor3.jpg');
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50% !important;
+                }
+
+                &.section-doctor4{
+                    background-image: url('../../assets/outstanding-doctor/doctor4.png');
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50% !important;
+                }
+
+                &.section-doctor5{
+                    background-image: url('../../assets/outstanding-doctor/doctor5.jpg');
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50% !important;
+                }
+
+                &.section-doctor6{
+                    background-image: url('../../assets/outstanding-doctor/doctor6.jpg');
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50% !important;
+                }
+
+                &.section-handbook1{
+                    background-image: url('../../assets/handbook/handbook1.jpg');
+                    width: 500px;
+                    height: 300px;
+                }
+
+                &.section-handbook2{
+                    background-image: url('../../assets/handbook/handbook2.jpg');
+                    width: 400px;
+                    height: 300px;
+                }
+
+                &.section-handbook3{
+                    background-image: url('../../assets/handbook/handbook3.jpg');
+                    width: 400px;
+                    height: 300px;
+                }
+
+                &.section-handbook4{
+                    background-image: url('../../assets/handbook/handbook4.jpg');
+                    width: 400px;
+                    height: 300px;
+                }
+            } 
+        }
+    }
+}
+
+.section-share{
+    height: 350px;
+    
+    .section-container{
+        margin: 0 100px;
+        display: flex;
+        flex-direction: column;
+        .section-header{
+            height: 60px;
+            padding-top: 25px;
+            margin-bottom: 30px;
+
+            .title-section{
+                font-size: 25px;
+                font-weight: bold  ;
+            }
+
+            .btn-section{
+                display: block;
+                float: right;
+                padding: 10px 15px;
+                border: none;
+                outline: none;
+                background: rgb(255, 6, 143);
+                border-radius: 15px;
+                color: white;
+                text-transform: uppercase;
+                cursor: pointer;
+
+                &:hover{
+                    background: rgb(241, 160, 160);
+                    color: black;
+                }
+            }
+        }
+        
+    }
+    
+}
+
+.section-hankbook{
+    height: 450px;
+    .section-custome{
+        padding: 0 5px;
+        .custome-border-handbook{
+            display: flex !important;
+            padding: 5px;
+            .text-handbook{
+                width: 450px;
+                .text-title-handbook{
+                    margin-left: 20px;
+                    font-size: 20px;
+                    font-weight: 600;
+                    width: 95%;
+                }
+
+                .text-content-hanbook{
+                    margin-top: 5px;
+                    margin-left: 20px;
+                    font-size: 16px;
+                    width: 95%;
+                    height: 100px;
+                }
+            }
+        }
+        
+
+        
+    }
+
+}
+
+.section-oustanding-doctor{
+
+    .section-custome{
+        padding: 5px;
+        .cutome-border{
+            border: 1px solid rgb(255, 0, 187);
+            background-color: aliceblue;
+            padding: 20px;
+            border-radius: 5px;
+
+            .outter-bg{
+                display: flex;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+            
+        }
+        
+    }
+}
+
+.home-footer{
+    padding-top: 15px;
+    text-align: center;
+
+    a{
+        text-decoration: none;
+    }
+    
+}
+
+.section-about{
+    height: 550px;
+    padding: 0 100px;
+    .section-about-header{
+        padding: 20px 0;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .section-about-content{
+        display: flex;
+        gap: 15px;
+        width: 100%;
+
+        .content-left{
+            width: 60%;
+        }
+
+        .content-right{
+            width: 40%;
+            font-size: 16px;
+            height: 400px;
+            font-style: italic;
+        }
+    }
+}
+
+
+
