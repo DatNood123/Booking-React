@@ -23,7 +23,7 @@ class OutstandingDoctor extends Component {
                                         </div>
                                         <div className='position text-center'>
                                             <div>TS Trần Hà Linh</div>
-                                            <div>Khoa Sản</div>
+                                            <div>Giám Đốc</div>
                                         </div>
                                     </div>
                                 </div>
@@ -35,7 +35,7 @@ class OutstandingDoctor extends Component {
                                         </div>
                                         <div className='position text-center'>
                                             <div>GS Ngọc Trinh</div>
-                                            <div>Cơ Xương Khớp</div>
+                                            <div>Phó Giám Đốc</div>
                                         </div>
                                     </div>
                                 </div>
@@ -47,7 +47,7 @@ class OutstandingDoctor extends Component {
                                         </div>
                                         <div className='position text-center'>
                                             <div>ThS Lan Anh</div>
-                                            <div>Khoa Hô Hấp</div>
+                                            <div>Chuyên gia Hòn Non Bộ</div>
                                         </div>
                                     </div>
                                 </div>
@@ -59,7 +59,7 @@ class OutstandingDoctor extends Component {
                                         </div>
                                         <div className='position text-center'>
                                             <div> ThS JessicaNgow</div>
-                                            <div>Khoa Thần Kinh</div>
+                                            <div>Trưởng nhóm Hòn Non Bộ</div>
                                         </div>
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@ class OutstandingDoctor extends Component {
                                         </div>
                                         <div className='position text-center'>
                                             <div>Konami Kawari</div>
-                                            <div>Tai Mũi Họng</div>
+                                            <div>Chuyên Gia Hồ Cá Koi</div>
                                         </div>
                                     </div>
                                 </div>
@@ -83,7 +83,7 @@ class OutstandingDoctor extends Component {
                                         </div>
                                         <div className='position text-center'>
                                             <div>Melody Marks</div>
-                                            <div>Răng Hàm Mặt</div>
+                                            <div>Nhân Viên</div>
                                         </div>
                                     </div>
                                 </div>

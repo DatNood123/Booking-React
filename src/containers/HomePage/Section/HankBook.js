@@ -27,7 +27,7 @@ class HankBook extends Component {
                                     <div className='custome-border-handbook'>
                                         <div className='bg-image section-handbook1' />
                                         <div className='text-handbook'>
-                                            <div className='text-title-handbook'>Cẩm nang chọn đào giá cả hợp lý, phù hợp với nhu cầu</div>
+                                            <div className='text-title-handbook'>Cẩm nang chọn cá Koi khỏe mạnh</div>
                                             <div className='text-content-hanbook'>Lựa chọn trái đào tươi là một kỹ năng quan trọng để đảm bảo bạn có được những quả đào ngọt, thơm và ngon nhất. Dưới đây là một số bí quyết giúp bạn lựa chọn trái đào tươi ngon</div>
                                         </div>
                                     </div>
@@ -37,7 +37,7 @@ class HankBook extends Component {
                                     <div className='custome-border-handbook'>
                                         <div className='bg-image section-handbook2' />
                                         <div className='text-handbook'>
-                                            <div className='text-title-handbook'>Cẩm nang chọn nơi thăm khám uy tín, phù hợp với tình trạng hiện tại</div>
+                                            <div className='text-title-handbook'>Cẩm nang chọn cây phù hợp với phong thủy</div>
                                             <div className='text-content-hanbook'>Lựa chọn trái đào tươi là một kỹ năng quan trọng để đảm bảo bạn có được những quả đào ngọt, thơm và ngon nhất. Dưới đây là một số bí quyết giúp bạn lựa chọn trái đào tươi ngon</div>
                                         </div>
                                     </div>
@@ -47,7 +47,7 @@ class HankBook extends Component {
                                     <div className='custome-border-handbook'>
                                         <div className='bg-image section-handbook3' />
                                         <div className='text-handbook'>
-                                            <div className='text-title-handbook'>Các phòng tránh các căn bệnh thường gặp</div>
+                                            <div className='text-title-handbook'>Cẩm nang chăm sóc cây bóng mát</div>
                                             <div className='text-content-hanbook'>Để phòng tránh các căn bệnh thường gặp, việc duy trì lối sống lành mạnh và thực hiện các biện pháp phòng ngừa là rất quan trọng. Dưới đây là những cách phòng tránh một số căn bệnh thường gặp</div>
                                         </div>
                                     </div>
@@ -57,7 +57,7 @@ class HankBook extends Component {
                                     <div className='custome-border-handbook'>
                                         <div className='bg-image section-handbook4' />
                                         <div className='text-handbook'>
-                                            <div className='text-title-handbook'>Cẩm nang tăng cường sinh lý</div>
+                                            <div className='text-title-handbook'>Cẩm nang giúp cây ra hoa nhanh chóng</div>
                                             <div className='text-content-hanbook'>Tăng cường sinh lý là một yếu tố quan trọng giúp cải thiện chất lượng đời sống tình dục và sức khỏe tổng thể. Dưới đây là cẩm nang các biện pháp giúp tăng cường sinh lý một cách tự nhiên và hiệu quả</div>
                                         </div>
                                     </div>

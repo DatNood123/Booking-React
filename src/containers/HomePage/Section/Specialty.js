@@ -18,27 +18,27 @@ class Specialty extends Component {
                             <Slider {...this.props.settings}>
                                 <div className='section-custome'>
                                     <div className='bg-image section-specialty1' />
-                                    <div>Cơ Xương Khớp</div>
+                                    <div>Thiết kế - Thi công sân vườn</div>
                                 </div>
                                 <div className='section-custome'>
                                     <div className='bg-image section-specialty2' />
-                                    <div>Răng Hàm Mặt</div>
+                                    <div>Thiết kế - Thi công hồ cá Koi</div>
                                 </div>
                                 <div className='section-custome'>
                                     <div className='bg-image section-specialty3' />
-                                    <div>Sản Phụ Khoa</div>
+                                    <div>Thiết kế - Thi công hòn non bộ</div>
                                 </div>
                                 <div className='section-custome'>
                                     <div className='bg-image section-specialty4' />
-                                    <div>Chấn Thương Chỉnh Hình</div>
+                                    <div>Xây dựng tiểu cảnh</div>
                                 </div>
                                 <div className='section-custome'>
                                     <div className='bg-image section-specialty5' />
-                                    <div>Da Liễu</div>
+                                    <div>Thi công hồ bơi</div>
                                 </div>
                                 <div className='section-custome'>
                                     <div className='bg-image section-specialty6' />
-                                    <div>Đa Khoa</div>
+                                    <div>Trang trí cảnh quanh nhà ở</div>
                                 </div>
 
                             </Slider>

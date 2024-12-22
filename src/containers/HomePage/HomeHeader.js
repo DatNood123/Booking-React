@@ -51,72 +51,76 @@ class HomeHeader extends Component {
                 </div>
 
                 <div className='home-header-banner'>
-                    <div className='content-up'>
-                        <div className='title-1'><FormattedMessage id="banner.title1" /></div>
-                        <div className='title-2'><FormattedMessage id="banner.title2" /></div>
-                        <div className='search'>
-                            <i className="fas fa-search"></i>
-                            <input type='text' placeholder='Nhu cầu của bạn là gì?'></input>
-                        </div>
-                    </div>
-                    <div className='content-down'>
-                        <div className='options'>
-                            <div className='option-child'>
-                                <div className='icon-child'>
-                                    <i className="far fa-hospital"></i>
-                                </div>
-                                <div className='text-child'>
-                                    <FormattedMessage id="banner.specialist" />
-                                </div>
+                    <div className='home-header-border'>
+                        <div className='content-up'>
+                            <div className='title-1'>
+                                <div className="leaf"></div>
+                                <FormattedMessage id="banner.title1" />
                             </div>
-
-                            <div className='option-child'>
-                                <div className='icon-child'>
-                                    <i className="far fa-play-circle"></i>
-                                </div>
-                                <div className='text-child'>
-                                    <FormattedMessage id="banner.remote" />
-                                </div>
-                            </div>
-
-                            <div className='option-child'>
-                                <div className='icon-child'>
-                                    <i class="far fa-heart"></i>
-                                </div>
-                                <div className='text-child'>
-                                    <FormattedMessage id="banner.general" />
-                                </div>
-                            </div>
-
-                            <div className='option-child'>
-                                <div className='icon-child'>
-                                    <i className="fas fa-stethoscope"></i>
-                                </div>
-                                <div className='text-child'>
-                                    <FormattedMessage id="banner.medical-test" />
-                                </div>
-                            </div>
-
-                            <div className='option-child'>
-                                <div className='icon-child'>
-                                    <i className="far fa-smile"></i>
-                                </div>
-                                <div className='text-child'>
-                                    <FormattedMessage id="banner.metal-health" />
-                                </div>
-                            </div>
-
-                            <div className='option-child'>
-                                <div className='icon-child'>
-                                    <i class="fas fa-vial"></i>
-                                </div>
-                                <div className='text-child'>
-                                    <FormattedMessage id="banner.dental" />
-                                </div>
+                            <div className='title-2'><FormattedMessage id="banner.title2" /></div>
+                            <div className='search'>
+                                <div className="icon-search"></div>
+                                <input type='text' placeholder='Nhu cầu của bạn là gì?'></input>
                             </div>
                         </div>
-                    </div>
+                        <div className='content-down'>
+                            <div className='options'>
+                                <div className='option-child'>
+                                    <div className='icon-child'>
+                                        <div className='icon-bonsai'></div>
+                                    </div>
+                                    <div className='text-child'>
+                                        <FormattedMessage id="banner.specialist" />
+                                    </div>
+                                </div>
 
+                                <div className='option-child'>
+                                    <div className='icon-child'>
+                                        <div className='icon-koi'></div>
+                                    </div>
+                                    <div className='text-child'>
+                                        <FormattedMessage id="banner.remote" />
+                                    </div>
+                                </div>
+
+                                <div className='option-child'>
+                                    <div className='icon-child'>
+                                        <div className='icon-tree'></div>
+                                    </div>
+                                    <div className='text-child'>
+                                        <FormattedMessage id="banner.general" />
+                                    </div>
+                                </div>
+
+                                <div className='option-child'>
+                                    <div className='icon-child'>
+                                        <div className='icon-forest'></div>
+                                    </div>
+                                    <div className='text-child'>
+                                        <FormattedMessage id="banner.medical-test" />
+                                    </div>
+                                </div>
+
+                                <div className='option-child'>
+                                    <div className='icon-child'>
+                                        <div className='icon-mountain'></div>
+                                    </div>
+                                    <div className='text-child'>
+                                        <FormattedMessage id="banner.metal-health" />
+                                    </div>
+                                </div>
+
+                                <div className='option-child'>
+                                    <div className='icon-child'>
+                                        <div className='icon-book'></div>
+                                    </div>
+                                    <div className='text-child'>
+                                        <FormattedMessage id="banner.dental" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -130,6 +134,7 @@ class HomeHeader extends Component {
 const mapStateToProps = state => {
     return {
         isLoggedIn: state.user.isLoggedIn,
+        userInfo: state.user.userInfo,
         language: state.app.language,
     };
 };

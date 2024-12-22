@@ -18,27 +18,27 @@ class MedicalFacility extends Component {
                             <Slider {...this.props.settings}>
                                 <div className='section-custome'>
                                     <div className='bg-image section-medical1' />
-                                    <div>Hệ thống đào Q1</div>
+                                    <div>Mai Vàng 20 năm tuổi</div>
                                 </div>
                                 <div className='section-custome'>
                                     <div className='bg-image section-medical2' />
-                                    <div>Hệ thống đào Q2</div>
+                                    <div>Tùng quành 60</div>
                                 </div>
                                 <div className='section-custome'>
                                     <div className='bg-image section-medical3' />
-                                    <div>Hệ thống đào Q3</div>
+                                    <div>Sơ Dừa</div>
                                 </div>
                                 <div className='section-custome'>
                                     <div className='bg-image section-medical4' />
-                                    <div>Hệ thống đào Q4</div>
+                                    <div>Vú Sữa cao 25m</div>
                                 </div>
                                 <div className='section-custome'>
                                     <div className='bg-image section-medical5' />
-                                    <div>Hệ thống đào Q5</div>
+                                    <div>Lộc Vừng kiểng</div>
                                 </div>
                                 <div className='section-custome'>
                                     <div className='bg-image section-medical6' />
-                                    <div>Hệ thống đào Q6</div>
+                                    <div>Tha La</div>
                                 </div>
 
                             </Slider>

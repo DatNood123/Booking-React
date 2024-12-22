@@ -3,7 +3,7 @@
     height: 80px;
     width: 100%;
     padding: 0 20px;
-    background: rgba(68, 0, 14, 0.871);
+    background: rgba(224, 255, 219, 0.871);
     z-index: 10000;
     position: sticky;
     top: 0;
@@ -19,8 +19,9 @@
                 align-items: center;
     
                 img{
-                    height: 100%;
+                    height: 90%;
                     width: 100%;
+                    margin-left: 30px;
                 }
     
                 i{
@@ -37,7 +38,7 @@
                 justify-content: space-between;
                 align-items: center;
                 margin-left: 70px;
-                color: #fff;
+                color: #000000;
                 
                 .child-content{
                     .sub-title{
@@ -48,7 +49,7 @@
             }
     
             .right-content{
-                color: #fff;
+                color: #000000;
                 width: 20%;
                 display: flex;
                 align-items: center;
@@ -73,14 +74,14 @@
                         opacity: 1;
                         span {
                             text-shadow: 
-                                0 0 5px rgba(255, 20, 147, 0.9),   /* Ánh sáng mờ xung quanh chữ */
-                                0 0 10px rgba(255, 20, 147, 0.8),
-                                0 0 15px rgba(255, 20, 147, 0.7),
-                                0 0 20px rgba(255, 20, 147, 0.6),
-                                0 0 30px rgba(255, 20, 147, 0.5), /* Ánh sáng xa hơn, mờ dần */
-                                0 0 40px rgba(255, 20, 147, 0.4),
-                                0 0 50px rgba(255, 20, 147, 0.3),
-                                0 0 75px rgba(255, 20, 147, 0.2);
+                                0 0 5px rgba(0, 255, 128, 0.9),   /* Ánh sáng mờ xung quanh chữ */
+                                0 0 10px rgba(0, 255, 128, 0.8),
+                                0 0 15px rgba(0, 255, 128, 0.7),
+                                0 0 20px rgba(0, 255, 128, 0.6),
+                                0 0 30px rgba(0, 255, 128, 0.5),   /* Ánh sáng xa hơn, mờ dần */
+                                0 0 40px rgba(0, 255, 128, 0.4),
+                                0 0 50px rgba(0, 255, 128, 0.3);
+
                         }
                     }
 
@@ -97,14 +98,14 @@
                         opacity: 1;
                         span{
                             text-shadow: 
-                                0 0 5px rgba(255, 20, 147, 0.9),   /* Ánh sáng mờ xung quanh chữ */
-                                0 0 10px rgba(255, 20, 147, 0.8),
-                                0 0 15px rgba(255, 20, 147, 0.7),
-                                0 0 20px rgba(255, 20, 147, 0.6),
-                                0 0 30px rgba(255, 20, 147, 0.5), /* Ánh sáng xa hơn, mờ dần */
-                                0 0 40px rgba(255, 20, 147, 0.4),
-                                0 0 50px rgba(255, 20, 147, 0.3),
-                                0 0 75px rgba(255, 20, 147, 0.2);
+                                0 0 5px rgba(0, 255, 128, 0.9),   /* Ánh sáng mờ xung quanh chữ */
+                                0 0 10px rgba(0, 255, 128, 0.8),
+                                0 0 15px rgba(0, 255, 128, 0.7),
+                                0 0 20px rgba(0, 255, 128, 0.6),
+                                0 0 30px rgba(0, 255, 128, 0.5),   /* Ánh sáng xa hơn, mờ dần */
+                                0 0 40px rgba(0, 255, 128, 0.4),
+                                0 0 50px rgba(0, 255, 128, 0.3);
+
                         }
                     }
 
@@ -115,49 +116,84 @@
             }
     }
 }
+
+.home-header-banner::before {
+    content: '';
+    position: absolute;  /* Để phủ lên toàn bộ div */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(96, 204, 136, 0.4); /* Màu nền mờ với alpha */
+    z-index: 1;  /* Đặt lớp phủ mờ phía dưới nội dung */
+}
+
+.home-header-banner > * {
+    position: relative;
+    z-index: 2;  /* Đảm bảo các phần tử con nằm trên lớp phủ mờ */
+}
     
 .home-header-banner{
+    position: relative;
     margin-top: -100px;
-    background: url('../../assets/images/background2.png');
+    background: url('../../assets/images/background2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 720px;
     width: 100%;
-    background-position: 30% 45%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
-    .content-up{
-            height: 450px;
-            background-image: linear-gradient(rgba(180, 13, 13, 0.25), rgba(86, 59, 59, 0.1));
+    .home-header-border{
+        height: 350px;
+        margin-top: 120px;
+        width: 800px;
+        //background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 50px;        
+        .content-up{
+            height: 350px;
             .title-1{
-                animation: flicker 1.8s infinite alternate;
-                font-family: "Vibur", sans-serif;
-                margin-top: 270px;
-                color: white;
+                position: relative;
+                font-family: "Ms Madi", serif;
+                font-weight: bolder;
+                font-style: normal;
+                margin-top: 60px;
                 text-align: center;
-                font-size: 24px;
-        
+                font-optical-sizing: auto;
+                color: #116101;
+                font-size: 40px;
+                // text-shadow: 
+                //     0 0 5px rgba(3, 74, 3, 0.9),   /* Ánh sáng mờ xung quanh chữ */
+                //     0 0 10px rgba(0, 255, 0, 0.8),
+                //     0 0 15px rgba(0, 255, 0, 0.7),
+                //     0 0 20px rgba(0, 255, 0, 0.6),
+                //     0 0 30px rgba(0, 255, 0, 0.5), /* Ánh sáng xa hơn, mờ dần */
+                //     0 0 40px rgba(0, 255, 0, 0.4),
+                //     0 0 50px rgba(0, 255, 0, 0.3),
+                //     0 0 75px rgba(0, 255, 0, 0.2);  /* Ánh sáng xanh lá neon */
             }
             .title-2{
-                font-family: "Vibur", sans-serif;
+                font-family: "Pacifico", sans-serif;
                 color: white;
                 text-align: center;
-                font-size: 35px;
-                font-weight: bolder;
+                font-size: 45px;
+                font-weight: 500;
                 margin-bottom: 30px;
+                //animation: flicker 2.5s infinite alternate;
                 /* Hiệu ứng neon */
                 text-shadow: 
-                    0 0 5px rgba(255, 20, 147, 0.9),   /* Ánh sáng mờ xung quanh chữ */
-                    0 0 10px rgba(255, 20, 147, 0.8),
-                    0 0 15px rgba(255, 20, 147, 0.7),
-                    0 0 20px rgba(255, 20, 147, 0.6),
-                    0 0 30px rgba(255, 20, 147, 0.5), /* Ánh sáng xa hơn, mờ dần */
-                    0 0 40px rgba(255, 20, 147, 0.4),
-                    0 0 50px rgba(255, 20, 147, 0.3),
-                    0 0 75px rgba(255, 20, 147, 0.2); /* Ánh sáng mờ nhạt, giống neon */
+                    0 0 5px rgba(3, 74, 3, 0.9),   /* Ánh sáng mờ xung quanh chữ */
+                    0 0 10px rgba(4, 110, 4, 0.8),
+                    0 0 15px rgba(1, 93, 1, 0.7),
+                    0 0 20px rgba(3, 87, 3, 0.6),
+                    0 0 30px rgba(1, 70, 1, 0.5), /* Ánh sáng xa hơn, mờ dần */
+                    0 0 40px rgba(1, 39, 1, 0.4),
+                    0 0 50px rgba(0, 34, 0, 0.3),
+                    0 0 75px rgba(4, 58, 4, 0.2);  /* Ánh sáng xanh lá neon */
             }
             .search{
+                position: relative;
                 display: flex;
                 justify-content: center;
                 width: 400px;
@@ -165,27 +201,36 @@
                 align-items: center;
                 padding: 10px;
                 border-radius: 20px;
-                background: linear-gradient(to right, rgba(255, 20, 147, 0) 0%, rgba(254, 90, 177, 0.7) 50%, rgba(255, 20, 147, 0.2) 100%);
+                background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgb(63, 246, 96) 50%, rgba(14, 194, 95, 0.8) 100%);
                 z-index: 1; /* Đảm bảo lớp phủ nằm trên ảnh nền */
-                box-shadow: 0 0 15px rgba(255, 20, 147, 1), 0 0 30px rgba(229, 79, 159, 0.5); /* Tạo hiệu ứng ánh sáng neon hồng */
-                i{
-                    margin: 0 8px;
-                    color: white;
+                box-shadow: 0 0 15px rgba(0, 255, 0, 1), 0 0 30px rgba(0, 206, 209, 0.5); /* Tạo hiệu ứng ánh sáng neon ngọc bích xanh lá */                
+                
+                .icon-search {
+                    background: url('../../assets/gif-icon/search.gif') no-repeat center center;
+                    background-size: contain;
+                    height: 20px;
+                    width: 20px;
+                    position: absolute; 
+                    top: 50%; 
+                    left: 5%; 
+                    transform: translate(-50%, -50%); 
+                    z-index: 3;
                 }
         
                 input{
+                    margin-left: 20px;
                     height: 30px;
                     width: 350px;
                     background: transparent;
                     border: none;
                     outline: none;
-                    color: white;
+                    color: #114500;
                     font-size: 15px;
                 }
         
                 input::placeholder {
                     font-size: 15px;
-                    color: #f1bcce;
+                    color: #114500;
                     font-style: italic; 
                     font-weight: lighter; 
                 }
@@ -193,32 +238,109 @@
     }
         
     .content-down{
-            height: 270px;
-            padding-bottom: 50px;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(12, 6, 6, 0.8) 100%);
-            .options{
+        margin-top: -80px;
+        height: 240px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 40px;
+            //background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(12, 6, 6, 0.8) 100%);
+        .options{
                 text-align: center;
                 display: flex;
                 gap: 40px;
                 justify-content: center;
     
                 .option-child{
-                    width: 100px;
+                    width: 120px;
     
                     .icon-child{
-                        background: white;
-                        width: 40px;
-                        height: 40px;
+                        cursor: pointer;
+                        position: relative;
+                        background-color: white;
+                        //background: linear-gradient(to right, #8dfffd, #00e946);
+                        width: 65px;
+                        height: 65px;
                         padding: 10px;
                         border-radius: 50%;
-                        text-align: center;
                         margin: 0 auto;
-                        i{
-                            font-size: 20px;
-                            color: rgb(255, 0, 179);
+                        transition: box-shadow 0.3s ease, filter 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
+
+                        &:hover{
+                            filter: brightness(1.5);
+                            box-shadow: 0 0 10px 3px green; /* Hiệu ứng viền xanh lá */
+                        }
+
+                        .icon-bonsai {
+                            background: url('../../assets/gif-icon/bonsai.gif') no-repeat center center;
+                            background-size: contain;
+                            height: 40px;
+                            width: 40px;
+                            position: absolute; 
+                            top: 50%; 
+                            left: 50%; 
+                            transform: translate(-50%, -50%); 
+                            z-index: 3;
+                        }
+
+                        .icon-koi {
+                            background: url('../../assets/gif-icon/koi-fish.gif') no-repeat center center;
+                            background-size: contain;
+                            height: 40px;
+                            width: 40px;
+                            position: absolute; 
+                            top: 50%; 
+                            left: 50%; 
+                            transform: translate(-50%, -50%); 
+                            z-index: 3;
+                        }
+
+                        .icon-tree {
+                            background: url('../../assets/gif-icon/organic.gif') no-repeat center center;
+                            background-size: contain;
+                            height: 40px;
+                            width: 40px;
+                            position: absolute; 
+                            top: 50%; 
+                            left: 50%; 
+                            transform: translate(-50%, -50%); 
+                            z-index: 3;
+                        }
+
+                        .icon-forest {
+                            background: url('../../assets/gif-icon/forest.gif') no-repeat center center;
+                            background-size: contain;
+                            height: 40px;
+                            width: 40px;
+                            position: absolute; 
+                            top: 50%; 
+                            left: 50%; 
+                            transform: translate(-50%, -50%); 
+                            z-index: 3;
+                        }
+
+                        .icon-mountain {
+                            background: url('../../assets/gif-icon/mountain.gif') no-repeat center center;
+                            background-size: contain;
+                            height: 40px;
+                            width: 40px;
+                            position: absolute; 
+                            top: 50%; 
+                            left: 50%; 
+                            transform: translate(-50%, -50%); 
+                            z-index: 3;
+                        }
+
+                        .icon-book {
+                            background: url('../../assets/gif-icon/read.gif') no-repeat center center;
+                            background-size: contain;
+                            height: 40px;
+                            width: 40px;
+                            position: absolute; 
+                            top: 50%; 
+                            left: 50%; 
+                            transform: translate(-50%, -50%); 
+                            z-index: 3;
                         }
                     }
     
@@ -226,24 +348,22 @@
                         color: rgb(255, 255, 255);
                         font-size: 13px;
                         font-weight: 600;
-                        cursor: pointer;
                         text-shadow: 
-                            0 0 5px #5c5151,   /* Ánh sáng mờ xung quanh chữ */
-                            0 0 8px #f4b0b0,
-                            0 0 12px #fff,
-                            0 0 15px #d09898,
-                            0 0 20px #e7d4d4, /* Ánh sáng xa hơn, mờ dần */
-                            0 0 30px #e0bdbd,
-                            0 0 40px #e8cfcf,
-                            0 0 60px #8f3333; /* Ánh sáng mờ nhạt, giống neon */
-    
-                        &:hover{
-                            color:rgb(1, 2, 4) ;
-                        }
+                            0 0 5px #00043f,    /* Ánh sáng mờ xung quanh chữ */
+                            0 0 8px #006f85,    /* Bóng mờ dần về màu xanh ngọc đậm */
+                            0 0 12px #0288d1,   /* Ánh sáng xanh dương nhẹ */
+                            0 0 15px #00c2fd,    /* Màu xanh đậm để tạo chiều sâu */
+                            0 0 20px #00cce3,    /* Ánh sáng xanh ngọc rõ ràng */
+                            0 0 30px #00cce3,    /* Ánh sáng mạnh, neon */
+                            0 0 40px #00b0b9,    /* Bóng nhẹ, giữ hiệu ứng neon sáng */
+                            0 0 60px #00cce3;    /* Ánh sáng mờ nhạt, giống neon xanh ngọc */
                     }
                 }
             }
     }
+    }
+
+    
         
 }
 
@@ -252,14 +372,15 @@
     0%, 18%, 22%, 25%, 53%, 57%, 100% {
   
         text-shadow:
-        0 0 4px #ffffff,      /* Ánh sáng hồng nhẹ */
-        0 0 11px #ff00ff,     /* Ánh sáng hồng mạnh hơn */
-        0 0 19px #ff00ff,     /* Ánh sáng hồng đậm hơn */
-        0 0 40px #ff00ff,     /* Ánh sáng hồng neon */
-        0 0 80px #ff00ff,     /* Ánh sáng hồng neon rực rỡ */
-        0 0 90px #ff00ff,     /* Ánh sáng hồng neon rực rỡ hơn */
-        0 0 100px #ff00ff,    /* Ánh sáng hồng neon sáng rực */
-        0 0 150px #ff00ff;    /* Ánh sáng hồng neon rất sáng */
+            0 0 4px #000000,      /* Ánh sáng trắng nhẹ */
+            0 0 11px #088108,     /* Ánh sáng xanh lá mạnh hơn */
+            0 0 19px #088108,     /* Ánh sáng xanh lá đậm hơn */
+            0 0 40px #088108,     /* Ánh sáng xanh lá neon */
+            0 0 80px #088108,     /* Ánh sáng xanh lá neon rực rỡ */
+            0 0 90px #088108,     /* Ánh sáng xanh lá neon rực rỡ hơn */
+            0 0 100px #088108,    /* Ánh sáng xanh lá neon sáng rực */
+            0 0 150px #088108;    /* Ánh sáng xanh lá neon rất sáng */
+
     
     }
     
@@ -267,3 +388,35 @@
         text-shadow: none;
     }    
 }
+
+@keyframes leaf-motion {
+    0% {
+        transform: translateX(0) translateY(0); /* Vị trí ban đầu tại góc trên trái */
+    }
+    25% {
+        transform: translateX(410px) translateY(0); /* Di chuyển sang góc trên phải */
+    }
+    50% {
+        transform: translateX(410px) translateY(150%); /* Di chuyển xuống góc dưới phải */
+    }
+    75% {
+        transform: translateX(0) translateY(150%); /* Di chuyển sang góc dưới trái */
+    }
+    100% {
+        transform: translateX(0) translateY(0); /* Quay lại vị trí góc trên trái */
+    }
+}
+
+.leaf {
+    background-image: url('../../assets/images/capybara.png'); /* Đặt đường dẫn tới ảnh PNG */
+    position: absolute;
+    top: -50%; /* Đặt chiếc lá trên đầu văn bản */
+    left: 22%; /* Bắt đầu từ góc trái */
+    transform: translateY(-50%); /* Đảm bảo chiếc lá nằm chính giữa theo chiều dọc */
+    animation: leaf-motion 8s linear infinite; /* Tạo hiệu ứng di chuyển liên tục */
+    width: 40px; /* Kích thước chiếc lá */
+    height: 40px; /* Kích thước chiếc lá */
+    background-size: cover; /* Đảm bảo ảnh phủ đầy phần tử */
+    
+}
+

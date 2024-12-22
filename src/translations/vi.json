@@ -1,36 +1,36 @@
 {
     "homeheader": {
-        "specialty": "Chuyên Khoa",
-        "searchdoctor": "Tìm bác sĩ theo chuyên khoa",
-        "health-facility": "Cơ sở y tế",
-        "select-room": "Chọn bệnh viện - phòng khám",
-        "doctor": "Bác Sĩ",
-        "select-doctor": "Chọn bác sĩ giỏi",
-        "fee": "Gói Khám",
-        "choose-fee": "Chọn gói khám phù hợp",
+        "specialty": "Dịch Vụ",
+        "searchdoctor": "Tìm dịch vụ bạn mong muốn",
+        "health-facility": "Cây Cảnh",
+        "select-room": "Tìm cây cảnh yêu thích",
+        "doctor": "Sản Phẩm",
+        "select-doctor": "Sản phẩm phù hợp với khu vườn",
+        "fee": "Công Trình Nổi Bật",
+        "choose-fee": "Các công trình đã được thi công",
         "support": "Hỗ trợ",
-        "pro-process": "QUY TRÌNH CHUYÊN NGHIỆP"
+        "welcome": "Xin chào"
     },
     "banner": {
-        "title1": "QUY TRÌNH CHUYÊN NGHIỆP",
-        "title2": "CHUYÊN MÔN CAO - GIÁ CẢ HỢP LÝ",
-        "specialist": "Khám Chuyên Khoa",
-        "remote": "Khám Từ Xa",
-        "general": "Khám Tổng Quát",
-        "medical-test": "Xét Nghiệm Y Học",
-        "metal-health": "Sức Khỏe Tinh Thần",
-        "dental": "Khám Nha Khoa"
+        "title1": "Quy Trình Chuyên Nghiệp",
+        "title2": "Chuyên Môn Cao - Giá Cả Hợp Lý",
+        "specialist": "Tiểu Cảnh Sân Vườn",
+        "remote": "Hồ Cá Koi",
+        "general": "Cây Cảnh Đẹp",
+        "medical-test": "Cây Công Trình",
+        "metal-health": "Hòn Non Bộ",
+        "dental": "Cẩm Nang"
     },
     "specialty": {
-        "popular-spceialty": "Chuyên Khoa Phổ Biến",
+        "popular-spceialty": "Các Dịch Vụ Chính",
         "more": "Xem thêm"
     },
     "facility": {
-        "good-facility": "Cơ Sở Y Tế Nổi Bật",
+        "good-facility": "Sản Phẩm Nổi Bật",
         "more": "Xem thêm"
     },
     "doctor": {
-        "good-doctor": "Bác Sĩ Nổi Bật",
+        "good-doctor": "Nhân Sự Ưu Tú",
         "more": "Xem thêm"
     },
     "handbook": {
@@ -38,128 +38,26 @@
         "more": "Xem thêm"
     },
     "about": {
-        "about-peachbooking": "Truyền thông nói gì về Peach Booking?",
-        "saying": "Peach Booking là một dịch vụ đặt lịch hẹn khám bệnh trực tuyến tiện lợi và dễ sử dụng, mang đến một giải pháp hiện đại cho những ai mong muốn tiết kiệm thời gian khi cần thăm khám bác sĩ. Dịch vụ này cho phép người dùng nhanh chóng tìm kiếm và đặt lịch hẹn với các bác sĩ, phòng khám, bệnh viện trên toàn quốc mà không cần phải gọi điện hay trực tiếp đến nơi."
+        "about-peachbooking": "Truyền thông nói gì về ChauSaDec?",
+        "saying": "Tôi rất ấn tượng với quy trình thi công của ChauSaDec. Đội ngũ kỹ sư và thợ thi công của họ rất chuyên nghiệp, từ khâu lên kế hoạch thiết kế cho đến khi hoàn thiện công trình. Sau khi tôi chia sẻ yêu cầu và mong muốn về không gian sân vườn, họ đã đưa ra những đề xuất rất hợp lý, giúp tôi hình dung được một không gian xanh hài hòa với ngôi nhà.",
+        "saying2": "Một điểm rất đáng chú ý ở ChauSaDec là chất lượng cây cảnh mà họ cung cấp. Tôi đã mua một số loại cây cảnh trang trí cho sân vườn và không gian sống trong nhà từ công ty này, và thực sự tôi rất hài lòng với chất lượng cây. Tất cả các cây đều khỏe mạnh, đẹp và được chăm sóc kỹ lưỡng. Ngoài ra, công ty còn cung cấp các loại cây bonsai, cây công trình, và các loại cây phù hợp với nhiều phong cách thiết kế khác nhau."
     },
     "footer": {
         "more": "Xem thêm thông tin tại đây"
     },
-    "common": {
-        "add": "Thêm",
-        "edit": "Sửa",
-        "delete": "Xóa",
-        "decentralize": "Phân quyền",
-        "close": "Đóng",
-        "save": "Lưu",
-        "refresh": "Refresh",
-        "accept": "Chấp nhận",
-        "confirm": "Xác nhận",
-        "confirm-this-task": "Bạn có chắc chắn thực hiện tác vụ này?",
-        "fail-to-load-data": "Không thể tải về dữ liệu",
-        "unknown-error": "Có lỗi xảy ra",
-        "internal-server-error": "Lỗi kết nối",
-        "bad-request": "Yêu cầu không hợp lệ",
-        "forbiden-request": "Thông tin truyền vào không hợp lệ",
-        "fail-to-load-all-code": "Không thể tải về dữ liệu allcode",
-        "sum": "Tổng",
-        "date-range-invalid": "Khoảng thời gian không hợp lệ"
-    },
-    "login": {
-        "login": "Đăng nhập",
-        "username": "Tên đăng nhập",
-        "password": "Mật khẩu",
-        "userpass-wrong": "Sai tên đăng nhập hoặc mật khẩu!"
-    },
     "menu": {
-        "system": {
-            "header": "Hệ thống",
-            "system-administrator": {
-                "header": "Quản trị hệ thống",
-                "user-manage": "Quản lý người sử dụng",
-                "product-manage": "Quản lý gói",
-                "register-package-group-or-account": "Đăng ký gói dịch vụ cho nhóm/tài khoản"
-            },
-            "system-parameter": {
-                "header": "Tham số hệ thống"
-            }
-        }
-    },
-    "system": {
-        "user-manage": {
-            "fail-to-load-fouser": "Không thể tải về danh sách người dùng",
-            "user-id": "Mã người sử dụng",
-            "usertype": "Loại người dùng",
-            "username": "Tên người dùng",
-            "fullname": "Tên đầy đủ",
-            "mobile": "Số điện thoại",
-            "email": "Email",
-            "status": "Trạng thái",
-            "add-user": "Thêm người dùng",
-            "edit-user": "Sửa thông tin người dùng",
-            "password": "Mật khẩu",
-            "retype-password": "Nhập lại mật khẩu",
-            "add-user-success": "Thêm người dùng thành công",
-            "edit-user-success": "Thay đổi thông tin người dùng thành công",
-            "add-user-fail": "Thêm người dùng thất bại",
-            "edit-user-fail": "Thay đổi thông tin người dùng thất bại",
-            "del-user-success": "Xóa người dùng thành công",
-            "del-user-fail": "Xóa người dùng thất bại",
-            "invalid-input": {
-                "username": "Quý khách vui lòng nhập tên người dùng",
-                "fullname": "Quý khách vui lòng nhập tên đầy đủ",
-                "password": "Quý khách vui lòng nhập mật khẩu"
-            },
-            "sure-delete-user": "Bạn có chắc chắn muốn xóa người dùng này?"
-        },
-        "product-manage": {
-            "fail-to-load-foprtype": "Không thể tải về danh sách gói",
-            "prid": "Mã gói",
-            "prname": "Tên gói",
-            "prtype": "Loại gói",
-            "status": "Trạng thái",
-            "description": "Diễn giải",
-            "effective-date": "Ngày hiệu lực",
-            "expiration-date": "Ngày hết hiệu lực",
-            "add-product": "Thêm gói",
-            "add-product-success": "Thêm gói thành công",
-            "add-product-fail": "Thêm gói thất bại",
-            "edit-product": "Sửa thông tin gói",
-            "package-decentralize": "Phân quyền chức năng",
-            "edit-product-success": "Thay đổi thông tin gói thành công",
-            "edit-product-fail": "Thay đổi thông tin gói thất bại",
-            "delete-product-success": "Xóa gói thành công",
-            "delete-product-fail": "Xóa gói thất bại",
-            "invalid-input": {
-                "prid": "Quý khách vui lòng nhập mã gói",
-                "prname": "Quý khách vui lòng nhập tên gói"
-            },
-            "fail-to-load-decentralize-info": "Không thể tải về thông tin phân quyền chức năng",
-            "save-decentralize-success": "Lưu phân quyền chức năng thành công",
-            "save-decentralize-fail": "Lưu phân quyền chức năng thất bại",
-            "sure-delete-package": "Bạn có chắc chắn muốn xóa gói này?"
-        },
-        "register-package-group-or-acc": {
-            "assign-service-package-to-customer": "Gán gói dịch vụ cho khách hàng",
-            "package-name": "Tên gói",
-            "assign-type": "Loại gán",
-            "cust-acc-group": "Nhóm KH/Tài khoản",
-            "effective-date": "Ngày hiệu lực",
-            "expiration-date": "Ngày hết hiệu lực",
-            "assign": "Gán",
-            "manage-assign-groups": "Quản lý gán nhóm",
-            "group-cust-acc-name": "Tên nhóm/tài khoản KH",
-            "del-assign": "Xóa gán",
-            "fail-to-load-manage-assign-groups-list": "Không thể tải về thông tin quản lý gán nhóm",
-            "invalid-selected": {
-                "currentfoProduct": "Gói đang chọn không hợp lệ",
-                "currentAssignType": "Loại gán không hợp lệ",
-                "currentFoUser": "Nhóm KH/Tài khoản không hợp lệ"
-            },
-            "assign-service-package-to-customer-success": "Gán gói dịch vụ cho khách hàng thành công",
-            "assign-service-package-to-customer-fail": "Gán gói dịch vụ cho khách hàng thất bại",
-            "remove-assign-success": "Bỏ gán gói dịch vụ cho khách hàng thành công",
-            "remove-assign-fail": "Bỏ gán gói dịch vụ cho khách hàng thất bại",
-            "sure-delete-assign": "Bạn có chắc chắn muốn bỏ gán gói dịch vụ cho khách hàng?"
+        "admin": {
+            "manage-user": "Người dùng",
+            "manage-doctor": "Quản lý Nhân Sự",
+            "manage-admin": "Quản lý Admin",
+            "crud": "CRUD User",
+            "crud-redux": "CRUD Redux",
+            "clinic": "Sản Phẩm",
+            "manage-clinic": "Quản lý Sản Phẩm",
+            "specialty": "Dịch Vụ",
+            "manage-specialty": "Quản lý Dịch Vụ",
+            "handbook": "Cẩm Nang",
+            "manage-handbook": "Quản lý Cẩm Nang"
         }
     }
 }

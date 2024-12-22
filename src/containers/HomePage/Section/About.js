@@ -15,18 +15,19 @@ class About extends Component {
                             <iframe
                                 width="100%"
                                 height="450px"
-                                src="https://www.youtube.com/embed/QzGbpFStUak"
-                                title="One of the beautiful model in Peach Booking"
-                                frameborder="0"
+                                src="https://www.youtube.com/embed/8vJqftQGYUg?list=RD8vJqftQGYUg"
+                                title="Video clip"
+                                frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen>
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen>
                             </iframe>
                         </div>
 
                         <div className='content-right'>
                             <div>
-                                "<FormattedMessage id="about.saying" />"
+                                "<FormattedMessage id="about.saying" />"  <br></br>  <br></br>
+                                "<FormattedMessage id="about.saying2" />"
                             </div>
                         </div>
                     </div>

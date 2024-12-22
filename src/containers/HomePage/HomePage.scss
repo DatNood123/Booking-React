@@ -1,15 +1,15 @@
 .slick-prev{
-    left: -10px !important;
+    left: -30px !important;
     z-index: 1000;
     height: 48px !important;
     width: 44px !important;
-    background: rgb(255, 6, 143) !important;
+    background: rgba(40, 127, 185, 0.767) !important;
     border: 2px solid wheat !important;
     border-radius: 10px;
     margin-top: 10px;
 
     &:hover {
-        background: grey !important;
+        background: rgba(11, 212, 152, 0.877) !important;
     }
 }
 
@@ -19,13 +19,17 @@
 }
 
 .slick-next{
-    right: -10px !important;
+    right: -20px !important;
     z-index: 1000;
     height: 48px !important;
     width: 44px !important;
-    background: rgb(255, 6, 143) !important;
+    background: rgba(40, 127, 185, 0.767) !important;
     border: 2px solid wheat !important;
     border-radius: 10px;
+
+    &:hover {
+        background: rgba(11, 212, 152, 0.877) !important;
+    }
 }
 
 .slick-next:before{
@@ -73,23 +77,23 @@
 
 .section-share{
     &.section-specialty{
-        background: rgb(255, 238, 238);
+        background: rgb(210, 255, 238);
     }
 
     &.section-medical-facility{
-        background: rgb(255, 255, 255);
+        background: rgb(229, 254, 245);
     }
 
     &.section-oustanding-doctor{
-        background: rgb(255, 238, 238);
+        background: rgb(210, 255, 238);
     }
 
     &.section-hankbook{
-        background: rgb(255, 255, 255);
+        background: rgb(229, 254, 245);
     }
     
     &.section-about{
-        background: rgb(255, 238, 238);
+        background: rgb(210, 255, 238);
     }
 
     .section-body{
@@ -244,7 +248,7 @@
                 padding: 10px 15px;
                 border: none;
                 outline: none;
-                background: rgb(255, 6, 143);
+                background: linear-gradient(to right, #68e6e6, #04c1d2);
                 border-radius: 15px;
                 color: white;
                 text-transform: uppercase;
