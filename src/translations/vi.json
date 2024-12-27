@@ -59,5 +59,19 @@
             "handbook": "Cẩm Nang",
             "manage-handbook": "Quản lý Cẩm Nang"
         }
+    },
+    "manage-user": {
+        "add": "Thêm Mới Người Dùng",
+        "email": "Email",
+        "password": "Mật khẩu",
+        "first-name": "Tên",
+        "last-name": "Họ",
+        "phone": "Số điện thoại",
+        "address": "Địa chỉ",
+        "gender": "Giới tính",
+        "position": "Chức danh",
+        "role": "Vai trò",
+        "image": "Ảnh đại diện",
+        "save": "Lưu"
     }
 }
