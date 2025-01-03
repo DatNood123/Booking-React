@@ -1,0 +1,41 @@
+.doctor-detail-container{
+    height: 500px;
+    border: 1px solid red;
+    margin: 0 40px;
+    .intro-doctor{
+        display: flex;
+        border: 1px solid blue;
+        .content-left{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: center center no-repeat;
+            background-size: cover;
+            margin: 10px 20px;
+        }
+
+        .content-right{
+            padding: 5px;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            .up{
+                font-size: 20px;
+                font-weight: 600;
+                padding-top: 10px;
+            }
+
+            .down{
+                padding-top: 5px;
+            }
+        }
+    }
+
+    .detail-info-doctor{
+        .detail-info-doctor-title{
+            font-size: 16px;
+            font-weight: 600;
+            padding: 10px;
+        }
+    }
+}

@@ -3,7 +3,16 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './TableManageUser.scss';
 import * as actions from "../../../store/actions";
-import { set } from 'lodash';
+import MarkdownIt from 'markdown-it';
+import MdEditor from 'react-markdown-editor-lite';
+
+import 'react-markdown-editor-lite/lib/index.css';
+
+const mdParser = new MarkdownIt(/* Markdown-it options */);
+
+function handleEditorChange({ html, text }) {
+    console.log('handleEditorChange', html, text);
+}
 
 class TableManageUser extends Component {
 
@@ -72,6 +81,11 @@ class TableManageUser extends Component {
 
                     </tbody>
                 </table>
+
+                <MdEditor style={{ height: '500px', marginTop: '20px' }}
+                    renderHTML={text => mdParser.render(text)}
+                    onChange={handleEditorChange}
+                />
             </>
 
         );

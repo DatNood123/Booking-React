@@ -37,44 +37,6 @@
     color: rgb(255, 255, 255) !important;
 }
 
-.neon-border-pink {
-    width: 120px;
-    height: 120px;
-    box-shadow: 0 0 5px 2px #ff00ff, 0 0 10px 5px #ff00ff, 0 0 20px 10px #ff00ff; 
-
-}
-
-.neon-border-red {
-    width: 120px;
-    height: 120px;
-    box-shadow: 0 0 5px 2px #ff5a5a, 0 0 10px 5px #f26767, 0 0 20px 10px #ff0000;
-}
-
-.neon-border-blue {
-    width: 120px;
-    height: 120px;
-    box-shadow: 0 0 5px 2px #0000ff, 0 0 10px 5px #0000ff, 0 0 20px 10px #0000ff;
-}
-
-.neon-border-green {
-    width: 120px;
-    height: 120px;
-    box-shadow: 0 0 5px 2px #00ff00, 0 0 10px 5px #00ff00, 0 0 20px 10px #00ff00; /* Viền neon màu xanh lá */
-
-}
-
-.neon-border-purple {
-    width: 120px;
-    height: 120px;
-    box-shadow: 0 0 5px 2px #8a2be2, 0 0 10px 5px #8a2be2, 0 0 20px 10px #8a2be2; /* Viền neon màu tím */
-}
-
-.neon-border-red-blue {
-    width: 120px;
-    height: 120px;
-    box-shadow: 0 0 5px 2px #4ef490, 0 0 10px 5px #56f59b, 0 0 20px 10px #00e792; /* Ánh sáng neon quanh viền */
-}
-
 .section-share{
     &.section-specialty{
         background: rgb(210, 255, 238);
@@ -155,43 +117,7 @@
                     background-image: url("../../assets/medical-facility/medical6.jpg");
                 }
 
-                &.section-doctor1{
-                    background-image: url('../../assets/outstanding-doctor/doctor1.jpg');
-                    width: 120px;
-                    height: 120px;
-                    border-radius: 50% !important;
-                }
-
-                &.section-doctor2{
-                    background-image: url('../../assets/outstanding-doctor/doctor2.jpg');
-                    width: 120px;
-                    height: 120px;
-                    border-radius: 50% !important;
-                }
-
-                &.section-doctor3{
-                    background-image: url('../../assets/outstanding-doctor/doctor3.jpg');
-                    width: 120px;
-                    height: 120px;
-                    border-radius: 50% !important;
-                }
-
-                &.section-doctor4{
-                    background-image: url('../../assets/outstanding-doctor/doctor4.png');
-                    width: 120px;
-                    height: 120px;
-                    border-radius: 50% !important;
-                }
-
-                &.section-doctor5{
-                    background-image: url('../../assets/outstanding-doctor/doctor5.jpg');
-                    width: 120px;
-                    height: 120px;
-                    border-radius: 50% !important;
-                }
-
-                &.section-doctor6{
-                    background-image: url('../../assets/outstanding-doctor/doctor6.jpg');
+                &.section-doctor{
                     width: 120px;
                     height: 120px;
                     border-radius: 50% !important;
@@ -286,7 +212,7 @@
                     margin-left: 20px;
                     font-size: 16px;
                     width: 95%;
-                    height: 100px;
+                    height: 10px;
                 }
             }
         }
@@ -302,19 +228,37 @@
     .section-custome{
         padding: 5px;
         .cutome-border{
-            border: 1px solid rgb(255, 0, 187);
+            border: 1px solid rgb(12, 137, 4);
             background-color: aliceblue;
             padding: 20px;
             border-radius: 5px;
+            height: 220px;
+            cursor: pointer; 
 
             .outter-bg{
                 display: flex;
                 justify-content: center;
-                margin-bottom: 10px;
+                margin-bottom: 10px;           
             }
             
+            .name-staff{
+                max-width: 100%;
+                margin-top: 15px;
+                font-weight: 600;
+                overflow: hidden !important;
+                height: 20px;
+            }
+
+            &:hover {
+                color: #0079c0;
+                .bg-image.section-doctor {
+                    width: 120px;
+                    height: 120px;
+                    box-shadow: 0 0 5px 2px #7c87be, 0 0 10px 5px #0991bf, 0 0 20px 10px #02ac5a;
+                }
+                
+            }
         }
-        
     }
 }
 
@@ -341,7 +285,6 @@
         display: flex;
         gap: 15px;
         width: 100%;
-
         .content-left{
             width: 60%;
         }
@@ -349,10 +292,16 @@
         .content-right{
             width: 40%;
             font-size: 16px;
-            height: 400px;
             font-style: italic;
+            height: 460px;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
+}
+
+.slick-disabled{
+    display: none !important;
 }
 
 

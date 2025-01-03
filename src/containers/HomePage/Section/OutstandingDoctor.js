@@ -2,10 +2,36 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Slider from 'react-slick';
 import { FormattedMessage } from 'react-intl';
+import * as actions from "../../../store/actions";
+import { LANGUAGES } from "../../../utils";
+import { withRouter } from 'react-router';
 
 class OutstandingDoctor extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            arrDoctors: []
+        }
+    }
 
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (prevProps.topDoctorsRedux !== this.props.topDoctorsRedux) {
+            this.setState({
+                arrDoctors: this.props.topDoctorsRedux
+            })
+        }
+    }
+
+    componentDidMount() {
+        this.props.loadTopDoctor();
+    }
+
+    handleViewDetailDoctor = (doctor) => {
+        this.props.history.push(`/detail-doctor/${doctor.id}`)
+    }
     render() {
+        let { language } = this.props;
+        let allDoctors = this.state.arrDoctors;
         return (
             <>
                 <div className='section-share section-oustanding-doctor'>
@@ -16,77 +42,31 @@ class OutstandingDoctor extends Component {
                         </div>
                         <div className='section-body'>
                             <Slider {...this.props.settings}>
-                                <div className='section-custome'>
-                                    <div className='cutome-border'>
-                                        <div className='outter-bg'>
-                                            <div className='bg-image section-doctor1 neon-border-pink' />
-                                        </div>
-                                        <div className='position text-center'>
-                                            <div>TS Trần Hà Linh</div>
-                                            <div>Giám Đốc</div>
-                                        </div>
-                                    </div>
-                                </div>
+                                {allDoctors && allDoctors.length > 0 &&
+                                    allDoctors.map((item, index) => {
+                                        let imageBase64 = '';
+                                        if (item.image) {
+                                            imageBase64 = new Buffer(item.image, 'base64').toString('binary')
+                                        }
+                                        let nameVi = `${item.positionData.valueVie} ${item.lastName} ${item.firstName} `
+                                        let nameEn = `${item.positionData.valueEn} ${item.firstName} ${item.lastName}`
 
-                                <div className='section-custome'>
-                                    <div className='cutome-border'>
-                                        <div className='outter-bg'>
-                                            <div className='bg-image section-doctor2 neon-border-red' />
-                                        </div>
-                                        <div className='position text-center'>
-                                            <div>GS Ngọc Trinh</div>
-                                            <div>Phó Giám Đốc</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className='section-custome'>
-                                    <div className='cutome-border'>
-                                        <div className='outter-bg'>
-                                            <div className='bg-image section-doctor3 neon-border-blue' />
-                                        </div>
-                                        <div className='position text-center'>
-                                            <div>ThS Lan Anh</div>
-                                            <div>Chuyên gia Hòn Non Bộ</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className='section-custome'>
-                                    <div className='cutome-border'>
-                                        <div className='outter-bg'>
-                                            <div className='bg-image section-doctor4 neon-border-green' />
-                                        </div>
-                                        <div className='position text-center'>
-                                            <div> ThS JessicaNgow</div>
-                                            <div>Trưởng nhóm Hòn Non Bộ</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className='section-custome'>
-                                    <div className='cutome-border'>
-                                        <div className='outter-bg'>
-                                            <div className='bg-image section-doctor5 neon-border-purple' />
-                                        </div>
-                                        <div className='position text-center'>
-                                            <div>Konami Kawari</div>
-                                            <div>Chuyên Gia Hồ Cá Koi</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className='section-custome'>
-                                    <div className='cutome-border'>
-                                        <div className='outter-bg'>
-                                            <div className='bg-image section-doctor6 neon-border-red-blue' />
-                                        </div>
-                                        <div className='position text-center'>
-                                            <div>Melody Marks</div>
-                                            <div>Nhân Viên</div>
-                                        </div>
-                                    </div>
-                                </div>
+                                        return (
+                                            <div className='section-custome' key={index} onClick={() => this.handleViewDetailDoctor(item)}>
+                                                <div className='cutome-border'>
+                                                    <div className='outter-bg'>
+                                                        <div className='bg-image section-doctor'
+                                                            style={{ backgroundImage: `url(${imageBase64})` }} />
+                                                    </div>
+                                                    <div className='position text-center'>
+                                                        <div className='name-staff'>{language === LANGUAGES.VI ? nameVi : nameEn}</div>
+                                                        <div>{item.address}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )
+                                    })
+                                }
 
 
                             </Slider>
@@ -102,13 +82,16 @@ class OutstandingDoctor extends Component {
 
 const mapStateToProps = state => {
     return {
-        isLoggedIn: state.user.isLoggedIn
+        isLoggedIn: state.user.isLoggedIn,
+        topDoctorsRedux: state.admin.topDoctors,
+        language: state.app.language,
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
+        loadTopDoctor: () => dispatch(actions.fetchTopDoctor())
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(OutstandingDoctor);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(OutstandingDoctor));

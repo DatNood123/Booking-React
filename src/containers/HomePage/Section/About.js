@@ -25,7 +25,7 @@ class About extends Component {
                         </div>
 
                         <div className='content-right'>
-                            <div>
+                            <div className='saying1'>
                                 "<FormattedMessage id="about.saying" />"  <br></br>  <br></br>
                                 "<FormattedMessage id="about.saying2" />"
                             </div>

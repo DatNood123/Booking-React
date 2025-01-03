@@ -22,6 +22,13 @@
                     height: 90%;
                     width: 100%;
                     margin-left: 30px;
+                    transition: filter 0.2s ease, transform 0.2s ease;
+                    cursor: pointer;
+
+                    &:hover{
+                        filter: drop-shadow(0 0 15px #00ff00) drop-shadow(0 0 30px #00ff00);
+                        transform: scale(1.1);
+                    }
                 }
     
                 i{

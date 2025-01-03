@@ -12,9 +12,9 @@ import System from '../routes/System';
 import { CustomToastCloseButton } from '../components/CustomToast';
 import HomePage from './HomePage/HomePage.js'
 import CustomScrollbars from '../components/CustomScrollbars.js';
+import DetailDoctor from './HomePage/Patient/Doctor/DetailDoctor.js';
 
 class App extends Component {
-
     handlePersistorState = () => {
         const { persistor } = this.props;
         let { bootstrapped } = persistor.getState();
@@ -45,6 +45,7 @@ class App extends Component {
                                     <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
                                     <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
                                     <Route path={path.HOMEPAGE} component={HomePage} />
+                                    <Route path={path.DETAIL_DOCTOR} component={DetailDoctor} />
                                 </Switch>
                             </CustomScrollbars>
 
@@ -58,7 +59,7 @@ class App extends Component {
                         /> */}
 
                         <ToastContainer
-                            position="bottom-right"
+                            position="top-right"
                             autoClose={5000}
                             hideProgressBar={false}
                             newestOnTop={false}

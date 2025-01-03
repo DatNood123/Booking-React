@@ -5,12 +5,18 @@ import logo from '../../assets/images/logo-transparent-png.png'
 import { FormattedMessage } from 'react-intl';
 import { LANGUAGES } from '../../utils/constant';
 import { changeLanguageApp } from "../../store/actions"
+import { withRouter } from 'react-router';
+
 class HomeHeader extends Component {
 
     changeLanguage = (language) => {
         //fire redux event: actions
         this.props.changeLanguageAppRedux(language)
 
+    }
+
+    handeBackToHomepage = () => {
+        this.props.history.push(`/home`)
     }
 
     render() {
@@ -21,7 +27,7 @@ class HomeHeader extends Component {
                     <div className='home-header-content'>
                         <div className='left-content'>
                             <i className="fas fa-bars"></i>
-                            <img src={logo} />
+                            <img onClick={() => this.handeBackToHomepage()} src={logo} />
                         </div>
                         <div className='center-content'>
                             <div className='child-content'>
@@ -49,80 +55,80 @@ class HomeHeader extends Component {
                         </div>
                     </div>
                 </div>
-
-                <div className='home-header-banner'>
-                    <div className='home-header-border'>
-                        <div className='content-up'>
-                            <div className='title-1'>
-                                <div className="leaf"></div>
-                                <FormattedMessage id="banner.title1" />
+                {this.props.isShowBanner === true &&
+                    <div className='home-header-banner'>
+                        <div className='home-header-border'>
+                            <div className='content-up'>
+                                <div className='title-1'>
+                                    <div className="leaf"></div>
+                                    <FormattedMessage id="banner.title1" />
+                                </div>
+                                <div className='title-2'><FormattedMessage id="banner.title2" /></div>
+                                <div className='search'>
+                                    <div className="icon-search"></div>
+                                    <input type='text' placeholder='Nhu cầu của bạn là gì?'></input>
+                                </div>
                             </div>
-                            <div className='title-2'><FormattedMessage id="banner.title2" /></div>
-                            <div className='search'>
-                                <div className="icon-search"></div>
-                                <input type='text' placeholder='Nhu cầu của bạn là gì?'></input>
-                            </div>
-                        </div>
-                        <div className='content-down'>
-                            <div className='options'>
-                                <div className='option-child'>
-                                    <div className='icon-child'>
-                                        <div className='icon-bonsai'></div>
+                            <div className='content-down'>
+                                <div className='options'>
+                                    <div className='option-child'>
+                                        <div className='icon-child'>
+                                            <div className='icon-bonsai'></div>
+                                        </div>
+                                        <div className='text-child'>
+                                            <FormattedMessage id="banner.specialist" />
+                                        </div>
                                     </div>
-                                    <div className='text-child'>
-                                        <FormattedMessage id="banner.specialist" />
-                                    </div>
-                                </div>
 
-                                <div className='option-child'>
-                                    <div className='icon-child'>
-                                        <div className='icon-koi'></div>
+                                    <div className='option-child'>
+                                        <div className='icon-child'>
+                                            <div className='icon-koi'></div>
+                                        </div>
+                                        <div className='text-child'>
+                                            <FormattedMessage id="banner.remote" />
+                                        </div>
                                     </div>
-                                    <div className='text-child'>
-                                        <FormattedMessage id="banner.remote" />
-                                    </div>
-                                </div>
 
-                                <div className='option-child'>
-                                    <div className='icon-child'>
-                                        <div className='icon-tree'></div>
+                                    <div className='option-child'>
+                                        <div className='icon-child'>
+                                            <div className='icon-tree'></div>
+                                        </div>
+                                        <div className='text-child'>
+                                            <FormattedMessage id="banner.general" />
+                                        </div>
                                     </div>
-                                    <div className='text-child'>
-                                        <FormattedMessage id="banner.general" />
-                                    </div>
-                                </div>
 
-                                <div className='option-child'>
-                                    <div className='icon-child'>
-                                        <div className='icon-forest'></div>
+                                    <div className='option-child'>
+                                        <div className='icon-child'>
+                                            <div className='icon-forest'></div>
+                                        </div>
+                                        <div className='text-child'>
+                                            <FormattedMessage id="banner.medical-test" />
+                                        </div>
                                     </div>
-                                    <div className='text-child'>
-                                        <FormattedMessage id="banner.medical-test" />
-                                    </div>
-                                </div>
 
-                                <div className='option-child'>
-                                    <div className='icon-child'>
-                                        <div className='icon-mountain'></div>
+                                    <div className='option-child'>
+                                        <div className='icon-child'>
+                                            <div className='icon-mountain'></div>
+                                        </div>
+                                        <div className='text-child'>
+                                            <FormattedMessage id="banner.metal-health" />
+                                        </div>
                                     </div>
-                                    <div className='text-child'>
-                                        <FormattedMessage id="banner.metal-health" />
-                                    </div>
-                                </div>
 
-                                <div className='option-child'>
-                                    <div className='icon-child'>
-                                        <div className='icon-book'></div>
-                                    </div>
-                                    <div className='text-child'>
-                                        <FormattedMessage id="banner.dental" />
+                                    <div className='option-child'>
+                                        <div className='icon-child'>
+                                            <div className='icon-book'></div>
+                                        </div>
+                                        <div className='text-child'>
+                                            <FormattedMessage id="banner.dental" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
+                }
 
             </>
 
@@ -145,4 +151,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeHeader);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HomeHeader));
