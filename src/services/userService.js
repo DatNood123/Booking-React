@@ -39,9 +39,29 @@ const serviceSaveInfoDoctors = (inputData) => {
 const serviceGetDetailDoctor = (doctorId) => {
     return axios.get(`/api/get-detail-doctor-by-id?id=${doctorId}`)
 }
+
+const serviceSaveBulkScheduleDoctor = (data) => {
+    return axios.post(`/api/bulk-create-schedule`, data)
+}
+
+const serviceGetScheduleDoctorByDate = (doctorId, date) => {
+    return axios.get(`/api/get-schedule-doctor-by-date?doctorId=${doctorId}&date=${date}`)
+}
+
+const serviceGetExtraInfoDoctorById = (doctorId) => {
+    return axios.get(`/api/get-extra-info-doctor-by-id?doctorId=${doctorId}`)
+}
+
+const serviceGetProfileDoctorById = (doctorId) => {
+    return axios.get(`/api/get-profile-doctor-by-id?doctorId=${doctorId}`)
+}
+
+
 export {
     handleLoginApi, getAllUser, serviceAddNewUser,
     serviceDeleteUser, serviceEditUser, serviceGetAllCode,
     serviceTopDoctorHome, serviceGetAllDoctors,
-    serviceSaveInfoDoctors, serviceGetDetailDoctor
+    serviceSaveInfoDoctors, serviceGetDetailDoctor,
+    serviceSaveBulkScheduleDoctor, serviceGetScheduleDoctorByDate,
+    serviceGetExtraInfoDoctorById, serviceGetProfileDoctorById
 } 

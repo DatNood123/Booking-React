@@ -1,0 +1,82 @@
+.doctor-schedule-container{
+    // height: 165px;
+    // overflow: hidden;
+
+    .schedule-header{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        .text-calendar{
+            font-weight: 800;
+            padding: 10px 0;
+            color: rgb(2, 90, 24);
+            font-size: 15px;
+            font-family: "Public Sans", serif;
+        }
+
+        .all-schedule{
+            select{
+                font-weight: 600;
+                font-family: "Public Sans", serif;
+                border-bottom: 2px solid rgb(2, 90, 24);
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                outline: none;
+                padding: 5px 10px;
+                cursor: pointer;
+                color: rgb(2, 90, 24);
+                
+            }
+        }
+    }
+
+    .time-content{
+        .time-content-btns{
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+
+            button{
+                font-family: "Public Sans", serif;
+                padding: 8px 10px;
+                border: none;
+                outline: none;
+                background-color: #ddd;
+                border-radius: 4px;
+                    
+                &:hover{
+                    background-color: #06d81f;
+                    transform: scale(1.05);
+                    font-weight: 600;
+                }
+            }
+    
+            .btn-vie{
+                min-width: 150px;
+            }
+    
+            .btn-en{
+                min-width: 150px;
+            }
+        }
+        
+        .book-free{
+            margin-top: 12px;
+            font-weight: 600;
+            font-family: "Public Sans", serif;
+        }
+
+        .text-no-schedule{
+            font-weight: 400;
+            color: #f90a05;
+            margin-top: 25px;
+            font-family: "Pacifico", sans-serif;
+            font-size: 17px;     
+        }
+    }
+
+}

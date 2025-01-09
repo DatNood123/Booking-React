@@ -1,10 +1,9 @@
 .doctor-detail-container{
-    height: 500px;
-    border: 1px solid red;
-    margin: 0 40px;
+    height: 100px;
+
     .intro-doctor{
         display: flex;
-        border: 1px solid blue;
+        padding: 30px 50px;
         .content-left{
             width: 100px;
             height: 100px;
@@ -12,13 +11,15 @@
             background: center center no-repeat;
             background-size: cover;
             margin: 10px 20px;
+            
         }
 
         .content-right{
             padding: 5px;
-            width: 80%;
+            width: 90%;
             display: flex;
             flex-direction: column;
+            font-family: "Public Sans", serif;
             .up{
                 font-size: 20px;
                 font-weight: 600;
@@ -26,16 +27,43 @@
             }
 
             .down{
+                width: 100%;
                 padding-top: 5px;
             }
         }
     }
 
+    .schedule-doctor{
+        margin-left: 70px;
+        margin-right: 70px;
+        margin-top: -10px;
+        padding-bottom: 12px;
+        display: flex;
+        min-height: 150px;
+
+        .content-left{
+            width: 52%;
+        }
+
+        .content-right{
+            width: 48%;
+        }
+    }
+
     .detail-info-doctor{
+        font-family: "Public Sans", serif;
+        margin-top: 10px;
+        padding: 0 70px;
+        margin-bottom: 20px;
+        background-color: rgba(234, 230, 230, 0.553);
+        img{
+            width: 100%;
+            padding-bottom: 20px;
+        }
         .detail-info-doctor-title{
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 600;
-            padding: 10px;
+            padding: 10px 0;
         }
     }
 }

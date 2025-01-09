@@ -58,6 +58,9 @@
             "manage-specialty": "Quản lý Dịch Vụ",
             "handbook": "Cẩm Nang",
             "manage-handbook": "Quản lý Cẩm Nang"
+        },
+        "doctor": {
+            "manage-schedule": "Quản lý lịch khám bệnh"
         }
     },
     "manage-user": {
@@ -74,5 +77,43 @@
         "image": "Ảnh đại diện",
         "save": "Lưu",
         "create": "Thêm mới"
+    },
+    "manage-schedule": {
+        "title": "Quản lý lịch khám bệnh của bác sĩ",
+        "choose-doctor": "Chọn bác sĩ",
+        "choose-date": "Chọn ngày",
+        "save": "Lưu thông tin"
+    },
+    "patient": {
+        "detail-doctor": {
+            "schedule": "Lịch Khám",
+            "text-no-schedule": "Bác sĩ hôm nay không có lịch khám, vui lòng chọn thời gian khác!!!",
+            "choose-and-book": "Chọn và đặt",
+            "free": "(miễn phí)",
+            "on": "ngày"
+        },
+        "extra-info-doctor": {
+            "text-address": "Địa chỉ phòng khám",
+            "price": "Giá khám: ",
+            "view-detail": "Xem chi tiết",
+            "price-avarage": "Giá khám trung bình: ",
+            "accept-payment": "Các hình thức thanh toán được chấp nhận: ",
+            "hidden-detail": "Ẩn thông tin chi tiết"
+        }
+    },
+    "admin": {
+        "manage-doctor": {
+            "title": "Thêm thông tin Nhân sự",
+            "choose-doctor": "Chọn nhân sự",
+            "information": "Thông tin giới thiệu",
+            "create": "Tạo thông tin",
+            "update": "Lưu thông tin",
+            "price": "Chọn giá tiền",
+            "staff": "Chọn nhân sự",
+            "payment": "Phương thức thanh toán",
+            "province": "Tỉnh thành",
+            "nameClinic": "Tên phòng khám",
+            "addressClinic": "Địa chỉ phòng khám"
+        }
     }
 }

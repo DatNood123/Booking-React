@@ -58,6 +58,9 @@
             "manage-specialty": "Service Manage",
             "handbook": "Handbook",
             "manage-handbook": "Handbook Manage"
+        },
+        "doctor": {
+            "manage-schedule": "Manage doctor's schedule"
         }
     },
     "manage-user": {
@@ -74,5 +77,43 @@
         "image": "Avatar",
         "save": "Save",
         "create": "Create"
+    },
+    "manage-schedule": {
+        "title": "Manage doctor's appointment schedule",
+        "choose-doctor": "Choose doctor",
+        "choose-date": "Choose date",
+        "save": "Save Infomation"
+    },
+    "patient": {
+        "detail-doctor": {
+            "schedule": "Appointment Schedule",
+            "text-no-schedule": "The doctor is unavailable for appointments today. Please select another time!!!",
+            "choose-and-book": "Choose and book",
+            "free": "(free)",
+            "on": "on"
+        },
+        "extra-info-doctor": {
+            "text-address": "Clinic address",
+            "price": "Price: ",
+            "view-detail": "View detail",
+            "price-avarage": "Average consultation fee: ",
+            "accept-payment": "Accepted payment methods: ",
+            "hidden-detail": "Hide detailed information"
+        }
+    },
+    "admin": {
+        "manage-doctor": {
+            "title": "Add more doctor's information",
+            "choose-doctor": "Choose personnel",
+            "information": "Information",
+            "create": "Create",
+            "update": "Update",
+            "price": "Price",
+            "staff": "Choose staff",
+            "payment": "Choose payment",
+            "province": "Province",
+            "nameClinic": "Name of clinic",
+            "addressClinic": "Address of clinic"
+        }
     }
 }

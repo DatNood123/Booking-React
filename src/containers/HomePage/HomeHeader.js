@@ -16,7 +16,10 @@ class HomeHeader extends Component {
     }
 
     handeBackToHomepage = () => {
-        this.props.history.push(`/home`)
+        if (this.props.history) {
+            this.props.history.push(`/home`)
+        }
+
     }
 
     render() {
@@ -31,19 +34,19 @@ class HomeHeader extends Component {
                         </div>
                         <div className='center-content'>
                             <div className='child-content'>
-                                <div><b><FormattedMessage id="homeheader.specialty" /></b></div>
+                                <div className='content-title'><b><FormattedMessage id="homeheader.specialty" /></b></div>
                                 <div className='sub-title'><FormattedMessage id="homeheader.searchdoctor" /></div>
                             </div>
                             <div className='child-content'>
-                                <div><b><FormattedMessage id="homeheader.health-facility" /></b></div>
+                                <div className='content-title'><b><FormattedMessage id="homeheader.health-facility" /></b></div>
                                 <div className='sub-title'><FormattedMessage id="homeheader.select-room" /></div>
                             </div>
                             <div className='child-content'>
-                                <div><b><FormattedMessage id="homeheader.doctor" /></b></div>
+                                <div className='content-title'><b><FormattedMessage id="homeheader.doctor" /></b></div>
                                 <div className='sub-title'><FormattedMessage id="homeheader.select-doctor" /></div>
                             </div>
                             <div className='child-content'>
-                                <div><b><FormattedMessage id="homeheader.fee" /></b></div>
+                                <div className='content-title'><b><FormattedMessage id="homeheader.fee" /></b></div>
                                 <div className='sub-title'><FormattedMessage id="homeheader.choose-fee" /></div>
                             </div>
                         </div>

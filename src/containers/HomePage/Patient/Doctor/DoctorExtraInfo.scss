@@ -1,0 +1,122 @@
+.doctor-extra-info-container{
+    padding-left: 65px;
+    .content-up{
+        .text-address{
+            padding-top: 10px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #333;
+            text-transform: uppercase;
+            font-family: "Public Sans", serif;
+        }
+
+        .name-clinic{
+            font-weight: 800;
+            padding-top: 5px;
+            padding-left: 5px;
+            font-size: 16px;
+            color: rgb(2, 90, 24);
+            font-family: "Public Sans", serif;
+        }
+
+        .address-clinic{
+            font-weight: 400;
+            font-style: italic;
+            padding: 0 5px;
+            font-family: "Public Sans", serif;
+        }
+    }
+
+    .content-down{
+        .short-info{
+            display: flex;
+            flex-direction: column;
+            .title-info{
+                font-family: "Public Sans", serif;
+                padding-top: 15px;
+                font-weight: 600;
+                font-size: 14px;
+                color: #333;
+                text-transform: uppercase;
+
+                .currency{
+                    font-family: "Public Sans", serif;
+                    margin-left: 10px;
+                    font-size: 16px;
+                    font-weight: 800;
+                    text-transform: lowercase;
+                }
+            }
+
+            .view-detail{
+                font-family: "Public Sans", serif;
+                margin-top: 10px;
+                width: 100px;
+                text-align: center;
+                font-weight: 400;
+                font-size: 13px;
+                text-transform: none;
+                cursor: pointer;
+                border-radius: 5px;
+                padding: 3px;
+                background-color: rgb(25, 113, 41);
+                color: white;
+            }
+            
+        }
+
+        .title-detail-info{
+            padding-top: 15px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #333;
+            text-transform: uppercase;
+            font-family: "Public Sans", serif;
+        }
+        
+
+        .detail-info{
+            .price{
+                padding: 5px;
+                border-radius: 5px;
+                margin-top: 5px;
+                font-family: "Public Sans", serif;
+                .right{
+                    float: right;
+                    font-weight: 800;
+                    font-size: 18px;
+                    margin-top: -3px;
+                    font-family: "Public Sans", serif;
+                }
+
+                .note{
+                    margin-top: 5px;
+                    font-family: "Public Sans", serif;
+                }
+            }
+            .payment{
+                padding: 5px;
+                margin-top: 10px;
+                border: 1px solid #ddd;
+                background-color: #eee;
+                border-radius: 5px;
+                font-family: "Public Sans", serif;
+            }
+        }
+
+        .hide-payment{
+            margin-top: 10px;
+            span{
+                font-weight: 400;
+                font-size: 13px;
+                cursor: pointer;
+                border-radius: 5px;
+                padding: 3px;
+                background-color: rgb(225, 56, 0);
+                color: white;
+                float: right;
+                font-family: "Public Sans", serif;
+            }
+        }
+    }
+}
