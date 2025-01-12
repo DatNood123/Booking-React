@@ -56,6 +56,13 @@ const serviceGetProfileDoctorById = (doctorId) => {
     return axios.get(`/api/get-profile-doctor-by-id?doctorId=${doctorId}`)
 }
 
+const servicePostCustomerBookingAppointment = (data) => {
+    return axios.post(`/api/customer-book-appointment`, data)
+}
+
+const servicePostVerifyAppointment = (data) => {
+    return axios.post(`/api/customer-verify-appointment`, data)
+}
 
 export {
     handleLoginApi, getAllUser, serviceAddNewUser,
@@ -63,5 +70,6 @@ export {
     serviceTopDoctorHome, serviceGetAllDoctors,
     serviceSaveInfoDoctors, serviceGetDetailDoctor,
     serviceSaveBulkScheduleDoctor, serviceGetScheduleDoctorByDate,
-    serviceGetExtraInfoDoctorById, serviceGetProfileDoctorById
+    serviceGetExtraInfoDoctorById, serviceGetProfileDoctorById,
+    servicePostCustomerBookingAppointment, servicePostVerifyAppointment
 } 

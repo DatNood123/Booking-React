@@ -89,8 +89,7 @@
             "schedule": "Lịch Khám",
             "text-no-schedule": "Bác sĩ hôm nay không có lịch khám, vui lòng chọn thời gian khác!!!",
             "choose-and-book": "Chọn và đặt",
-            "free": "(miễn phí)",
-            "on": "ngày"
+            "free": "(miễn phí)"
         },
         "extra-info-doctor": {
             "text-address": "Địa chỉ phòng khám",
@@ -99,6 +98,24 @@
             "price-avarage": "Giá khám trung bình: ",
             "accept-payment": "Các hình thức thanh toán được chấp nhận: ",
             "hidden-detail": "Ẩn thông tin chi tiết"
+        },
+        "booking-modal": {
+            "title": "Thông tin đặt lịch khám bệnh",
+            "full-name": "Họ và tên",
+            "phone-number": "Số điện thoại",
+            "email": "Địa chỉ email",
+            "address": "Địa chỉ nhà",
+            "birthday": "Ngày sinh",
+            "gender": "Giới tính",
+            "confirm": "Xác nhận",
+            "cancel": "Hủy",
+            "reason": "Lý do khám bệnh",
+            "doctor": "Bác sĩ khám: ",
+            "clinic": "Phòng khám: ",
+            "time": "Giờ khám: ",
+            "price": "Giá khám: ",
+            "on": "ngày",
+            "free": "đặt lịch miễn phí "
         }
     },
     "admin": {

@@ -110,7 +110,8 @@ class DoctorSchedule extends Component {
 
     render() {
         let { allDays, allAvailabelSchedule, isOpenModalBooking, dataScheduleTimeModal } = this.state;
-        let { language } = this.props
+        let { language } = this.props;
+        console.log(allAvailabelSchedule)
         return (
             <>
                 <div className='doctor-schedule-container'>
@@ -143,15 +144,17 @@ class DoctorSchedule extends Component {
                             <>
                                 <div className='time-content-btns'>
                                     {allAvailabelSchedule.map((item, index) => {
-                                        let timeDisplay = language === LANGUAGES.VI ? item.timeTypeData.valueVie : item.timeTypeData.valueEn
+                                        let timeDisplay = language === LANGUAGES.VI ? item.timeTypeData.valueVie : item.timeTypeData.valueEn;
                                         return (
                                             <button
+                                                disabled={item.currentNumber !== null}
                                                 onClick={() => this.handleClickScheduleTime(item)}
                                                 key={index}
                                                 className={language === LANGUAGES.VI ? 'btn-vie' : 'btn-en'}>
                                                 {timeDisplay}
                                             </button>
                                         )
+
                                     })}
                                 </div>
 

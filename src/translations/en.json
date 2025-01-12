@@ -89,8 +89,7 @@
             "schedule": "Appointment Schedule",
             "text-no-schedule": "The doctor is unavailable for appointments today. Please select another time!!!",
             "choose-and-book": "Choose and book",
-            "free": "(free)",
-            "on": "on"
+            "free": "(free)"
         },
         "extra-info-doctor": {
             "text-address": "Clinic address",
@@ -99,6 +98,24 @@
             "price-avarage": "Average consultation fee: ",
             "accept-payment": "Accepted payment methods: ",
             "hidden-detail": "Hide detailed information"
+        },
+        "booking-modal": {
+            "title": "Appointment Booking Information",
+            "full-name": "Full name",
+            "phone-number": "Phone number",
+            "email": "Email address",
+            "address": "Home address",
+            "birthday": "Birthday",
+            "gender": "Gender",
+            "confirm": "Confirm",
+            "cancel": "Cancel",
+            "reason": "Reason for Medical Consultation",
+            "doctor": "Doctor: ",
+            "clinic": "Clinic: ",
+            "time": "Time: ",
+            "price": "Price: ",
+            "on": "on",
+            "free": "Free booking"
         }
     },
     "admin": {

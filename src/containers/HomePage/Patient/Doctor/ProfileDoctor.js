@@ -59,7 +59,7 @@ class ProfileDoctor extends Component {
             return (
                 <>
                     <div className='schedule-seleted'>
-                        Giờ khám: <span>{time} <FormattedMessage id="patient.detail-doctor.on" /> {this.uppercaseFirstLetter(date)}</span>
+                        <FormattedMessage id="patient.booking-modal.time" /> <span>{time} <FormattedMessage id="patient.booking-modal.on" /> {this.uppercaseFirstLetter(date)}</span>
                     </div>
                 </>
             )
@@ -88,8 +88,8 @@ class ProfileDoctor extends Component {
 
                         <div className='content-right'>
                             <div className='up'>
-                                Người khám: <span>{language === LANGUAGES.VI ? nameVi : nameEn} </span> <br></br>
-                                Phòng khám: <span>{nameClinic}</span>
+                                <FormattedMessage id="patient.booking-modal.doctor" /> <span>{language === LANGUAGES.VI ? nameVi : nameEn} </span> <br></br>
+                                <FormattedMessage id="patient.booking-modal.clinic" /> <span>{nameClinic}</span>
                             </div>
                             {isShowInfoFromParent === true &&
                                 this.renderTimeBooking(dataScheduleTimeModalFromParent)
@@ -98,7 +98,7 @@ class ProfileDoctor extends Component {
                     </div>
 
                     <div className='price'>
-                        Giá khám: {language === LANGUAGES.VI ?
+                        <FormattedMessage id="patient.booking-modal.price" /> {language === LANGUAGES.VI ?
                             <NumberFormat
                                 className='currency'
                                 value={priceVi}
@@ -115,6 +115,8 @@ class ProfileDoctor extends Component {
                                 prefix='$'
                             />
                         }
+
+                        <span> (<FormattedMessage id="patient.booking-modal.free" />)</span>
                     </div>
                 </div>
 
