@@ -130,7 +130,15 @@
             "payment": "Phương thức thanh toán",
             "province": "Tỉnh thành",
             "nameClinic": "Tên phòng khám",
-            "addressClinic": "Địa chỉ phòng khám"
+            "addressClinic": "Địa chỉ phòng khám",
+            "specialty": "Chuyên ngành",
+            "choose-specialty": "Chọn chuyên ngành",
+            "clinic": "Phòng khám",
+            "choose-clinic": "Chọn phòng khám"
         }
+    },
+    "all-product": {
+        "sorry-out-tree": "Tạm thời đã hết cây loại này, chân thành xin lỗi quý khách",
+        "search": "Tìm kiếm theo: "
     }
 }

@@ -32,6 +32,7 @@ class OutstandingDoctor extends Component {
         }
 
     }
+
     render() {
         let { language } = this.props;
         let allDoctors = this.state.arrDoctors;
@@ -41,7 +42,6 @@ class OutstandingDoctor extends Component {
                     <div className='section-container'>
                         <div className='section-header'>
                             <span className='title-section'><FormattedMessage id="doctor.good-doctor" /></span>
-                            <button className='btn-section'><FormattedMessage id="doctor.more" /></button>
                         </div>
                         <div className='section-body'>
                             <Slider {...this.props.settings}>

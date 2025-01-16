@@ -1,11 +1,9 @@
 .doctor-schedule-container{
-    // height: 165px;
-    // overflow: hidden;
-
     .schedule-header{
         display: flex;
         gap: 10px;
         align-items: center;
+        flex-wrap: wrap;
 
         .text-calendar{
             font-weight: 800;

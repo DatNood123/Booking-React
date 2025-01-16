@@ -1,0 +1,119 @@
+.section-specialty{
+    height: 100vh !important;
+    .section-container{
+        height: inherit;
+
+        .section-specialty-body {
+            height: calc(100% - 60px);
+
+            .section-custome{
+                padding-left: 10px;
+                height: calc(100vh - 60px) !important;
+
+                .specialty-container{
+                    width: 100%;
+                    height: calc(100vh - 60px) !important;
+                    .specialty-name-container{
+                        padding-left: 40px;
+                        overflow: hidden;
+                        margin-top: 40px;
+                        margin-bottom: 30px;
+                        .specialty-name{
+                            //color: rgb(88, 47, 2);
+                            color: rgb(16, 93, 21);
+                            font-weight: 400;
+                            font-size: 2em;
+                            font-family: "Bungee", serif;
+                            //font-family: "Pacifico", sans-serif;
+                        }
+                    }
+
+                    .specialty-info{
+                        padding: 0 40px;
+                        height: calc(100vh - 180px) !important;
+                        display: flex;
+
+                        .bg-image{
+                            margin-bottom: 40px;
+                            background: center center no-repeat;
+                            background-size: cover;
+                            width: calc(100vw - 1150px) !important;
+                            border-radius: 10px;
+                            box-shadow: 
+                                0 0 5px rgba(0, 255, 128, 0.9),   /* Ánh sáng mờ xung quanh chữ */
+                                0 0 10px rgba(0, 255, 128, 0.8),
+                                0 0 15px rgba(0, 255, 128, 0.7),
+                                0 0 20px rgba(0, 255, 128, 0.6),
+                                0 0 30px rgba(0, 255, 128, 0.5),   /* Ánh sáng xa hơn, mờ dần */
+                                0 0 40px rgba(0, 255, 128, 0.4),
+                                0 0 50px rgba(0, 255, 128, 0.3);
+                        }
+
+                        .specialty-name-info-container{
+                            margin-bottom: 50px;
+                            margin-left: 20px;
+                            width: 65%;
+                            overflow: hidden;
+                            height: calc(100vh - 300px);
+
+                            .specialty-slogan{
+                                padding: 0 20px;
+                                text-align: center;
+                                //color: rgb(16, 93, 21);
+                                color: rgb(88, 47, 2);
+                                font-weight: 600;
+                                font-size: 4vw;
+                                //font-family: "Bungee", serif;
+                                font-family: "Pacifico", sans-serif;
+                            }
+
+                            .specialty-content{
+                                overflow: hidden;
+                                text-align: center;
+                                //color: rgb(88, 47, 2);
+                                color: rgb(16, 93, 21);
+                                font-weight: 400;
+                                font-size: 2vh;
+                                font-family: "Lexend", serif;
+                                padding: 10px 60px;
+                            }
+
+                            .specialty-button{
+                                text-align: center;
+                                padding: 80px;
+
+                                button{
+                                    border: 3.5px solid rgb(96, 55, 2);
+                                    border-radius: 8px;
+                                    padding: 8px 25px;
+                                    font-weight: 600;
+                                    font-size: 1.1vw;
+                                    background-color: white;
+                                    color: rgb(16, 93, 21);
+                                    font-family: "Lexend", serif;
+                                    transition: all 0.2s ease;
+
+                                    &:hover{
+                                        scale: 1.1;
+                                        filter: brightness(1.2);
+                                        box-shadow: 
+                                            0 0 2px rgba(0, 255, 128, 0.6),   /* Ánh sáng mờ xung quanh chữ */
+                                            0 0 5px rgba(0, 255, 128, 0.5),
+                                            0 0 8px rgba(0, 255, 128, 0.4),
+                                            0 0 10px rgba(0, 255, 128, 0.3),
+                                            0 0 15px rgba(0, 255, 128, 0.2),   /* Ánh sáng xa hơn, mờ dần */
+                                            0 0 20px rgba(0, 255, 128, 0.1),
+                                            0 0 25px rgba(0, 255, 128, 0.1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                
+            }
+        }
+    
+    }
+}

@@ -1,0 +1,43 @@
+.section-product{
+    .section-custome{
+        margin-top: 20px;
+        .product-container{
+            height: 240px;
+            cursor: pointer;
+            overflow: hidden;
+            margin-top: 20px;
+            .border-product{
+                display: flex;
+                padding: 5px;
+                
+                .bg-image{
+                    margin-top: unset;
+                    box-shadow: 2px 2px 2px rgba(42, 212, 36, 0.8);
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        box-shadow: 
+                            0 0 1px rgba(0, 255, 128, 0.6),   /* Ánh sáng mờ xung quanh chữ */
+                            0 0 5px rgba(0, 255, 128, 0.5),
+                            0 0 10px rgba(0, 255, 128, 0.4),
+                            0 0 15px rgba(0, 255, 128, 0.3),
+                            0 0 20px rgba(0, 255, 128, 0.2),   /* Ánh sáng xa hơn, mờ dần */
+                            0 0 25px rgba(0, 255, 128, 0.1),
+                            0 0 30px rgba(0, 255, 128, 0.1);
+
+                        transform: scale(1.3);
+                    }
+                }
+
+                
+            }
+
+            .name-product{
+                overflow: hidden;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 600;
+            }
+            
+        }
+    }
+}

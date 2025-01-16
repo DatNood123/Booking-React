@@ -1,0 +1,103 @@
+.detail-product-container{
+    font-family: "Public Sans", serif;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #76ec76, #f7eede);
+    .detail-product-content{
+        background-color: white;
+        display: flex;
+        margin: 20px 90px;
+        box-shadow: 0 1px 6px rgba(32, 33, 36, 0.45);
+        border-radius: 15px;
+        height: 80vh;
+        .content-left{
+            width: 50vw;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+
+            .title-product{
+                padding-bottom: 10px;
+                font-size: 25px;
+                font-weight: 800;
+                color: rgb(16, 93, 21);
+            }
+            .boder-image{
+                display: flex;
+                .image-product{
+                    border-radius: 10px;
+                    height: 68vh;
+                    width: 50vw;
+                    background: center center no-repeat;
+                    background-size: cover;
+                }
+            }
+            
+        }
+
+        .content-right{
+            width: 50vw;
+            padding: 10px 30px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            .name-production{
+                font-size: 55px;
+                font-weight: 800;
+                margin-bottom: 20px;
+                color: rgb(88, 47, 2);
+                font-family: "Pacifico", sans-serif;
+            }
+
+            .description-content{
+                box-shadow: 0 2px 5px rgba(7, 210, 7, 0.9);
+                border-radius: 10px;
+                padding: 10px;
+                border: 1px solid #ddd;
+                font-size: 16px;
+                color: rgb(16, 93, 21);
+                p{
+                    margin-bottom: 5px;
+                }
+            }
+
+            .product-price{
+                color: rgb(0, 75, 17);
+                margin-top: 20px;
+                font-size: 20px;
+                .currency{
+                    font-weight: 800;
+                }
+            }
+
+
+            .btn-give-contact{
+                margin-top: 30px;
+                text-align: center;
+            
+                button {
+                    background: linear-gradient(to bottom right, #3fd73c, #05d87d);; 
+                    color: white;
+                    font-size: 16px;
+                    font-weight: bold;
+                    padding: 10px 25px;
+                    border: none;
+                    border-radius: 8px;
+                    text-transform: uppercase;
+                    box-shadow: 0 8px #097236; /* Tạo bóng 3D */
+                    transition: all 0.2s ease;
+
+                    &:hover {
+                        box-shadow: 0 6px #1c7430; /* Giảm bóng khi hover */
+                        transform: translateY(2px); /* Di chuyển nhẹ xuống */
+                    }
+
+                    &:active {
+                        box-shadow: 0 3px #145622; /* Bóng ngắn hơn khi click */
+                        transform: translateY(5px); /* Di chuyển xuống rõ rệt */
+                    }
+                }
+            }
+            
+        }
+    }
+}

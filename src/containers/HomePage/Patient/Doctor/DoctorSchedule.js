@@ -22,6 +22,15 @@ class DoctorSchedule extends Component {
     async componentDidMount() {
         let { language } = this.props;
         let allDays = this.getArrDays(language);
+
+        //load data ngày đầu tiên nếu có component khác gọi đến
+        if (this.props.doctorIdFromParent) {
+            let res = await serviceGetScheduleDoctorByDate(this.props.doctorIdFromParent, allDays[0].value);
+            this.setState({
+                allAvailabelSchedule: res.data ? res.data : []
+            })
+        }
+
         this.setState({
             allDays: allDays
         })
@@ -111,7 +120,6 @@ class DoctorSchedule extends Component {
     render() {
         let { allDays, allAvailabelSchedule, isOpenModalBooking, dataScheduleTimeModal } = this.state;
         let { language } = this.props;
-        console.log(allAvailabelSchedule)
         return (
             <>
                 <div className='doctor-schedule-container'>

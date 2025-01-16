@@ -28,7 +28,7 @@ export const adminMenu = [
         ]
     },
 
-    { //quản lý sản phẩm
+    { //quản lý cây (phòng khám) 
         name: 'menu.admin.clinic',
         menus: [
             {
@@ -37,7 +37,7 @@ export const adminMenu = [
         ]
     },
 
-    { //quản lý dịch vụ
+    { //quản lý dịch vụ (chuyen khoa)
         name: 'menu.admin.specialty',
         menus: [
             {

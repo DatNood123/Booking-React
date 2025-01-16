@@ -4,12 +4,34 @@
         gap: 15px;
         padding: 10px 0;
         .content-left{
+            text-align: center;
+
             .avatar{
                 height: 60px;
                 width: 60px;
                 background: center center no-repeat;
                 background-size: cover;
                 border-radius: 50%;
+            }
+
+            .nav-link{
+                margin-top: -1vh;
+                font-size: 15px !important;
+                font-weight: 600;
+                color: rgb(90, 43, 2) !important;
+                cursor: pointer;
+
+                &:hover{
+                    filter: brightness(1.1);
+                    text-shadow: 
+                                0 0 5px rgba(0, 255, 128, 0.9),   /* Ánh sáng mờ xung quanh chữ */
+                                0 0 10px rgba(0, 255, 128, 0.8),
+                                0 0 15px rgba(0, 255, 128, 0.7),
+                                0 0 20px rgba(0, 255, 128, 0.6),
+                                0 0 30px rgba(0, 255, 128, 0.5),   /* Ánh sáng xa hơn, mờ dần */
+                                0 0 40px rgba(0, 255, 128, 0.4),
+                                0 0 50px rgba(0, 255, 128, 0.3);
+                }
             }
         }
 
@@ -20,6 +42,10 @@
                     font-weight: 800;
                     color: rgb(2, 90, 24);
                     display: inline-block;
+                }
+
+                .description{
+                    margin-right: 30px;
                 }
             }
 

@@ -1,12 +1,11 @@
 .slick-prev{
     left: -30px !important;
     z-index: 1000;
-    height: 48px !important;
-    width: 44px !important;
-    background: rgba(40, 127, 185, 0.767) !important;
-    border: 2px solid wheat !important;
+    height: 45px !important;
+    width: 60px !important;
+    background: rgba(188, 192, 195, 0.882) !important;
+    border: 3px solid rgb(92, 62, 6) !important;
     border-radius: 10px;
-    margin-top: 10px;
 
     &:hover {
         background: rgba(11, 212, 152, 0.877) !important;
@@ -14,27 +13,34 @@
 }
 
 .slick-prev:before{
-    font-family: FontAwesome !important;
-    color: rgb(255, 255, 255) !important;  
+    display: inline-block !important;
+    background-image: url('../../assets/images/capybara.png') !important; /* Đường dẫn đến hình ảnh */
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    color: transparent !important; 
 }
 
 .slick-next{
     right: -20px !important;
     z-index: 1000;
-    height: 48px !important;
-    width: 44px !important;
-    background: rgba(40, 127, 185, 0.767) !important;
-    border: 2px solid wheat !important;
+    height: 45px !important;
+    width: 60px !important;
+    //background: rgba(40, 127, 185, 0.767) !important;
+    border: 3px solid rgb(92, 62, 6) !important;
     border-radius: 10px;
 
     &:hover {
-        background: rgba(11, 212, 152, 0.877) !important;
+        background: rgba(31, 174, 6, 0.877) !important;
     }
 }
 
 .slick-next:before{
-    font-family: FontAwesome !important;
-    color: rgb(255, 255, 255) !important;
+    //content: '' !important;
+    display: inline-block !important;
+    background-image: url('../../assets/images/capybara.png') !important; /* Đường dẫn đến hình ảnh */
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    color: transparent !important;
 }
 
 .section-share{
@@ -59,63 +65,17 @@
     }
 
     .section-body{
+        font-family: "Public Sans", serif;
         .section-custome{
             .bg-image{
-                border-radius: 10px !important;
+                margin-top: 20px;
+                border-radius: 15px !important;
                 height: 200px;
                 width: 320px;
                 background-repeat: no-repeat !important;
                 background-color: white;
                 background-size: cover !important;
                 background-position: center center !important;
-
-                &.section-specialty1{
-                    background-image: url("../../assets/specialty/specialty.jpg");
-                }
-
-                &.section-specialty2{
-                    background-image: url("../../assets/specialty/specialty2.jpg");
-                }
-
-                &.section-specialty3{
-                    background-image: url("../../assets/specialty/specialty3.jpg");
-                }
-
-                &.section-specialty4{
-                    background-image: url("../../assets/specialty/specialty4.jpg");
-                }
-
-                &.section-specialty5{
-                    background-image: url("../../assets/specialty/specialty5.jpg");
-                }
-
-                &.section-specialty6{
-                    background-image: url("../../assets/specialty/specialty6.jpg");
-                }
-
-                &.section-medical1{
-                    background-image: url("../../assets/medical-facility/medical1.jpg");
-                }
-
-                &.section-medical2{
-                    background-image: url("../../assets/medical-facility/medical2.png");
-                }
-
-                &.section-medical3{
-                    background-image: url("../../assets/medical-facility/medical3.png");
-                }
-
-                &.section-medical4{
-                    background-image: url("../../assets/medical-facility/medical4.jpg");
-                }
-
-                &.section-medical5{
-                    background-image: url("../../assets/medical-facility/medical5.jpg");
-                }
-
-                &.section-medical6{
-                    background-image: url("../../assets/medical-facility/medical6.jpg");
-                }
 
                 &.section-doctor{
                     width: 120px;
@@ -152,17 +112,15 @@
 }
 
 .section-share{
-    height: 350px;
+    height: 400px;
     
     .section-container{
-        margin: 0 100px;
+        padding: 5px 100px 0 100px;
         display: flex;
         flex-direction: column;
         .section-header{
-            height: 60px;
-            padding-top: 25px;
-            margin-bottom: 30px;
-
+            padding-top: 10px;
+            
             .title-section{
                 font-size: 25px;
                 font-weight: bold  ;
@@ -171,18 +129,25 @@
             .btn-section{
                 display: block;
                 float: right;
-                padding: 10px 15px;
-                border: none;
-                outline: none;
-                background: linear-gradient(to right, #68e6e6, #04c1d2);
-                border-radius: 15px;
+                background: linear-gradient(to bottom right, #6df5dc, #087394);; 
                 color: white;
+                font-size: 14px;
+                font-weight: 600;
+                padding: 8px 25px;
+                border: none;
+                border-radius: 8px;
                 text-transform: uppercase;
-                cursor: pointer;
+                box-shadow: 0 8px #142566; /* Tạo bóng 3D */
+                transition: all 0.2s ease;
 
-                &:hover{
-                    background: rgb(241, 160, 160);
-                    color: black;
+                &:hover {
+                    box-shadow: 0 6px #142566; /* Giảm bóng khi hover */
+                    transform: translateY(2px); /* Di chuyển nhẹ xuống */
+                }
+
+                &:active {
+                    box-shadow: 0 3px #142566; /* Bóng ngắn hơn khi click */
+                    transform: translateY(5px); /* Di chuyển xuống rõ rệt */
                 }
             }
         }
@@ -224,8 +189,8 @@
 }
 
 .section-oustanding-doctor{
-
     .section-custome{
+        margin-top: 30px;
         padding: 5px;
         .cutome-border{
             border: 1px solid rgb(12, 137, 4);
@@ -234,7 +199,7 @@
             border-radius: 5px;
             height: 220px;
             cursor: pointer; 
-
+            overflow: hidden;
             .outter-bg{
                 display: flex;
                 justify-content: center;

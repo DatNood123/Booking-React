@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import HomeHeader from './HomeHeader';
 import Specialty from './Section/Specialty';
-import MedicalFacility from './Section/MedicalFacility';
+import Product from './Section/Product';
 import OutstandingDoctor from './Section/OutstandingDoctor';
 import HankBook from './Section/HankBook';
 import About from './Section/About';
@@ -25,7 +25,7 @@ class HomePage extends Component {
             <div>
                 <HomeHeader isShowBanner={true} />
                 <Specialty settings={settings} />
-                <MedicalFacility settings={settings} />
+                <Product settings={settings} />
                 <OutstandingDoctor settings={settings} />
                 <HankBook settings={settings} />
                 <About />

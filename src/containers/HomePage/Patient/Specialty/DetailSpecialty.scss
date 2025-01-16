@@ -1,0 +1,91 @@
+.detail-specialty-container{
+    font-family: "Public Sans", serif;
+    .detail-specialty-body{
+        margin: 0 100px;
+
+        .description-specialty{
+            margin-top: 20px;
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.45);
+            padding: 15px 10px 0 10px;
+            border-radius: 5px;
+            h4{
+                font-size: 20px;
+                font-weight: 800;
+                color: rgb(2, 90, 24);
+            }
+        }
+
+        .search-specialty-doctor{
+            margin-top: 20px;
+            font-size: 16px;
+            width: 25vw;
+        }
+
+        .list-doctor{
+            min-height: 30vh;
+
+            .each-doctor{
+                padding: 10px 15px;
+                margin: 20px 0;
+                display: flex;
+                min-height: 30vh;
+        
+                background-color: #fff;
+                box-shadow: 0 1px 6px rgba(32, 33, 36, 0.45);
+                border-radius: 8px;
+                .detail-content-left{
+    
+                    width: 50%;
+                    border-right: 1px solid #ddd;
+    
+                    .profile-doctor{
+                        .avatar{
+                            margin: 5px 10px;
+                            height: 90px;
+                            width: 90px;
+                            background: center center no-repeat;
+                            background-size: cover;
+                            border-radius: 50%;
+                        }
+    
+                        span{
+                            padding-left: unset;
+                            font-size: 18px;
+                        }
+                    }
+                    
+                }
+        
+                .detail-content-right{
+                    width: 50%;
+                    padding: 10px 25px;
+                    
+        
+                    .doctor-extra-info{
+                        .doctor-extra-info-container{
+                            margin-top: 10px;
+                            border-top: 1px solid #ddd;
+                            padding-left: 0 !important;
+                        }
+                    }
+                }
+            }
+
+            .text-no-doctor{
+                margin-top: -20px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+                min-height: inherit;
+                font-weight: 600;
+                font-size: 16px;
+                color: rgb(158, 44, 2);
+            }
+        }
+
+        
+    }
+
+    
+}

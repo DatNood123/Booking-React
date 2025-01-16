@@ -64,6 +64,30 @@ const servicePostVerifyAppointment = (data) => {
     return axios.post(`/api/customer-verify-appointment`, data)
 }
 
+const serviceCreateNewSpecialty = (data) => {
+    return axios.post(`/api/create-new-specialty`, data)
+}
+
+const serviceGetAllSpecialty = () => {
+    return axios.get(`/api/get-all-specialty`)
+}
+
+const serviceGetDetailSpecialtyById = (data) => {
+    return axios.get(`/api/get-detail-specialty-by-id?id=${data.id}&location=${data.location}`)
+}
+
+const serviceCreateNewProduct = (data) => {
+    return axios.post(`/api/create-new-product`, data)
+}
+
+const serviceGetProductByType = (inputType) => {
+    return axios.get(`/api/get-all-product-by-type?type=${inputType}`)
+}
+
+const serviceGetDetailProductById = (inputId) => {
+    return axios.get(`/api/get-detail-product-by-id?id=${inputId}`)
+}
+
 export {
     handleLoginApi, getAllUser, serviceAddNewUser,
     serviceDeleteUser, serviceEditUser, serviceGetAllCode,
@@ -71,5 +95,8 @@ export {
     serviceSaveInfoDoctors, serviceGetDetailDoctor,
     serviceSaveBulkScheduleDoctor, serviceGetScheduleDoctorByDate,
     serviceGetExtraInfoDoctorById, serviceGetProfileDoctorById,
-    servicePostCustomerBookingAppointment, servicePostVerifyAppointment
+    servicePostCustomerBookingAppointment, servicePostVerifyAppointment,
+    serviceCreateNewSpecialty, serviceGetAllSpecialty,
+    serviceGetDetailSpecialtyById, serviceCreateNewProduct,
+    serviceGetProductByType, serviceGetDetailProductById
 } 

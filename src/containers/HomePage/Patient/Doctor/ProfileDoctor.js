@@ -8,6 +8,7 @@ import { serviceGetProfileDoctorById } from '../../../../services/userService';
 import NumberFormat from 'react-number-format';
 import _ from 'lodash';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 
 class ProfileDoctor extends Component {
     constructor(props) {
@@ -28,6 +29,13 @@ class ProfileDoctor extends Component {
     async componentDidUpdate(prevProps, prevState) {
         if (this.props.language !== prevProps.language) {
 
+        }
+
+        if (this.props.doctorIdFromParent !== prevProps.doctorIdFromParent) {
+            let data = await this.getInfoDoctor(this.props.doctorIdFromParent);
+            this.setState({
+                dataProfile: data,
+            });
         }
     }
 
@@ -68,58 +76,85 @@ class ProfileDoctor extends Component {
 
     render() {
         let { dataProfile } = this.state;
-        let { language, dataScheduleTimeModalFromParent, isShowInfoFromParent } = this.props;
-        let nameVi, nameEn, priceVi, priceEn, nameClinic = '';
-        if (dataProfile && dataProfile.positionData) {
+        let { language, dataScheduleTimeModalFromParent, isShowInfoFromParent, doctorIdFromParent } = this.props;
+        let nameVi, nameEn, priceVi, priceEn, nameClinic, description = '';
+        if (dataProfile && dataProfile.positionData && dataProfile.Doctor_Infor && dataProfile.Markdown) {
             nameVi = `${dataProfile.positionData.valueVie} ${dataProfile.lastName} ${dataProfile.firstName} `
             nameEn = `${dataProfile.positionData.valueEn} ${dataProfile.firstName} ${dataProfile.lastName}`
 
             priceVi = `${dataProfile.Doctor_Infor.priceTypeData.valueVie} `
             priceEn = `${dataProfile.Doctor_Infor.priceTypeData.valueEn} `
             nameClinic = dataProfile.Doctor_Infor.nameClinic
+
+            description = dataProfile.Markdown.description
         }
         return (
             <>
-                <div className='profile-doctor-container'>
-                    <div className='intro-doctor'>
-                        <div className='content-left'>
-                            <div className='avatar' style={{ backgroundImage: `url(${dataProfile.image && dataProfile.image ? dataProfile.image : ''})` }}></div>
-                        </div>
-
-                        <div className='content-right'>
-                            <div className='up'>
-                                <FormattedMessage id="patient.booking-modal.doctor" /> <span>{language === LANGUAGES.VI ? nameVi : nameEn} </span> <br></br>
-                                <FormattedMessage id="patient.booking-modal.clinic" /> <span>{nameClinic}</span>
+                {isShowInfoFromParent === true ?
+                    <div className='profile-doctor-container'>
+                        <div className='intro-doctor'>
+                            <div className='content-left'>
+                                <div className='avatar' style={{ backgroundImage: `url(${dataProfile.image && dataProfile.image ? dataProfile.image : ''})` }}></div>
                             </div>
-                            {isShowInfoFromParent === true &&
-                                this.renderTimeBooking(dataScheduleTimeModalFromParent)
+
+                            <div className='content-right'>
+                                <div className='up'>
+                                    <FormattedMessage id="patient.booking-modal.doctor" /> <span>{language === LANGUAGES.VI ? nameVi : nameEn} </span> <br></br>
+                                    <FormattedMessage id="patient.booking-modal.clinic" /> <span>{nameClinic}</span>
+                                </div>
+
+                                {this.renderTimeBooking(dataScheduleTimeModalFromParent)}
+
+                            </div>
+                        </div>
+
+                        <div className='price'>
+                            <FormattedMessage id="patient.booking-modal.price" /> {language === LANGUAGES.VI ?
+                                <NumberFormat
+                                    className='currency'
+                                    value={priceVi}
+                                    displayType={'text'}
+                                    thousandSeparator={true}
+                                    suffix='đ'
+                                />
+                                :
+                                <NumberFormat
+                                    className='currency'
+                                    value={priceEn}
+                                    displayType={'text'}
+                                    thousandSeparator={true}
+                                    prefix='$'
+                                />
                             }
+
+                            <span> (<FormattedMessage id="patient.booking-modal.free" />)</span>
                         </div>
                     </div>
 
-                    <div className='price'>
-                        <FormattedMessage id="patient.booking-modal.price" /> {language === LANGUAGES.VI ?
-                            <NumberFormat
-                                className='currency'
-                                value={priceVi}
-                                displayType={'text'}
-                                thousandSeparator={true}
-                                suffix='đ'
-                            />
-                            :
-                            <NumberFormat
-                                className='currency'
-                                value={priceEn}
-                                displayType={'text'}
-                                thousandSeparator={true}
-                                prefix='$'
-                            />
-                        }
+                    :
 
-                        <span> (<FormattedMessage id="patient.booking-modal.free" />)</span>
+                    <div className='profile-doctor-container'>
+                        <div className='intro-doctor'>
+                            <div className='content-left'>
+                                <div className='avatar' style={{ backgroundImage: `url(${dataProfile.image && dataProfile.image ? dataProfile.image : ''})` }}></div>
+                                <Link className="nav-link" to={`/detail-doctor/${doctorIdFromParent}`}>Xem thêm</Link>
+                            </div>
+
+                            <div className='content-right'>
+                                <div className='up'>
+                                    <span>{language === LANGUAGES.VI ? nameVi : nameEn} </span> <br></br>
+                                    <div className='description'>
+                                        {description}
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                </div>
 
+
+                }
             </>
         );
     }

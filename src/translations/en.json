@@ -130,7 +130,15 @@
             "payment": "Choose payment",
             "province": "Province",
             "nameClinic": "Name of clinic",
-            "addressClinic": "Address of clinic"
+            "addressClinic": "Address of clinic",
+            "specialty": "Specialty",
+            "choose-specialty": "Choose specialty",
+            "clinic": "Clinic",
+            "choose-clinic": "Choose clinic"
         }
+    },
+    "all-product": {
+        "sorry-out-tree": "This type of tree is temporarily out of stock, we sincerely apologize to you",
+        "search": "Search by: "
     }
 }
