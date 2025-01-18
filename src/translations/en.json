@@ -60,7 +60,8 @@
             "manage-handbook": "Handbook Manage"
         },
         "doctor": {
-            "manage-schedule": "Manage doctor's schedule"
+            "manage-schedule": "Manage schedule",
+            "manage-customer": "Manage customer"
         }
     },
     "manage-user": {
@@ -83,6 +84,10 @@
         "choose-doctor": "Choose doctor",
         "choose-date": "Choose date",
         "save": "Save Infomation"
+    },
+    "manage-customer": {
+        "title": "Manage booking appointment",
+        "title-modal": "Send survey result form"
     },
     "patient": {
         "detail-doctor": {

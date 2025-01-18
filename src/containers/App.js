@@ -49,7 +49,7 @@ class App extends Component {
                                     <Route path={path.HOME} exact component={(Home)} />
                                     <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
                                     <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
-                                    <Route path={'/doctor'} component={userIsAuthenticated(Doctor)} />
+                                    <Route path={path.DOCTOR} component={userIsAuthenticated(Doctor)} />
 
                                     <Route path={path.HOMEPAGE} component={HomePage} />
                                     <Route path={path.DETAIL_DOCTOR} component={DetailDoctor} />
@@ -62,13 +62,6 @@ class App extends Component {
                             </CustomScrollbars>
 
                         </div>
-
-                        {/* <ToastContainer
-                            className="toast-container" toastClassName="toast-item" bodyClassName="toast-item-body"
-                            autoClose={false} hideProgressBar={true} pauseOnHover={false}
-                            pauseOnFocusLoss={true} closeOnClick={false} draggable={false}
-                            closeButton={<CustomToastCloseButton />}
-                        /> */}
 
                         <ToastContainer
                             position="top-right"

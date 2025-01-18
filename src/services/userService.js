@@ -88,6 +88,14 @@ const serviceGetDetailProductById = (inputId) => {
     return axios.get(`/api/get-detail-product-by-id?id=${inputId}`)
 }
 
+const serviceGetAllBookingAppointmentById = (data) => {
+    return axios.get(`/api/get-list-customer-for-staff-by-id?id=${data.doctorId}&date=${data.date}`)
+}
+
+const serviceSendResultSurvey = (data) => {
+    return axios.post(`/api/send-result-survey`, data)
+}
+
 export {
     handleLoginApi, getAllUser, serviceAddNewUser,
     serviceDeleteUser, serviceEditUser, serviceGetAllCode,
@@ -98,5 +106,6 @@ export {
     servicePostCustomerBookingAppointment, servicePostVerifyAppointment,
     serviceCreateNewSpecialty, serviceGetAllSpecialty,
     serviceGetDetailSpecialtyById, serviceCreateNewProduct,
-    serviceGetProductByType, serviceGetDetailProductById
+    serviceGetProductByType, serviceGetDetailProductById,
+    serviceGetAllBookingAppointmentById, serviceSendResultSurvey
 } 

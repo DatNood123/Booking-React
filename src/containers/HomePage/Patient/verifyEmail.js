@@ -5,6 +5,7 @@ import { servicePostVerifyAppointment } from '../../../services/userService';
 import HomeHeader from '../HomeHeader';
 import './verifyEmail.scss';
 import { Modal } from 'reactstrap';
+import LoadingModal from '../Patient/Modal/LoadingModal';
 
 class verifyEmail extends Component {
     constructor(props) {
@@ -56,20 +57,9 @@ class verifyEmail extends Component {
                 <HomeHeader />
                 <div className='verify-email-container'>
                     {statusVerify === false ?
-
-                        <Modal
-                            isOpen={true}
-                            className={'loading-modal-container'}
-                            size='md'
-                            centered>
-                            <div class="modal-content">
-                                <div className="capybara" />
-                                <div class="loading-line"></div>
-                                <div className="spinner"></div>
-                                <p>Đang xử lý...</p>
-                            </div>
-                        </Modal>
-
+                        <LoadingModal
+                            isLoadingFromParent={true}
+                        />
                         :
                         <div>
                             {errCode === 0 ?

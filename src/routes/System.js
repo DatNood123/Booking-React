@@ -7,6 +7,7 @@ import Header from '../containers/Header/Header';
 import ManageDoctor from '../containers/System/Admin/ManageDoctor';
 import ManageSpeacialty from '../containers/System/Speacialty/ManageSpeacialty';
 import ManageClinic from '../containers/System/Clinic/ManageClinic';
+import WelcomeUser from '../containers/System/WelcomeUser';
 
 class System extends Component {
     render() {
@@ -17,6 +18,7 @@ class System extends Component {
                 <div className="system-container">
                     <div className="system-list">
                         <Switch>
+                            <Route path="/system/welcome-user" component={WelcomeUser} />
                             <Route path="/system/user-manage" component={UserManage} />
                             <Route path="/system/user-redux" component={UserRedux} />
                             <Route path="/system/manage-doctor" component={ManageDoctor} />

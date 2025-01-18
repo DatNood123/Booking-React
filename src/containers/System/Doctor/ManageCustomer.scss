@@ -1,0 +1,58 @@
+div._loading_overlay_wrapper{
+    position: unset !important;
+
+    ._loading_overlay_overlay {
+        z-index: 100000;
+    }
+}
+
+.manage-customer-container{
+    .m-c-title{
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .manage-customer-body{
+        padding: 20px;
+
+        .table-manage-customer{
+            table, th, td{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            th, td{
+                padding: 5px;
+                text-align: center;
+                
+            }
+
+            button{
+                border: none;
+                outline: none;
+                color: white;
+                border-radius: 5px;
+                transition: all 0.2s ease;
+                margin: 5px;
+                padding: 5px 10px;
+
+                &:hover{
+                    transform: scale(1.1);
+                    filter: brightness(1.1);
+                }
+            }
+            
+            .btn-confirm{
+                background-color: rgb(13, 179, 13);
+            }
+
+            .btn-cancel{
+                background-color: crimson;
+            }
+        }
+    }
+}
+

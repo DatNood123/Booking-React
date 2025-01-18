@@ -60,7 +60,8 @@
             "manage-handbook": "Quản lý Cẩm Nang"
         },
         "doctor": {
-            "manage-schedule": "Quản lý lịch khám bệnh"
+            "manage-schedule": "Quản lý lịch khám bệnh",
+            "manage-customer": "Quản lý khách hàng"
         }
     },
     "manage-user": {
@@ -79,10 +80,14 @@
         "create": "Thêm mới"
     },
     "manage-schedule": {
-        "title": "Quản lý lịch khám bệnh của bác sĩ",
+        "title": "Quản lý lịch khảo sát",
         "choose-doctor": "Chọn bác sĩ",
         "choose-date": "Chọn ngày",
         "save": "Lưu thông tin"
+    },
+    "manage-customer": {
+        "title": "Quản lý lịch đặt khảo sát",
+        "title-modal": "Gửi phiếu kết quả khảo sát"
     },
     "patient": {
         "detail-doctor": {

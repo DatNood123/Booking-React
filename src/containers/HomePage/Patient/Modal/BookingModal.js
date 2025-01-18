@@ -135,6 +135,7 @@ class BookingModal extends Component {
         this.setState({
             isLoading: true
         })
+
         let doctorName = this.buildDoctorName(this.props.dataScheduleTimeModalFromParent)
         let timeString = this.buildTimeBooking(this.props.dataScheduleTimeModalFromParent)
         let birthDay = new Date(this.state.birthDay).getTime();

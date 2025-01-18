@@ -161,6 +161,8 @@ class DetailSpecialty extends Component {
                                                     doctorIdFromParent={item}
                                                     isShowInfoFromParent={false}
                                                 />
+
+                                                isLoadingFromParent
                                             </div>
                                         </div>
 
