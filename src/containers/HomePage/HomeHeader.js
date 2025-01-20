@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import './HomeHeader.scss';
+import { connect } from 'react-redux';
 import logo from '../../assets/images/logo-transparent-png.png';
 import { FormattedMessage } from 'react-intl';
 import { LANGUAGES } from '../../utils/constant';
 import { changeLanguageApp } from "../../store/actions";
 import { withRouter } from 'react-router';
-
-window.addEventListener('scroll', () => {
-    console.log("ScrollY:", window.scrollY);
-});
 
 class HomeHeader extends Component {
     constructor(props) {
@@ -17,6 +13,24 @@ class HomeHeader extends Component {
         this.state = {
             activeIndex: 0,
         };
+    }
+
+    componentDidMount() {
+        this.createFallingLeaves();
+    }
+
+    createFallingLeaves = () => {
+        let numberOfLeaves = 10;
+        let leavesContainer = document.querySelector('.falling-leaves');
+
+        for (let i = 0; i < numberOfLeaves; i++) {
+            let leaf = document.createElement('div');
+            leaf.classList.add('leaf');
+            leaf.style.left = `${Math.random() * 100}vw`; // Vị trí ngẫu nhiên từ 0 đến 100% chiều ngang
+            leaf.style.animationDuration = `${Math.random() * 3 + 4}s`; // Thời gian rơi ngẫu nhiên từ 4s đến 7s
+            leaf.style.animationDelay = `${Math.random() * 5}s`; // Độ trễ ngẫu nhiên từ 0 đến 5s
+            leavesContainer.appendChild(leaf);
+        }
     }
 
     changeLanguage = (language) => {
@@ -42,10 +56,10 @@ class HomeHeader extends Component {
         onNavigate(sections[index]);
     };
 
-
     render() {
         let { language, isShowBanner } = this.props;
         let { activeIndex } = this.state;
+
         return (
             <>
                 {/* Nav header */}
@@ -78,7 +92,6 @@ class HomeHeader extends Component {
                         </div>
                     }
 
-
                     <div className="right-content">
                         <button className="contact-btn">Liên hệ</button>
                         <div className="change-language">
@@ -101,6 +114,7 @@ class HomeHeader extends Component {
 
                 {isShowBanner === true &&
                     <div className="hero-page-container">
+                        <div className="falling-leaves"></div>
                         <div className='grid wide'>
                             <div className="main-hero-content">
                                 <div className="hero-content-left">
@@ -127,7 +141,6 @@ class HomeHeader extends Component {
                     </div>
                 }
             </>
-
         );
     }
 }

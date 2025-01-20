@@ -1,4 +1,4 @@
-import React, { Component, createRef } from 'react';
+import React, { Component, createRef, useRef } from 'react';
 import { connect } from 'react-redux';
 import HomeHeader from './HomeHeader';
 import Specialty from './Section/Specialty';
@@ -27,7 +27,6 @@ class HomePage extends Component {
         if (this.sections[section]?.current) {
             this.sections[section].current.scrollIntoView({
                 behavior: 'smooth', // Hiệu ứng cuộn mượt
-                block: 'start', // Đưa phần tử lên đầu màn hình
             });
         }
     }
@@ -40,6 +39,7 @@ class HomePage extends Component {
             slidesToShow: 4,
             slidesToScroll: 1,
         }
+
         return (
             <div>
                 <div ref={this.sections.homeHeader}>
@@ -54,6 +54,7 @@ class HomePage extends Component {
                 <div ref={this.sections.staff}>
                     <OutstandingDoctor settings={settings} />
                 </div>
+                <HankBook />
                 <About />
                 <HomeFooter />
             </div>

@@ -32,6 +32,78 @@
     }
 }
 
+@keyframes fallLeaves {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity  : 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity  : 0;
+    }
+}
+
+.leaf {
+    position                 : absolute;
+    background-image         : url('../../assets/images/capybara.png');
+    background-size          : contain;
+    width                    : 30px;
+    height                   : 30px;
+    opacity                  : 0.8;
+    animation                : fallLeaves 5s linear infinite;
+    animation-timing-function: ease-in;
+}
+
+.falling-leaves {
+    position      : absolute;
+    top           : -35px;
+    left          : 0;
+    width         : 100%;
+    height        : 100%;
+    pointer-events: none;
+    z-index       : 10;
+    overflow      : hidden;
+
+    .leaf:nth-child(1) {
+        left              : 10%;
+        animation-duration: 6s;
+        animation-delay   : 2s;
+    }
+
+    .leaf:nth-child(2) {
+        left              : 30%;
+        animation-duration: 7s;
+        animation-delay   : 1s;
+    }
+
+    .leaf:nth-child(3) {
+        left              : 50%;
+        animation-duration: 5s;
+        animation-delay   : 3s;
+    }
+
+    .leaf:nth-child(4) {
+        left              : 70%;
+        animation-duration: 6.5s;
+        animation-delay   : 0.5s;
+    }
+
+    .leaf:nth-child(5) {
+        left              : 90%;
+        animation-duration: 5s;
+        animation-delay   : 4s;
+    }
+
+    .leaf:nth-child(6) {
+        left              : 20%;
+        animation-duration: 8s;
+        animation-delay   : 2.5s;
+    }
+
+    // Thêm nhiều chiếc lá nếu muốn
+}
+
 .home-header-container {
     width          : 100%;
     height         : 80px;
@@ -79,6 +151,19 @@
                 border          : none;
                 outline         : none;
                 background-color: transparent;
+
+                &:hover {
+                    transform: scale(1.1);
+                    text-shadow:
+                        0 0 5px rgba(0, 255, 128, 0.9),
+                        /* Ánh sáng mờ xung quanh chữ */
+                        0 0 10px rgba(0, 255, 128, 0.8),
+                        0 0 15px rgba(0, 255, 128, 0.7),
+                        0 0 20px rgba(0, 255, 128, 0.6),
+                        0 0 30px rgba(0, 255, 128, 0.5),
+                        /* Ánh sáng xa hơn, mờ dần */
+                        0 0 40px rgba(0, 255, 128, 0.4),
+                }
             }
 
             .item-line {
@@ -168,11 +253,12 @@
 }
 
 .hero-page-container {
-    height          : 100vh;
-    background-image: url('../../assets/heropage/background.png');
-    background-size : cover;
-    position        : relative;
-    overflow        : hidden;
+    height             : 100vh;
+    background-image   : url('../../assets/heropage/background.png');
+    background-size    : cover;
+    position           : relative;
+    overflow           : hidden;
+    background-position: 10% 50%;
 
     .grid {
         width  : 100%;
@@ -204,38 +290,42 @@
 
                 .logo {
                     display    : flex;
-                    margin-top : 90px;
+                    margin-top : 60px;
                     width      : 100%;
                     height     : 60%;
                     font-family: "Calistoga", serif;
                     position   : relative;
 
                     .chau {
-                        position   : absolute;
-                        font-size  : 7em;
-                        font-weight: 400;
-                        right      : 290px;
-                        color      : #042502;
-                        bottom     : 231px;
+                        position           : absolute;
+                        font-size          : 7em;
+                        font-weight        : 400;
+                        right              : 290px;
+                        color              : #042502;
+                        bottom             : 231px;
+                        -webkit-text-stroke: 2px rgb(202, 255, 207);
+                        text-shadow        : 6px 6px 10px rgba(114, 244, 88, 0.9);
                     }
 
                     .sadec {
-                        position   : absolute;
-                        font-size  : 8em;
-                        font-weight: 400;
-                        bottom     : 155px;
-                        right      : 180px;
-                        color      : #86ae00;
-                        font-weight: 500;
+                        position           : absolute;
+                        font-size          : 8em;
+                        font-weight        : 400;
+                        bottom             : 155px;
+                        right              : 180px;
+                        color              : #86ae00;
+                        font-weight        : 500;
+                        -webkit-text-stroke: 2px rgb(255, 254, 188);
+                        text-shadow        : 6px 6px 10px rgba(239, 247, 7, 0.9);
                     }
 
                     span {
                         position       : absolute;
-                        width          : 24em;
+                        width          : 20em;
                         font-size      : 1.3em;
                         text-align     : justify;
-                        right          : 110px;
-                        bottom         : 110px;
+                        right          : 180px;
+                        bottom         : 80px;
                         backdrop-filter: blur(10px);
                         font-family    : "Lexend", serif;
                     }
@@ -251,7 +341,7 @@
                         background-color: #00ff00;
                         bottom          : 0;
                         border-radius   : 25px;
-                        right           : 200px;
+                        right           : 225px;
                         font-weight     : 600;
                         font-family     : "Lexend", serif;
                         box-shadow      : 0 8px #142566;
@@ -316,7 +406,7 @@
         position         : absolute;
         background-repeat: no-repeat;
         background-image : url('../../assets/heropage/water.png');
-        height           : 800px;
+        height           : 100%;
         width            : 1250px;
         background-size  : cover;
         top              : 260px;
@@ -398,20 +488,16 @@
                         margin-top: 15px;
 
                         .chau {
-                            font-size          : 7em;
-                            right              : 110px;
-                            bottom             : 231;
-                            -webkit-text-stroke: 2px rgb(202, 255, 207);
-                            text-shadow        : 6px 6px 10px rgba(114, 244, 88, 0.9);
+                            font-size: 7em;
+                            right    : 110px;
+                            bottom   : 231;
                         }
 
                         .sadec {
-                            font-size          : 8em;
-                            bottom             : 155px;
-                            right              : 0;
-                            font-weight        : 600;
-                            -webkit-text-stroke: 2px rgb(255, 254, 188);
-                            text-shadow        : 6px 6px 10px rgba(239, 247, 7, 0.9);
+                            font-size  : 8em;
+                            bottom     : 155px;
+                            right      : 0;
+                            font-weight: 600;
                         }
 
                         span {

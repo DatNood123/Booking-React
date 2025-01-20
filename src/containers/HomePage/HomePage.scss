@@ -1,10 +1,10 @@
-.slick-prev{
-    left: -30px !important;
-    z-index: 1000;
-    height: 45px !important;
-    width: 60px !important;
-    background: rgba(188, 192, 195, 0.882) !important;
-    border: 3px solid rgb(92, 62, 6) !important;
+.slick-prev {
+    left         : -30px !important;
+    z-index      : 1000;
+    height       : 45px !important;
+    width        : 60px !important;
+    background   : rgba(188, 192, 195, 0.882) !important;
+    border       : 3px solid rgb(92, 62, 6) !important;
     border-radius: 10px;
 
     &:hover {
@@ -12,21 +12,22 @@
     }
 }
 
-.slick-prev:before{
-    display: inline-block !important;
-    background-image: url('../../assets/images/capybara.png') !important; /* Đường dẫn đến hình ảnh */
-    background-size: cover !important;
+.slick-prev:before {
+    display          : inline-block !important;
+    background-image : url('../../assets/images/capybara.png') !important;
+    /* Đường dẫn đến hình ảnh */
+    background-size  : cover !important;
     background-repeat: no-repeat !important;
-    color: transparent !important; 
+    color            : transparent !important;
 }
 
-.slick-next{
-    right: -20px !important;
-    z-index: 1000;
-    height: 45px !important;
-    width: 60px !important;
+.slick-next {
+    right        : -20px !important;
+    z-index      : 1000;
+    height       : 45px !important;
+    width        : 60px !important;
     //background: rgba(40, 127, 185, 0.767) !important;
-    border: 3px solid rgb(92, 62, 6) !important;
+    border       : 3px solid rgb(92, 62, 6) !important;
     border-radius: 10px;
 
     &:hover {
@@ -34,240 +35,255 @@
     }
 }
 
-.slick-next:before{
+.slick-next:before {
     //content: '' !important;
-    display: inline-block !important;
-    background-image: url('../../assets/images/capybara.png') !important; /* Đường dẫn đến hình ảnh */
-    background-size: cover !important;
+    display          : inline-block !important;
+    background-image : url('../../assets/images/capybara.png') !important;
+    /* Đường dẫn đến hình ảnh */
+    background-size  : cover !important;
     background-repeat: no-repeat !important;
-    color: transparent !important;
+    color            : transparent !important;
 }
 
-.section-share{
-    &.section-specialty{
+.section-share {
+    &.section-specialty {
         background: rgb(210, 255, 238);
     }
 
-    &.section-medical-facility{
+    &.section-medical-facility {
         background: rgb(229, 254, 245);
     }
 
-    &.section-oustanding-doctor{
+    &.section-oustanding-doctor {
         background: rgb(210, 255, 238);
     }
 
-    &.section-hankbook{
+    &.section-hankbook {
         background: rgb(229, 254, 245);
     }
-    
-    &.section-about{
+
+    &.section-about {
         background: rgb(210, 255, 238);
     }
 
-    .section-body{
+    .section-body {
         font-family: "Public Sans", serif;
-        .section-custome{
-            .bg-image{
-                margin-top: 20px;
-                border-radius: 15px !important;
-                height: 200px;
-                width: 320px;
-                background-repeat: no-repeat !important;
-                background-color: white;
-                background-size: cover !important;
+
+        .section-custome {
+            .bg-image {
+                margin-top         : 20px;
+                border-radius      : 15px !important;
+                height             : 200px;
+                width              : 320px;
+                background-repeat  : no-repeat !important;
+                background-color   : white;
+                background-size    : cover !important;
                 background-position: center center !important;
 
-                &.section-doctor{
-                    width: 120px;
-                    height: 120px;
+                &.section-doctor {
+                    width        : 120px;
+                    height       : 120px;
                     border-radius: 50% !important;
                 }
 
-                &.section-handbook1{
+                &.section-handbook1 {
                     background-image: url('../../assets/handbook/handbook1.jpg');
-                    width: 500px;
-                    height: 300px;
+                    width           : 500px;
+                    height          : 300px;
                 }
 
-                &.section-handbook2{
+                &.section-handbook2 {
                     background-image: url('../../assets/handbook/handbook2.jpg');
-                    width: 400px;
-                    height: 300px;
+                    width           : 400px;
+                    height          : 300px;
                 }
 
-                &.section-handbook3{
+                &.section-handbook3 {
                     background-image: url('../../assets/handbook/handbook3.jpg');
-                    width: 400px;
-                    height: 300px;
+                    width           : 400px;
+                    height          : 300px;
                 }
 
-                &.section-handbook4{
+                &.section-handbook4 {
                     background-image: url('../../assets/handbook/handbook4.jpg');
-                    width: 400px;
-                    height: 300px;
+                    width           : 400px;
+                    height          : 300px;
                 }
-            } 
+            }
         }
     }
 }
 
-.section-share{
+.section-share {
     height: 400px;
-    
-    .section-container{
-        padding: 5px 100px 0 100px;
-        display: flex;
+
+    .section-container {
+        padding       : 5px 100px 0 100px;
+        display       : flex;
         flex-direction: column;
-        .section-header{
+
+        .section-header {
             padding-top: 10px;
-            
-            .title-section{
-                font-size: 25px;
-                font-weight: bold  ;
+
+            .title-section {
+                font-size  : 25px;
+                font-weight: bold;
             }
 
-            .btn-section{
-                display: block;
-                float: right;
-                background: linear-gradient(to bottom right, #6df5dc, #087394);; 
-                color: white;
-                font-size: 14px;
-                font-weight: 600;
-                padding: 8px 25px;
-                border: none;
-                border-radius: 8px;
+            .btn-section {
+                display   : block;
+                float     : right;
+                background: linear-gradient(to bottom right, #6df5dc, #087394);
+                ;
+                color         : white;
+                font-size     : 14px;
+                font-weight   : 600;
+                padding       : 8px 25px;
+                border        : none;
+                border-radius : 8px;
                 text-transform: uppercase;
-                box-shadow: 0 8px #142566; /* Tạo bóng 3D */
-                transition: all 0.2s ease;
+                box-shadow    : 0 8px #142566;
+                /* Tạo bóng 3D */
+                transition    : all 0.2s ease;
 
                 &:hover {
-                    box-shadow: 0 6px #142566; /* Giảm bóng khi hover */
-                    transform: translateY(2px); /* Di chuyển nhẹ xuống */
+                    box-shadow: 0 6px #142566;
+                    /* Giảm bóng khi hover */
+                    transform : translateY(2px);
+                    /* Di chuyển nhẹ xuống */
                 }
 
                 &:active {
-                    box-shadow: 0 3px #142566; /* Bóng ngắn hơn khi click */
-                    transform: translateY(5px); /* Di chuyển xuống rõ rệt */
+                    box-shadow: 0 3px #142566;
+                    /* Bóng ngắn hơn khi click */
+                    transform : translateY(5px);
+                    /* Di chuyển xuống rõ rệt */
                 }
             }
         }
-        
+
     }
-    
+
 }
 
-.section-hankbook{
+.section-hankbook {
     height: 450px;
-    .section-custome{
+
+    .section-custome {
         padding: 0 5px;
-        .custome-border-handbook{
+
+        .custome-border-handbook {
             display: flex !important;
             padding: 5px;
-            .text-handbook{
+
+            .text-handbook {
                 width: 450px;
-                .text-title-handbook{
+
+                .text-title-handbook {
                     margin-left: 20px;
-                    font-size: 20px;
+                    font-size  : 20px;
                     font-weight: 600;
-                    width: 95%;
+                    width      : 95%;
                 }
 
-                .text-content-hanbook{
-                    margin-top: 5px;
+                .text-content-hanbook {
+                    margin-top : 5px;
                     margin-left: 20px;
-                    font-size: 16px;
-                    width: 95%;
-                    height: 10px;
+                    font-size  : 16px;
+                    width      : 95%;
+                    height     : 10px;
                 }
             }
         }
-        
 
-        
+
+
     }
 
 }
 
-.section-oustanding-doctor{
-    .section-custome{
+.section-oustanding-doctor {
+    .section-custome {
         margin-top: 30px;
-        padding: 5px;
-        .cutome-border{
-            border: 1px solid rgb(12, 137, 4);
+        padding   : 5px;
+
+        .cutome-border {
+            border          : 1px solid rgb(12, 137, 4);
             background-color: aliceblue;
-            padding: 20px;
-            border-radius: 5px;
-            height: 220px;
-            cursor: pointer; 
-            overflow: hidden;
-            .outter-bg{
-                display: flex;
+            padding         : 20px;
+            border-radius   : 5px;
+            height          : 220px;
+            cursor          : pointer;
+            overflow        : hidden;
+
+            .outter-bg {
+                display        : flex;
                 justify-content: center;
-                margin-bottom: 10px;           
+                margin-bottom  : 10px;
             }
-            
-            .name-staff{
-                max-width: 100%;
-                margin-top: 15px;
+
+            .name-staff {
+                max-width  : 100%;
+                margin-top : 15px;
                 font-weight: 600;
-                overflow: hidden !important;
-                height: 20px;
+                overflow   : hidden !important;
+                height     : 20px;
             }
 
             &:hover {
                 color: #0079c0;
+
                 .bg-image.section-doctor {
-                    width: 120px;
-                    height: 120px;
+                    width     : 120px;
+                    height    : 120px;
                     box-shadow: 0 0 5px 2px #7c87be, 0 0 10px 5px #0991bf, 0 0 20px 10px #02ac5a;
                 }
-                
+
             }
         }
     }
 }
 
-.home-footer{
+.home-footer {
     padding-top: 15px;
-    text-align: center;
+    text-align : center;
 
-    a{
+    a {
         text-decoration: none;
     }
-    
+
 }
 
-.section-about{
-    height: 550px;
+.section-about {
+    height : 550px;
     padding: 0 100px;
-    .section-about-header{
-        padding: 20px 0;
-        font-size: 25px;
+
+    .section-about-header {
+        padding    : 20px 0;
+        font-size  : 25px;
         font-weight: bold;
     }
 
-    .section-about-content{
+    .section-about-content {
         display: flex;
-        gap: 15px;
-        width: 100%;
-        .content-left{
+        gap    : 15px;
+        width  : 100%;
+
+        .content-left {
             width: 60%;
         }
 
-        .content-right{
-            width: 40%;
-            font-size: 16px;
-            font-style: italic;
-            height: 460px;
-            overflow: hidden;
+        .content-right {
+            width        : 40%;
+            font-size    : 16px;
+            font-style   : italic;
+            height       : 460px;
+            overflow     : hidden;
             text-overflow: ellipsis;
         }
     }
 }
 
-.slick-disabled{
+.slick-disabled {
     display: none !important;
 }
-
-
-
