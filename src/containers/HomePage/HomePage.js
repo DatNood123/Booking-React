@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import { connect } from 'react-redux';
 import HomeHeader from './HomeHeader';
 import Specialty from './Section/Specialty';
@@ -13,6 +13,25 @@ import "slick-carousel/slick/slick-theme.css";
 
 class HomePage extends Component {
 
+    constructor(props) {
+        super(props);
+        this.sections = {
+            homeHeader: createRef(),
+            specialty: createRef(),
+            product: createRef(),
+            staff: createRef(),
+        }
+    }
+
+    handleScrollTo = (section) => {
+        if (this.sections[section]?.current) {
+            this.sections[section].current.scrollIntoView({
+                behavior: 'smooth', // Hiệu ứng cuộn mượt
+                block: 'start', // Đưa phần tử lên đầu màn hình
+            });
+        }
+    }
+
     render() {
         let settings = {
             dots: false,
@@ -23,11 +42,18 @@ class HomePage extends Component {
         }
         return (
             <div>
-                <HomeHeader isShowBanner={true} />
-                <Specialty settings={settings} />
-                <Product settings={settings} />
-                <OutstandingDoctor settings={settings} />
-                <HankBook settings={settings} />
+                <div ref={this.sections.homeHeader}>
+                    <HomeHeader onNavigate={this.handleScrollTo} isShowBanner={true} />
+                </div>
+                <div ref={this.sections.specialty}>
+                    <Specialty settings={settings} />
+                </div>
+                <div ref={this.sections.product}>
+                    <Product settings={settings} />
+                </div>
+                <div ref={this.sections.staff}>
+                    <OutstandingDoctor settings={settings} />
+                </div>
                 <About />
                 <HomeFooter />
             </div>

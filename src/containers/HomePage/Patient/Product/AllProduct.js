@@ -75,7 +75,6 @@ class AllProduct extends Component {
     render() {
         let { language } = this.props;
         let { listAllProduct, listOptions, selectedOption } = this.state;
-        console.log('selectedOption', selectedOption);
 
         return (
             <>

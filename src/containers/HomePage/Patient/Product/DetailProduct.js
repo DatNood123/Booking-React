@@ -39,7 +39,7 @@ class DetailProduct extends Component {
         return (
             <>
                 <div className='detail-product-container'>
-                    <HomeHeader />
+                    <HomeHeader onNavigate={this.handleScrollTo} />
                     <div className='detail-product-content'>
                         <div className='content-left'>
                             <div className='title-product'>Thông tin sản phẩm</div>
