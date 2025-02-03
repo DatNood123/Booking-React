@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Slider from 'react-slick';
 import { FormattedMessage } from 'react-intl';
-import { serviceGetProductByType } from '../../../services/userService';
+import { serviceGetTopProduct } from '../../../services/userService';
 import './Product.scss';
 import { withRouter } from 'react-router';
+import NumberFormat from 'react-number-format';
+import { LANGUAGES } from '../../../utils/constant';
 
 class Product extends Component {
     constructor(props) {
@@ -15,7 +17,7 @@ class Product extends Component {
     }
 
     async componentDidMount() {
-        let res = await serviceGetProductByType('ALL');
+        let res = await serviceGetTopProduct();
         if (res && res.errCode === 0) {
             this.setState({
                 listProduct: res.data
@@ -37,42 +39,67 @@ class Product extends Component {
 
     render() {
         let { listProduct } = this.state;
+        let { language } = this.props;
+
         return (
             <>
-                <div className='section-share section-product'>
+                <div className='section-share section-product wide'>
                     <div className='section-container'>
                         <div className='section-header'>
                             <span className='title-section'><FormattedMessage id="facility.good-facility" /></span>
                             <button
                                 onClick={() => this.handleOnClickViewAllProduct()}
-                                className='btn-section'><FormattedMessage id="facility.more" /></button>
+                                className='btn-section'><FormattedMessage id="facility.more" />
+                            </button>
                         </div>
                         <div className='section-body'>
-                            <Slider {...this.props.settings}>
-                                {listProduct && listProduct.length > 0 &&
-                                    listProduct.map((item, index) => {
-                                        return (
-                                            <div
-                                                onClick={() => this.handleOnClickProduct(item)}
-                                                className='section-custome'
-                                                key={index}>
+                            {listProduct && listProduct.length > 0 &&
+                                listProduct.map((item, index) => {
+                                    return (
+                                        <div
+                                            className='section-custome'
+                                            key={index}>
 
-                                                <div className='product-container'>
-                                                    <div className='border-product'>
-                                                        <div className='bg-image' style={{ backgroundImage: `url(${item.image})` }} />
-                                                    </div>
-
-                                                    <div className='name-product'>{item.name}</div>
+                                            <div className='product-container'>
+                                                <div className='border-product'>
+                                                    <div
+                                                        className='bg-image'
+                                                        style={{ backgroundImage: `url(${item.image})` }}
+                                                    />
                                                 </div>
 
+                                                <div className='info-product'>
+                                                    <div className='name-product'>{item.name}</div>
+
+                                                    <div className='type-product'>
+                                                        Phân loại: {language === LANGUAGES.VI ? item.productTypeData.valueVie : item.productTypeData.valueEn}
+                                                    </div>
+
+                                                    <div className='price-product'>Giá đề xuất: <br></br>
+                                                        <NumberFormat
+                                                            className='currency'
+                                                            value={item.price}
+                                                            displayType={'text'}
+                                                            thousandSeparator={true}
+                                                            suffix='đ'
+                                                        />
+                                                    </div>
+
+                                                    <button
+                                                        onClick={() => this.handleOnClickProduct(item)}
+                                                        className='btn-detail'>
+                                                        Xem chi tiết
+                                                    </button>
+                                                </div>
                                             </div>
-                                        )
-                                    })
-                                }
 
-                            </Slider>
+                                        </div>
+                                    )
+                                })
+                            }
+
+
                         </div>
-
                     </div>
                 </div>
             </>
@@ -83,7 +110,8 @@ class Product extends Component {
 
 const mapStateToProps = state => {
     return {
-        isLoggedIn: state.user.isLoggedIn
+        isLoggedIn: state.user.isLoggedIn,
+        language: state.app.language
     };
 };
 

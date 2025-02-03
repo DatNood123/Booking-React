@@ -1,6 +1,6 @@
 .slick-prev {
     left         : -30px !important;
-    z-index      : 1000;
+    z-index      : 10;
     height       : 45px !important;
     width        : 60px !important;
     background   : rgba(188, 192, 195, 0.882) !important;
@@ -23,7 +23,7 @@
 
 .slick-next {
     right        : -20px !important;
-    z-index      : 1000;
+    z-index      : 10;
     height       : 45px !important;
     width        : 60px !important;
     //background: rgba(40, 127, 185, 0.767) !important;
@@ -45,27 +45,90 @@
     color            : transparent !important;
 }
 
+.slick-disabled {
+    display: none !important;
+}
+
+@keyframes fallLeaves {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity  : 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity  : 0;
+    }
+}
+
+.all-page {
+    background: linear-gradient(88deg,
+            #1a6541 0%,
+            #43dfb0 50%,
+            #1a6541 100%);
+}
+
+.leaf {
+    position                 : absolute;
+    background-image         : url('../../assets/images/hoamai.png');
+    background-size          : contain;
+    width                    : 30px;
+    height                   : 30px;
+    opacity                  : 0.8;
+    animation                : fallLeaves 5s linear infinite;
+    animation-timing-function: ease-in;
+}
+
+.falling-leaves {
+    position      : absolute;
+    top           : -35px;
+    left          : 0;
+    width         : 100%;
+    height        : 100%;
+    pointer-events: none;
+    z-index       : 1000;
+    overflow      : hidden;
+
+    .leaf:nth-child(1) {
+        left              : 10%;
+        animation-duration: 6s;
+        animation-delay   : 2s;
+    }
+
+    .leaf:nth-child(2) {
+        left              : 30%;
+        animation-duration: 7s;
+        animation-delay   : 1s;
+    }
+
+    .leaf:nth-child(3) {
+        left              : 50%;
+        animation-duration: 5s;
+        animation-delay   : 3s;
+    }
+
+    .leaf:nth-child(4) {
+        left              : 70%;
+        animation-duration: 6.5s;
+        animation-delay   : 0.5s;
+    }
+
+    .leaf:nth-child(5) {
+        left              : 90%;
+        animation-duration: 5s;
+        animation-delay   : 4s;
+    }
+
+    .leaf:nth-child(6) {
+        left              : 20%;
+        animation-duration: 8s;
+        animation-delay   : 2.5s;
+    }
+
+    // Thêm nhiều chiếc lá nếu muốn
+}
+
 .section-share {
-    &.section-specialty {
-        background: rgb(210, 255, 238);
-    }
-
-    &.section-medical-facility {
-        background: rgb(229, 254, 245);
-    }
-
-    &.section-oustanding-doctor {
-        background: rgb(210, 255, 238);
-    }
-
-    &.section-hankbook {
-        background: rgb(229, 254, 245);
-    }
-
-    &.section-about {
-        background: rgb(210, 255, 238);
-    }
-
     .section-body {
         font-family: "Public Sans", serif;
 
@@ -86,167 +149,35 @@
                     border-radius: 50% !important;
                 }
 
-                &.section-handbook1 {
-                    background-image: url('../../assets/handbook/handbook1.jpg');
-                    width           : 500px;
-                    height          : 300px;
-                }
-
-                &.section-handbook2 {
-                    background-image: url('../../assets/handbook/handbook2.jpg');
-                    width           : 400px;
-                    height          : 300px;
-                }
-
-                &.section-handbook3 {
-                    background-image: url('../../assets/handbook/handbook3.jpg');
-                    width           : 400px;
-                    height          : 300px;
-                }
-
-                &.section-handbook4 {
-                    background-image: url('../../assets/handbook/handbook4.jpg');
-                    width           : 400px;
-                    height          : 300px;
-                }
             }
         }
     }
 }
 
 .section-share {
-    height: 400px;
-
     .section-container {
-        padding       : 5px 100px 0 100px;
         display       : flex;
         flex-direction: column;
 
         .section-header {
-            padding-top: 10px;
+            padding-top: 90px;
+            z-index    : 2;
+            color      : white;
 
             .title-section {
-                font-size  : 25px;
-                font-weight: bold;
-            }
-
-            .btn-section {
-                display   : block;
-                float     : right;
-                background: linear-gradient(to bottom right, #6df5dc, #087394);
-                ;
-                color         : white;
-                font-size     : 14px;
-                font-weight   : 600;
-                padding       : 8px 25px;
-                border        : none;
-                border-radius : 8px;
-                text-transform: uppercase;
-                box-shadow    : 0 8px #142566;
-                /* Tạo bóng 3D */
-                transition    : all 0.2s ease;
-
-                &:hover {
-                    box-shadow: 0 6px #142566;
-                    /* Giảm bóng khi hover */
-                    transform : translateY(2px);
-                    /* Di chuyển nhẹ xuống */
-                }
-
-                &:active {
-                    box-shadow: 0 3px #142566;
-                    /* Bóng ngắn hơn khi click */
-                    transform : translateY(5px);
-                    /* Di chuyển xuống rõ rệt */
-                }
-            }
-        }
-
-    }
-
-}
-
-.section-hankbook {
-    height: 450px;
-
-    .section-custome {
-        padding: 0 5px;
-
-        .custome-border-handbook {
-            display: flex !important;
-            padding: 5px;
-
-            .text-handbook {
-                width: 450px;
-
-                .text-title-handbook {
-                    margin-left: 20px;
-                    font-size  : 20px;
-                    font-weight: 600;
-                    width      : 95%;
-                }
-
-                .text-content-hanbook {
-                    margin-top : 5px;
-                    margin-left: 20px;
-                    font-size  : 16px;
-                    width      : 95%;
-                    height     : 10px;
-                }
-            }
-        }
-
-
-
-    }
-
-}
-
-.section-oustanding-doctor {
-    .section-custome {
-        margin-top: 30px;
-        padding   : 5px;
-
-        .cutome-border {
-            border          : 1px solid rgb(12, 137, 4);
-            background-color: aliceblue;
-            padding         : 20px;
-            border-radius   : 5px;
-            height          : 220px;
-            cursor          : pointer;
-            overflow        : hidden;
-
-            .outter-bg {
-                display        : flex;
-                justify-content: center;
-                margin-bottom  : 10px;
-            }
-
-            .name-staff {
-                max-width  : 100%;
-                margin-top : 15px;
+                font-size  : 30px;
                 font-weight: 600;
-                overflow   : hidden !important;
-                height     : 20px;
-            }
-
-            &:hover {
-                color: #0079c0;
-
-                .bg-image.section-doctor {
-                    width     : 120px;
-                    height    : 120px;
-                    box-shadow: 0 0 5px 2px #7c87be, 0 0 10px 5px #0991bf, 0 0 20px 10px #02ac5a;
-                }
-
             }
         }
+
     }
+
 }
 
 .home-footer {
-    padding-top: 15px;
-    text-align : center;
+    padding-top  : 15px;
+    margin-bottom: -20px;
+    text-align   : center;
 
     a {
         text-decoration: none;
@@ -282,8 +213,4 @@
             text-overflow: ellipsis;
         }
     }
-}
-
-.slick-disabled {
-    display: none !important;
 }

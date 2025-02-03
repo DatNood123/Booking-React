@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import HomeHeader from './HomeHeader';
 import Specialty from './Section/Specialty';
 import Product from './Section/Product';
-import OutstandingDoctor from './Section/OutstandingDoctor';
-import HankBook from './Section/HankBook';
+import Staff from './Section/Staff';
 import About from './Section/About';
 import HomeFooter from './HomeFooter';
 import './HomePage.scss';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Achievement from './Section/Achievement';
 
 class HomePage extends Component {
 
@@ -20,6 +20,28 @@ class HomePage extends Component {
             specialty: createRef(),
             product: createRef(),
             staff: createRef(),
+        }
+    }
+
+    componentDidMount() {
+        this.createFallingLeaves();
+    }
+
+    createFallingLeaves = () => {
+        let numberOfLeaves = 10;
+        let leavesContainer = document.querySelector('.falling-leaves');
+
+        if (!leavesContainer) {
+            return;
+        }
+
+        for (let i = 0; i < numberOfLeaves; i++) {
+            let leaf = document.createElement('div');
+            leaf.classList.add('leaf');
+            leaf.style.left = `${Math.random() * 100}vw`; // Vị trí ngẫu nhiên từ 0 đến 100% chiều ngang
+            leaf.style.animationDuration = `${Math.random() * 3 + 6}s`; // Thời gian rơi ngẫu nhiên từ 4s đến 7s
+            leaf.style.animationDelay = `${Math.random() * 5}s`; // Độ trễ ngẫu nhiên từ 0 đến 5s
+            leavesContainer.appendChild(leaf);
         }
     }
 
@@ -41,21 +63,22 @@ class HomePage extends Component {
         }
 
         return (
-            <div>
+            <div className='all-page'>
+                <div className="falling-leaves"></div>
                 <div ref={this.sections.homeHeader}>
                     <HomeHeader onNavigate={this.handleScrollTo} isShowBanner={true} />
                 </div>
                 <div ref={this.sections.specialty}>
-                    <Specialty settings={settings} />
+                    <Specialty />
                 </div>
                 <div ref={this.sections.product}>
-                    <Product settings={settings} />
+                    <Product />
                 </div>
                 <div ref={this.sections.staff}>
-                    <OutstandingDoctor settings={settings} />
+                    <Achievement />
                 </div>
-                <HankBook />
-                <About />
+                <Staff settings={settings} />
+                {/* <About /> */}
                 <HomeFooter />
             </div>
         );

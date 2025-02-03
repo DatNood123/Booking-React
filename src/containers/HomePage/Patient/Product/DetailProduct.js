@@ -39,44 +39,47 @@ class DetailProduct extends Component {
         return (
             <>
                 <div className='detail-product-container'>
-                    <HomeHeader onNavigate={this.handleScrollTo} />
-                    <div className='detail-product-content'>
-                        <div className='content-left'>
-                            <div className='title-product'>Thông tin sản phẩm</div>
-                            <div className='boder-image'>
-                                <div className='image-product' style={{ backgroundImage: `url(${dataProduct.image})` }}></div>
-                            </div>
-
-                        </div>
-
-                        <div className='content-right'>
-                            <div className='product-description'>
-                                <div className='name-production'>
-                                    {dataProduct.name}
+                    <HomeHeader />
+                    <div className='detail-product-content wide'>
+                        <div className='detail-product-card'>
+                            <div className='content-left'>
+                                <div className='title-product'>Thông tin sản phẩm</div>
+                                <div className='boder-image'>
+                                    <div className='image-product' style={{ backgroundImage: `url(${dataProduct.image})` }}></div>
                                 </div>
 
-                                <div className='description-content'>
-                                    < div dangerouslySetInnerHTML={{ __html: dataProduct.descriptionHTML }}></div>
+                            </div>
+
+                            <div className='content-right'>
+                                <div className='product-description'>
+                                    <div className='name-production'>
+                                        {dataProduct.name}
+                                    </div>
+
+                                    <div className='description-content'>
+                                        < div dangerouslySetInnerHTML={{ __html: dataProduct.descriptionHTML }}></div>
+                                    </div>
                                 </div>
+
+                                <div className='product-price'>
+                                    Giá đề xuất: <NumberFormat
+                                        className='currency'
+                                        value={dataProduct.price}
+                                        displayType={'text'}
+                                        thousandSeparator={true}
+                                        suffix='đ'
+                                    /> (có thể thương lượng)
+
+                                </div>
+
+
+                                <div className='btn-give-contact'>
+                                    <button>Liên hệ với chúng tôi</button>
+                                </div>
+
                             </div>
-
-                            <div className='product-price'>
-                                Tầm giá: <NumberFormat
-                                    className='currency'
-                                    value={dataProduct.price}
-                                    displayType={'text'}
-                                    thousandSeparator={true}
-                                    suffix='đ'
-                                /> (có thể thương lượng)
-
-                            </div>
-
-
-                            <div className='btn-give-contact'>
-                                <button>Liên hệ với chúng tôi</button>
-                            </div>
-
                         </div>
+
                     </div>
                 </div>
             </>

@@ -32,87 +32,43 @@
     }
 }
 
-@keyframes fallLeaves {
+@keyframes effect {
     0% {
-        transform: translateY(-100px) rotate(0deg);
-        opacity  : 1;
+        transform: rotate(0deg);
     }
 
     100% {
-        transform: translateY(100vh) rotate(360deg);
-        opacity  : 0;
+        transform: rotate(360deg);
     }
 }
 
-.leaf {
-    position                 : absolute;
-    background-image         : url('../../assets/images/capybara.png');
-    background-size          : contain;
-    width                    : 30px;
-    height                   : 30px;
-    opacity                  : 0.8;
-    animation                : fallLeaves 5s linear infinite;
-    animation-timing-function: ease-in;
-}
-
-.falling-leaves {
-    position      : absolute;
-    top           : -35px;
-    left          : 0;
-    width         : 100%;
-    height        : 100%;
-    pointer-events: none;
-    z-index       : 10;
-    overflow      : hidden;
-
-    .leaf:nth-child(1) {
-        left              : 10%;
-        animation-duration: 6s;
-        animation-delay   : 2s;
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity       : 0;
     }
 
-    .leaf:nth-child(2) {
-        left              : 30%;
-        animation-duration: 7s;
-        animation-delay   : 1s;
+    40% {
+        opacity: 0.6;
     }
 
-    .leaf:nth-child(3) {
-        left              : 50%;
-        animation-duration: 5s;
-        animation-delay   : 3s;
+    100% {
+        opacity: 1;
     }
-
-    .leaf:nth-child(4) {
-        left              : 70%;
-        animation-duration: 6.5s;
-        animation-delay   : 0.5s;
-    }
-
-    .leaf:nth-child(5) {
-        left              : 90%;
-        animation-duration: 5s;
-        animation-delay   : 4s;
-    }
-
-    .leaf:nth-child(6) {
-        left              : 20%;
-        animation-duration: 8s;
-        animation-delay   : 2.5s;
-    }
-
-    // Thêm nhiều chiếc lá nếu muốn
 }
 
 .home-header-container {
-    width          : 100%;
-    height         : 80px;
-    display        : flex;
-    position       : fixed;
-    z-index        : 3;
-    top            : 0;
-    left           : 0;
-    backdrop-filter: blur(5px);
+    width   : 100%;
+    height  : 60px;
+    display : flex;
+    position: fixed;
+    z-index : 11;
+    top     : 0;
+    left    : 0;
+    background: linear-gradient(88deg,
+            #06331d 0%,
+            #056f4f 50%,
+            #02311a 100%);
 
     .left-content {
         width          : 20%;
@@ -120,12 +76,12 @@
         justify-content: center;
 
         img {
-            width     : 80%;
+            width     : 60%;
             transition: filter 0.2s ease, transform 0.2s ease;
             cursor    : pointer;
+            filter    : drop-shadow(2px 2px 2px #062a18);
 
             &:hover {
-                filter   : drop-shadow(0 0 15px #00ff00) drop-shadow(0 0 30px #00ff00);
                 transform: scale(1.1);
             }
         }
@@ -147,7 +103,7 @@
             .item-text {
                 font-size       : 1.3em;
                 font-weight     : 600;
-                color           : #175a14;
+                color           : #ffffff;
                 border          : none;
                 outline         : none;
                 background-color: transparent;
@@ -156,12 +112,10 @@
                     transform: scale(1.1);
                     text-shadow:
                         0 0 5px rgba(0, 255, 128, 0.9),
-                        /* Ánh sáng mờ xung quanh chữ */
                         0 0 10px rgba(0, 255, 128, 0.8),
                         0 0 15px rgba(0, 255, 128, 0.7),
                         0 0 20px rgba(0, 255, 128, 0.6),
                         0 0 30px rgba(0, 255, 128, 0.5),
-                        /* Ánh sáng xa hơn, mờ dần */
                         0 0 40px rgba(0, 255, 128, 0.4),
                 }
             }
@@ -169,7 +123,7 @@
             .item-line {
                 width           : 30px;
                 height          : 3px;
-                background-color: #175a14;
+                background-color: #ffffff;
                 border-radius   : 15px;
                 align-self      : center;
                 animation       : pop-up 0.6s cubic-bezier(0.23, 1, 0.32, 1);
@@ -185,23 +139,57 @@
         align-items    : center;
         justify-content: space-evenly;
 
-        .contact-btn {
-            text-align      : center;
-            width           : 35%;
-            padding         : 8px 16px;
-            background-color: #0a7105;
-            color           : white;
-            border-radius   : 15px;
-            font-size       : 1em;
-            border          : none;
-            outline         : none;
+        .button {
+            width        : 50%;
+            position     : relative;
+            overflow     : hidden;
+            height       : 3em;
+            padding      : 0 2em;
+            border-radius: 10px;
+            background   : #ffffff;
+            color        : #013225;
+            border       : none;
+            cursor       : pointer;
+            font-weight  : 600;
+            font-family  : "Lexend", sans-serif;
+
+            &::before {
+                content         : "";
+                position        : absolute;
+                top             : 0;
+                left            : 0;
+                transform       : scale(0); // Dùng scale thay vì scaleX
+                transform-origin: bottom left; // Điểm gốc sẽ là góc dưới bên trái
+                width           : 100%;
+                height          : 200%;
+                border-radius   : 0 50px 0 0;
+                background      : linear-gradient(82.3deg,
+                        rgb(97, 233, 206) 10.8%,
+                        rgb(0, 143, 12) 94.3%);
+                transition: all 0.475s;
+            }
+
+            &:hover {
+
+                &::before {
+                    transform: scale(1);
+                }
+            }
         }
+
+        .button-content {
+            position: relative;
+            z-index : 1;
+        }
+
+
 
         .change-language {
             .language-vi {
                 margin : 0 10px;
                 cursor : pointer;
                 opacity: 0.5;
+                color  : white;
 
                 &.active {
                     opacity    : 1;
@@ -226,6 +214,7 @@
                 margin : 0 10px;
                 cursor : pointer;
                 opacity: 0.5;
+                color  : white;
 
                 &.active {
                     opacity    : 1;
@@ -253,12 +242,8 @@
 }
 
 .hero-page-container {
-    height             : 100vh;
-    background-image   : url('../../assets/heropage/background.png');
-    background-size    : cover;
-    position           : relative;
-    overflow           : hidden;
-    background-position: 10% 50%;
+    height  : 100vh;
+    position: relative;
 
     .grid {
         width  : 100%;
@@ -316,47 +301,81 @@
                         color              : #86ae00;
                         font-weight        : 500;
                         -webkit-text-stroke: 2px rgb(255, 254, 188);
-                        text-shadow        : 6px 6px 10px rgba(239, 247, 7, 0.9);
+                    }
+
+                    .tracking {
+                        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000);
                     }
 
                     span {
-                        position       : absolute;
-                        width          : 20em;
-                        font-size      : 1.3em;
-                        text-align     : justify;
-                        right          : 180px;
-                        bottom         : 80px;
-                        backdrop-filter: blur(10px);
-                        font-family    : "Lexend", serif;
+                        color           : rgb(2, 49, 2);
+                        position        : absolute;
+                        width           : 20em;
+                        font-size       : 1.3em;
+                        text-align      : justify;
+                        right           : 180px;
+                        bottom          : 70px;
+                        background-color: rgba(255, 255, 255, 0.662);
+                        border-radius   : 5px;
+                        padding         : 5px;
+                        font-family     : "Lexend", serif;
                     }
 
                     .btn-contact {
-                        display         : flex;
-                        position        : absolute;
-                        width           : 15em;
-                        height          : 2.8em;
-                        font-size       : 18px;
-                        justify-content : center;
-                        align-items     : center;
-                        background-color: #00ff00;
-                        bottom          : 0;
-                        border-radius   : 25px;
-                        right           : 225px;
-                        font-weight     : 600;
-                        font-family     : "Lexend", serif;
-                        box-shadow      : 0 8px #142566;
-                        transition      : all 0.2s ease;
-                        outline         : none;
-                        border          : none;
+                        display        : inline-flex;
+                        position       : absolute;
+                        width          : 15em;
+                        height         : 2.8em;
+                        font-size      : 18px;
+                        justify-content: center;
+                        align-items    : center;
+                        bottom         : 0;
+                        border-radius  : 25px;
+                        right          : 225px;
+                        font-weight    : 600;
+                        font-family    : "Lexend", serif;
+                        transition     : all 0.2s ease;
+                        outline        : none;
+                        border         : none;
+                        overflow       : hidden;
+                        color          : rgb(0, 0, 0);
 
                         &:hover {
-                            box-shadow: 0 6px #142566;
-                            transform : translateY(2px);
+                            transform : scale(1.05);
+                            background: rgb(193, 228, 248);
+                            color     : rgb(33, 0, 85);
+
+                            div {
+                                width : 16rem;
+                                height: 16rem;
+                            }
                         }
 
-                        &:active {
-                            box-shadow: 0 3px #142566;
-                            transform : translateY(5px);
+                        .hoverEffect {
+                            position       : absolute;
+                            bottom         : 0;
+                            top            : 0;
+                            left           : 0;
+                            right          : 0;
+                            display        : flex;
+                            align-items    : center;
+                            justify-content: center;
+                            z-index        : 1;
+
+                            div {
+                                width     : 20rem;
+                                height    : 20rem;
+                                background: rgb(222, 0, 75);
+                                background: linear-gradient(90deg,
+                                        #08ec9a 0%,
+                                        #34ca1e 50%,
+                                        #6691a8 100%);
+                                border-radius: 40rem;
+                                transition   : 0.4s;
+                                filter       : blur(10px);
+                                animation    : effect infinite 3s linear;
+                                opacity      : 0.5;
+                            }
                         }
                     }
                 }
@@ -389,28 +408,14 @@
         }
     }
 
-    .fish-effect {
-        position         : absolute;
-        background-repeat: no-repeat;
-        background-image : url('../../assets/heropage/fish.png');
-        height           : 260px;
-        width            : 200px;
-        background-size  : contain;
-        bottom           : 0;
-        left             : 20px;
-        transform        : rotate(50deg);
-        z-index          : 2;
-    }
-
     .water-effect {
         position         : absolute;
         background-repeat: no-repeat;
-        background-image : url('../../assets/heropage/water.png');
-        height           : 100%;
-        width            : 1250px;
-        background-size  : cover;
-        top              : 260px;
-        transform        : rotate(20deg);
+        background-image : url('../../assets/images/waterfall.png');
+        height           : 100vh;
+        width            : 100%;
+        background-size  : contain;
+        top              : 100px;
     }
 
 }
@@ -448,24 +453,30 @@
                             width    : 16em;
                             font-size: 1.2em;
                             right    : 110px;
-                            bottom   : 50px;
+                            bottom   : 40px;
                         }
 
                         .btn-contact {
-                            width        : 10em;
+                            width        : 12em;
                             bottom       : -20px;
                             border-radius: 25px;
-                            right        : 160px;
+                            right        : 135px;
                         }
                     }
                 }
             }
         }
 
+        .fish-effect {
+            height   : 180px;
+            width    : 160px;
+            transform: rotate(90deg);
+        }
+
         .water-effect {
             height: 100%;
             width : 100%;
-            top   : 50%;
+            top   : 80px;
         }
 
     }
@@ -494,13 +505,13 @@
                         }
 
                         .sadec {
-                            font-size  : 8em;
-                            bottom     : 155px;
-                            right      : 0;
-                            font-weight: 600;
+                            font-size: 8em;
+                            bottom   : 155px;
+                            right    : 0;
                         }
 
                         span {
+                            color           : #042502;
                             width           : 18em;
                             font-size       : 1.2em;
                             right           : 55px;
@@ -512,7 +523,7 @@
                         }
 
                         .btn-contact {
-                            width : 10em;
+                            width : 12em;
                             bottom: -20px;
                             right : 100px;
 
@@ -538,10 +549,11 @@
         }
 
         .water-effect {
-            height         : 100%;
-            width          : 100%;
-            background-size: cover;
-            top            : 50%;
+            height         : 140%;
+            width          : 140%;
+            background-size: contain;
+            left           : -150px;
+            top            : 80px;
         }
 
     }
@@ -583,15 +595,27 @@
                         }
 
                         .btn-contact {
-                            width : 10em;
+                            width : 12em;
                             bottom: -20px;
-                            right : 220px;
+                            right : 200px;
 
                         }
                     }
                 }
 
+                .hero-content-right {
+                    display: none;
+                }
+
             }
+        }
+
+        .water-effect {
+            height         : 140%;
+            width          : 140%;
+            background-size: contain;
+            left           : -50px;
+            top            : 150px;
         }
     }
 }
@@ -626,7 +650,7 @@
         }
 
         .right-content {
-            .contact-btn {
+            .button {
                 width: 45%;
             }
         }
@@ -644,8 +668,8 @@
         }
 
         .right-content {
-            .contact-btn {
-                width: 50%;
+            .button {
+                width: 60%;
             }
 
             .change-language {

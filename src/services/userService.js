@@ -96,6 +96,10 @@ const serviceSendResultSurvey = (data) => {
     return axios.post(`/api/send-result-survey`, data)
 }
 
+const serviceGetTopProduct = () => {
+    return axios.get(`/api/get-top-product`)
+}
+
 export {
     handleLoginApi, getAllUser, serviceAddNewUser,
     serviceDeleteUser, serviceEditUser, serviceGetAllCode,
@@ -107,5 +111,6 @@ export {
     serviceCreateNewSpecialty, serviceGetAllSpecialty,
     serviceGetDetailSpecialtyById, serviceCreateNewProduct,
     serviceGetProductByType, serviceGetDetailProductById,
-    serviceGetAllBookingAppointmentById, serviceSendResultSurvey
+    serviceGetAllBookingAppointmentById, serviceSendResultSurvey,
+    serviceGetTopProduct
 } 

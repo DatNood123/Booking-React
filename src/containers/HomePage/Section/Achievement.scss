@@ -1,0 +1,349 @@
+//Grid
+.achievement-container {
+    width  : 100%;
+    display: block;
+    padding: 0;
+
+    &.wide {
+        max-width: 1200px;
+        margin   : 0 auto;
+    }
+
+    //Row
+    .achievement-content {
+        height : 100%;
+        padding: 0 14px;
+
+        .header {
+            position           : sticky;
+            color              : white;
+            margin-top         : 80px;
+            margin-bottom      : 20px;
+            top                : 100px;
+            font-size          : 2.5em;
+            font-weight        : 600;
+            text-align         : center;
+            font-family        : "Bungee", sans-serif;
+            -webkit-text-stroke: 1px rgb(0, 70, 29);
+        }
+
+        .achievement-wrapper {
+            .sticky-item {
+                display        : flex;
+                position       : sticky;
+                top            : 200px;
+                justify-content: center;
+            }
+
+            .sticky-item-1 {
+                top: 210px;
+            }
+
+            .sticky-item-2 {
+                top: 220px;
+            }
+
+            .sticky-item-3 {
+                top: 230px;
+            }
+
+            .sticky-item-4 {
+                top: 240px;
+            }
+
+            .sticky-item-5 {
+                top: 250px; //css không có tác dụng ở phần tử cuối
+            }
+
+            .image-style {
+                margin-bottom  : 60px;
+                transition     : all 300ms ease;
+                background     : center center no-repeat;
+                background-size: cover;
+                border-radius  : 0.375rem;
+                padding        : 20px;
+
+                .content-description-container {
+                    width : 100%;
+                    height: 100%;
+                    border: 4px solid white;
+                }
+
+                .achievement-one {
+                    display       : flex;
+                    flex-direction: column;
+
+                    .content-title-left {
+                        width : 40%;
+                        height: 20%;
+                        border: 3px solid rgb(10, 0, 101);
+                    }
+
+                    .content-desciption-left {
+                        width : 60%;
+                        height: 50%;
+                        border: 3px solid rgb(4, 71, 2);
+                    }
+                }
+
+                .achievement-two {
+                    display        : flex;
+                    flex-direction : column;
+                    justify-content: end;
+                    align-items    : end;
+
+                    .content-title-right {
+                        width : 40%;
+                        height: 20%;
+                        border: 3px solid rgb(10, 0, 101);
+                    }
+
+                    .content-desciption-right {
+                        width : 60%;
+                        height: 50%;
+                        border: 3px solid rgb(4, 71, 2);
+                    }
+                }
+
+                .achievement-three {
+                    display        : flex;
+                    flex-direction : column;
+                    justify-content: center;
+                    align-items    : center;
+
+                    .content-title-center {
+                        width : 40%;
+                        height: 20%;
+                        border: 3px solid rgb(10, 0, 101);
+                    }
+
+                    .content-desciption-center {
+                        width : 60%;
+                        height: 50%;
+                        border: 3px solid rgb(4, 71, 2);
+                    }
+                }
+
+                .achievement-four {
+                    display        : flex;
+                    flex-direction : column;
+                    justify-content: end;
+
+                    .content-title-left-bottom {
+                        width : 40%;
+                        height: 20%;
+                        border: 3px solid rgb(10, 0, 101);
+                    }
+
+                    .content-desciption-left-bottom {
+                        width : 60%;
+                        height: 50%;
+                        border: 3px solid rgb(4, 71, 2);
+                    }
+                }
+
+                .achievement-five {
+                    background      : center center no-repeat;
+                    background-image: url('../../../assets/images/cameraFrame.png');
+                    background-size : contain;
+
+                }
+            }
+
+            .image-style-0 {
+                height: 68vh;
+                width : 70%;
+            }
+
+            .image-style-1 {
+                height: 67vh;
+                width : 75%;
+            }
+
+            .image-style-2 {
+                height: 66vh;
+                width : 80%;
+            }
+
+            .image-style-3 {
+                margin-bottom: 100px;
+                height       : 65vh;
+                width        : 85%;
+            }
+
+            .image-style-4 {
+                margin-bottom: 100px;
+                height       : 64vh;
+                width        : 90%;
+            }
+
+            .image-style-5 {
+                height: 64vh;
+                width : 95%;
+            }
+        }
+
+    }
+}
+
+// PC low resolution
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .achievement-container {
+
+        &.wide {
+            max-width: 984px;
+        }
+
+        .achievement-content {
+            .header {
+                margin-top   : 70px;
+                margin-bottom: 50px;
+            }
+
+            .achievement-wrapper {
+                .image-style {
+                    margin-bottom: 100px;
+                }
+
+                .image-style-0 {
+                    height: 62vh;
+                    width : 65%;
+                }
+
+                .image-style-1 {
+                    height: 61vh;
+                    width : 70%;
+                }
+
+                .image-style-2 {
+                    height: 60vh;
+                    width : 75%;
+                }
+
+                .image-style-3 {
+                    height: 59vh;
+                    width : 80%;
+                }
+
+                .image-style-4 {
+                    height: 58vh;
+                    width : 85%;
+                }
+
+                .image-style-5 {
+                    margin-bottom: 50px;
+                    height       : 58vh;
+                    width        : 90%;
+                }
+            }
+
+        }
+    }
+}
+
+// Tablet
+@media (min-width: 740px) and (max-width: 1023px) {
+    .achievement-container {
+
+        &.wide {
+            max-width: 644px;
+        }
+
+        .achievement-content {
+            .header {
+                font-size    : 2.8em;
+                margin-bottom: 50px;
+            }
+
+            .achievement-wrapper {
+                .image-style-0 {
+                    height: 40vh;
+                    width : 90%;
+                }
+
+                .image-style-1 {
+                    height: 39vh;
+                    width : 92%;
+                }
+
+                .image-style-2 {
+                    height: 38vh;
+                    width : 94%;
+                }
+
+                .image-style-3 {
+                    margin-bottom: 50px;
+                    height       : 37vh;
+                    width        : 96%;
+                }
+
+                .image-style-4 {
+                    margin-bottom: 50px;
+                    height       : 36vh;
+                    width        : 98%;
+                }
+
+                .image-style-5 {
+                    height: 35vh;
+                    width : 100%;
+                }
+            }
+
+        }
+    }
+}
+
+// Phone
+@media (max-width: 739px) {
+    .achievement-container {
+
+        &.wide {
+            max-width: 500px;
+        }
+
+        .achievement-content {
+            .header {
+                font-size    : 2.2em;
+                margin-top   : 70px;
+                margin-bottom: 50px;
+            }
+
+            .achievement-wrapper {
+                .image-style {
+                    margin-bottom: 20px;
+                }
+
+                .image-style-0 {
+                    height: 40vh;
+                    width : 100%;
+                }
+
+                .image-style-1 {
+                    height: 40vh;
+                    width : 100%;
+                }
+
+                .image-style-2 {
+                    height: 40vh;
+                    width : 100%;
+                }
+
+                .image-style-3 {
+                    height: 40vh;
+                    width : 100%;
+                }
+
+                .image-style-4 {
+                    height: 40vh;
+                    width : 100%;
+                }
+
+                .image-style-5 {
+                    height: 40vh;
+                    width : 100%;
+                }
+            }
+
+        }
+    }
+}

@@ -34,9 +34,9 @@ class LoadingModal extends Component {
                     className={'loading-modal-container'}
                     size='md'
                     centered>
-                    <div class="modal-content">
+                    <div className="modal-content">
                         <div className="capybara" />
-                        <div class="loading-line"></div>
+                        <div className="loading-line"></div>
                         <div className="spinner"></div>
                         <p>Đang xử lý...</p>
                     </div>

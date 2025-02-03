@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { LANGUAGES } from '../../../../utils';
 import { FormattedMessage } from 'react-intl';
 import './AllProduct.scss';
+import { withRouter } from 'react-router';
+import NumberFormat from 'react-number-format';
 import HomeHeader from '../../HomeHeader.js';
 import { serviceGetAllCode, serviceGetProductByType } from '../../../../services/userService';
 
@@ -72,6 +74,12 @@ class AllProduct extends Component {
         })
     }
 
+    handleOnClickProduct = (item) => {
+        if (this.props.history) {
+            this.props.history.push(`/detail-product/${item.id}`)
+        }
+    }
+
     render() {
         let { language } = this.props;
         let { listAllProduct, listOptions, selectedOption } = this.state;
@@ -80,48 +88,81 @@ class AllProduct extends Component {
             <>
                 <div className='all-product-container'>
                     <HomeHeader />
-                    <div className='search-section'>
-                        <div className='title-search'>
-                            <FormattedMessage id='all-product.search' />
-                        </div>
-                        <div>
-                            <select onChange={(event) => this.handleOnChangeSelect(event)}>
-                                {listOptions && listOptions.length > 0 &&
-                                    listOptions.map((item, index) => {
-                                        return (
-                                            <option key={index} value={item.keyMap}>
-                                                {language === LANGUAGES.VI ? item.valueVie : item.valueEn}
-                                            </option>
-                                        )
-                                    })
-                                }
-                            </select>
+
+                    <div className='all-product-border'>
+                        <div className='search-section'>
+                            <div className='title-search'>
+                                <FormattedMessage id='all-product.search' />
+                            </div>
+                            <div>
+                                <select onChange={(event) => this.handleOnChangeSelect(event)}>
+                                    {listOptions && listOptions.length > 0 &&
+                                        listOptions.map((item, index) => {
+                                            return (
+                                                <option key={index} value={item.keyMap}>
+                                                    {language === LANGUAGES.VI ? item.valueVie : item.valueEn}
+                                                </option>
+                                            )
+                                        })
+                                    }
+                                </select>
+                            </div>
+
                         </div>
 
-                    </div>
-                    <div className='product-container'>
-                        {listAllProduct && listAllProduct.length > 0 ?
-                            listAllProduct.map((item, index) => {
-                                return (
-                                    <div className='each-product' key={index}>
-                                        <div className='content-left'>
-                                            <div className="product-image" style={{ backgroundImage: `url(${item.image})` }} />
-                                        </div>
+                        <div className='product-container wide'>
+                            {listAllProduct && listAllProduct.length > 0 ?
+                                listAllProduct.map((item, index) => {
+                                    return (
+                                        <div
+                                            className='section-custome'
+                                            key={index}>
 
-                                        <div className='content-right'>
-                                            <div className='name-product'>
-                                                {item.name}
+                                            <div className='product-boder'>
+                                                <div className='border-product'>
+                                                    <div
+                                                        className='bg-image'
+                                                        style={{ backgroundImage: `url(${item.image})` }}
+                                                    />
+                                                </div>
+
+                                                <div className='info-product'>
+                                                    <div className='name-product'>{item.name}</div>
+
+                                                    <div className='type-product'>
+                                                        Phân loại: {language === LANGUAGES.VI ? item.productTypeData.valueVie : item.productTypeData.valueEn}
+                                                    </div>
+
+                                                    <div className='price-product'>Giá đề xuất: <br></br>
+                                                        <NumberFormat
+                                                            className='currency'
+                                                            value={item.price}
+                                                            displayType={'text'}
+                                                            thousandSeparator={true}
+                                                            suffix='đ'
+                                                        />
+                                                    </div>
+
+                                                    <button
+                                                        onClick={() => this.handleOnClickProduct(item)}
+                                                        className='btn-detail'>
+                                                        Xem chi tiết
+                                                    </button>
+                                                </div>
                                             </div>
+
                                         </div>
-                                    </div>
-                                )
-                            })
+                                    )
+                                })
 
-                            :
+                                :
 
-                            <div className='text-sorry'><FormattedMessage id='all-product.sorry-out-tree' /></div>
-                        }
+                                <div className='text-sorry'><FormattedMessage id='all-product.sorry-out-tree' /></div>
+                            }
+                        </div>
                     </div>
+
+
                 </div>
             </>
         );
@@ -139,4 +180,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AllProduct);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AllProduct));

@@ -1,119 +1,649 @@
-.section-specialty{
-    height: 100vh !important;
-    .section-container{
-        height: inherit;
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity       : 0;
+    }
 
-        .section-specialty-body {
-            height: calc(100% - 60px);
+    40% {
+        opacity: 0.6;
+    }
 
-            .section-custome{
-                padding-left: 10px;
-                height: calc(100vh - 60px) !important;
+    100% {
+        opacity: 1;
+    }
+}
 
-                .specialty-container{
-                    width: 100%;
-                    height: calc(100vh - 60px) !important;
-                    .specialty-name-container{
-                        padding-left: 40px;
-                        overflow: hidden;
-                        margin-top: 40px;
-                        margin-bottom: 30px;
-                        .specialty-name{
-                            //color: rgb(88, 47, 2);
-                            color: rgb(16, 93, 21);
-                            font-weight: 400;
-                            font-size: 2em;
-                            font-family: "Bungee", serif;
-                            //font-family: "Pacifico", sans-serif;
-                        }
-                    }
+@keyframes slide-right {
+    0% {
+        transform: translateZ(90px) translateY(-90px) translateX(-90px);
+        opacity  : 0;
+    }
 
-                    .specialty-info{
-                        padding: 0 40px;
-                        height: calc(100vh - 180px) !important;
-                        display: flex;
+    100% {
+        transform: translateZ(0) translateY(0) translateX(0);
+        opacity  : 1;
+    }
+}
 
-                        .bg-image{
-                            margin-bottom: 40px;
-                            background: center center no-repeat;
-                            background-size: cover;
-                            width: calc(100vw - 1150px) !important;
-                            border-radius: 10px;
-                            box-shadow: 
-                                0 0 5px rgba(0, 255, 128, 0.9),   /* Ánh sáng mờ xung quanh chữ */
-                                0 0 10px rgba(0, 255, 128, 0.8),
-                                0 0 15px rgba(0, 255, 128, 0.7),
-                                0 0 20px rgba(0, 255, 128, 0.6),
-                                0 0 30px rgba(0, 255, 128, 0.5),   /* Ánh sáng xa hơn, mờ dần */
-                                0 0 40px rgba(0, 255, 128, 0.4),
-                                0 0 50px rgba(0, 255, 128, 0.3);
-                        }
+@keyframes border-animation {
+    0% {
+        box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.7);
+    }
 
-                        .specialty-name-info-container{
-                            margin-bottom: 50px;
-                            margin-left: 20px;
-                            width: 65%;
-                            overflow: hidden;
-                            height: calc(100vh - 300px);
+    25% {
+        box-shadow: 0 0 10px 5px rgba(255, 255, 0, 0.7);
+    }
 
-                            .specialty-slogan{
-                                padding: 0 20px;
-                                text-align: center;
-                                //color: rgb(16, 93, 21);
-                                color: rgb(88, 47, 2);
-                                font-weight: 600;
-                                font-size: 4vw;
-                                //font-family: "Bungee", serif;
-                                font-family: "Pacifico", sans-serif;
-                            }
+    50% {
+        box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.7);
+    }
 
-                            .specialty-content{
-                                overflow: hidden;
-                                text-align: center;
-                                //color: rgb(88, 47, 2);
-                                color: rgb(16, 93, 21);
-                                font-weight: 400;
-                                font-size: 2vh;
-                                font-family: "Lexend", serif;
-                                padding: 10px 60px;
-                            }
+    75% {
+        box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.7);
+    }
 
-                            .specialty-button{
-                                text-align: center;
-                                padding: 80px;
+    100% {
+        box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.7);
+    }
+}
 
-                                button{
-                                    border: 3.5px solid rgb(96, 55, 2);
-                                    border-radius: 8px;
-                                    padding: 8px 25px;
-                                    font-weight: 600;
-                                    font-size: 1.1vw;
-                                    background-color: white;
-                                    color: rgb(16, 93, 21);
-                                    font-family: "Lexend", serif;
-                                    transition: all 0.2s ease;
+@keyframes effect {
+    0% {
+        transform: rotate(0deg);
+    }
 
-                                    &:hover{
-                                        scale: 1.1;
-                                        filter: brightness(1.2);
-                                        box-shadow: 
-                                            0 0 2px rgba(0, 255, 128, 0.6),   /* Ánh sáng mờ xung quanh chữ */
-                                            0 0 5px rgba(0, 255, 128, 0.5),
-                                            0 0 8px rgba(0, 255, 128, 0.4),
-                                            0 0 10px rgba(0, 255, 128, 0.3),
-                                            0 0 15px rgba(0, 255, 128, 0.2),   /* Ánh sáng xa hơn, mờ dần */
-                                            0 0 20px rgba(0, 255, 128, 0.1),
-                                            0 0 25px rgba(0, 255, 128, 0.1);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
-                }
-                
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+//Grid
+.section-specialty {
+    width  : 100%;
+    display: block;
+    padding: 0;
+
+    &.wide {
+        max-width: 1200px;
+        margin   : 0 auto;
+    }
+
+    //Row
+    .section-container {
+        height : 100%;
+        padding: 0 14px;
+
+        .section-header {
+            display        : flex;
+            justify-content: center;
+
+            .title-section {
+                color    : #023106;
+                font-size: 3em !important;
+                filter   : drop-shadow(2px 2px 0 rgb(255, 255, 255)) drop-shadow(-2px -2px 0 rgb(255, 255, 255));
+            }
+
+            .tracking {
+                animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000);
             }
         }
-    
+
+        .specialty-body-main1 {
+            margin-top: 40px;
+            padding   : 20px;
+            display   : flex;
+            z-index   : 10;
+
+            .section-custome {
+                border-radius: 10px;
+                display      : flex;
+                padding      : 20px;
+                background   : white;
+                box-shadow   : 0 1px 6px rgba(26, 96, 0, 0.771);
+                width        : 70%;
+
+                .specialty-info {
+                    height : 100%;
+                    display: flex;
+                    width  : 100%;
+
+                    .specialty-image {
+                        width: 60%;
+
+                        .bg-image {
+                            width          : 100%;
+                            height         : 100%;
+                            background     : center center no-repeat;
+                            background-size: cover;
+                            border-radius  : 10px;
+                        }
+
+                        .fade-in {
+                            opacity  : 1;
+                            animation: slide-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+                        }
+                    }
+
+                    .specialty-name-info-container {
+                        width         : 60%;
+                        display       : flex;
+                        flex-direction: column;
+
+                        .specialty-title {
+                            font-family : "Calistoga", serif;
+                            padding-left: 20px;
+                            font-weight : 400;
+                            font-size   : 1.8em;
+                        }
+
+                        .specialty-feature {
+                            margin-top    : 10px;
+                            margin-left   : 10px;
+                            display       : flex;
+                            flex-direction: column;
+
+                            span {
+                                padding    : 8px;
+                                font-family: "Lexend", serif;
+                            }
+
+                            img {
+                                margin-right: 5px;
+                                width       : 20px;
+                                height      : 20px;
+                            }
+                        }
+
+                        .btn-view-more {
+                            flex      : 1;
+                            margin-top: 60px;
+                            text-align: center;
+
+                            .btn-more {
+                                padding      : 10px 20px;
+                                border-radius: 10px;
+                                border       : 2px solid rgb(2, 78, 15);
+                                outline      : none;
+                                font-family  : "Lexend", serif;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .statistic {
+                font-family     : "Lexend", sans-serif;
+                margin-left     : auto;
+                width           : 25%;
+                background-color: white;
+                border-radius   : 15px;
+                display         : flex;
+                flex-direction  : column;
+                animation       : border-animation 4s infinite linear;
+
+                .statistic-title {
+                    text-align : center;
+                    font-size  : 1.8em;
+                    font-weight: 600;
+                    padding    : 10px;
+                }
+
+                .chart-container {
+                    margin  : 10px auto;
+                    position: relative;
+                    width   : 150px;
+                    height  : 150px;
+
+                    .outer-circle {
+                        position     : absolute;
+                        top          : 0;
+                        left         : 0;
+                        width        : 100%;
+                        height       : 100%;
+                        background   : conic-gradient(#fffafa 0% 85%, rgba(13, 242, 1, 0.252) 85% 100%);
+                        border-radius: 50%;
+                    }
+
+                    .linear-overlay {
+                        position     : absolute;
+                        top          : 0;
+                        left         : 0;
+                        width        : 100%;
+                        height       : 100%;
+                        background   : linear-gradient(to bottom right, #066fe0 0%, #011e5e 80%, #04dd6d 100%);
+                        border-radius: 50%;
+                        mask         : conic-gradient(#ffffff 0% 85%, transparent 85% 100%);
+
+                        div {
+                            width : 20rem;
+                            height: 20rem;
+                            background: linear-gradient(90deg,
+                                    #1fccfc 0%,
+                                    #f6f6f6 50%,
+                                    #3fb9ee 100%);
+                            border-radius: 40rem;
+                            transition   : 0.4s;
+                            filter       : blur(10px);
+                            animation    : effect infinite 3s linear;
+                            opacity      : 0.5;
+                        }
+                    }
+
+                    .inner-circle {
+                        position     : absolute;
+                        top          : 15%;
+                        left         : 15%;
+                        width        : 70%;
+                        height       : 70%;
+                        background   : white;
+                        border-radius: 50%;
+                        box-shadow   : 0 0 10px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .center-text {
+                        position   : absolute;
+                        top        : 50%;
+                        left       : 50%;
+                        transform  : translate(-50%, -50%);
+                        text-align : center;
+                        font-size  : 1.8em;
+                        font-weight: 600;
+
+                        span {
+                            display    : block;
+                            font-size  : 0.7em;
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                .statistic-item-container {
+                    padding    : 20px 15px;
+                    font-weight: 400;
+                    font-size  : 1.1em
+                }
+            }
+        }
+
+        .specialty-body-main2 {
+            padding       : 20px;
+            display       : flex;
+            flex-direction: row-reverse;
+            gap           : 5em;
+
+            .section-custome {
+                border-radius: 10px;
+                display      : flex;
+                padding      : 20px;
+                background   : white;
+                box-shadow   : 0 1px 6px rgba(26, 96, 0, 0.771);
+                width        : 70%;
+
+
+                .specialty-info {
+                    height        : 100%;
+                    display       : flex;
+                    width         : 100%;
+                    flex-direction: row-reverse;
+
+                    .specialty-image {
+                        width: 60%;
+
+                        .bg-image {
+                            width          : 100%;
+                            height         : 100%;
+                            background     : center center no-repeat;
+                            background-size: cover;
+                            border-radius  : 10px;
+                        }
+
+                        .fade-in {
+                            opacity  : 1;
+                            animation: slide-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+                        }
+                    }
+
+                    .specialty-name-info-container {
+                        width         : 60%;
+                        display       : flex;
+                        flex-direction: column;
+
+                        .specialty-title {
+                            padding    : 0 20px;
+                            font-weight: 400;
+                            font-size  : 1.7em;
+                            font-family: "Calistoga", serif;
+                        }
+
+                        .specialty-feature {
+                            margin-top    : 10px;
+                            margin-left   : 10px;
+                            display       : flex;
+                            flex-direction: column;
+
+                            span {
+                                padding    : 8px;
+                                font-family: "Lexend", serif;
+                            }
+
+                            img {
+                                margin-right: 5px;
+                                width       : 20px;
+                                height      : 20px;
+                            }
+                        }
+
+                        .btn-view-more {
+                            margin-top: 35px;
+                            flex      : 1;
+                            text-align: center;
+
+                            .btn-more {
+                                padding      : 10px 20px;
+                                border-radius: 10px;
+                                border       : 2px solid rgb(2, 78, 15);
+                                outline      : none;
+                                font-family  : "Lexend", serif;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .specialty-content {
+                color      : rgb(255, 255, 255);
+                text-align : justify;
+                flex       : 1;
+                font-size  : 1.4em;
+                font-family: "Lexend", serif;
+            }
+        }
+
+        .specialty-body-sub-sevrice {
+            width  : 100%;
+            display: flex;
+
+            .sub-service-container {
+                height : 100%;
+                width  : 100%;
+                padding: 15px;
+
+                .service-content {
+                    border-radius   : 10px;
+                    background-color: white;
+                    height          : 100%;
+                    padding         : 10px;
+
+                    .image-container {
+                        height : 12em;
+                        padding: 5px;
+
+
+                        .bg-image {
+                            border-radius  : 10px;
+                            height         : 100%;
+                            width          : 100%;
+                            background     : center center no-repeat;
+                            background-size: cover;
+                        }
+                    }
+
+                    .info-sub-serive {
+                        height     : 55%;
+                        font-family: "Lexend", serif;
+
+                        .name-service {
+                            text-align : center;
+                            font-size  : 1.2em;
+                            font-weight: 600;
+                        }
+
+                        .specialty-feature {
+                            margin-top    : 10px;
+                            display       : flex;
+                            flex-direction: column;
+
+                            span {
+                                padding: 5px 0;
+                            }
+
+                            img {
+                                margin-right: 5px;
+                                width       : 20px;
+                                height      : 20px;
+                            }
+                        }
+
+                        .btn-view-more {
+                            flex      : 1;
+                            margin-top: 35px;
+                            text-align: center;
+
+                            .btn-more {
+                                padding      : 10px 20px;
+                                border-radius: 10px;
+                                border       : 2px solid rgb(2, 78, 15);
+                                outline      : none;
+                                font-family  : "Lexend", serif;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+// PC low resolution
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .section-specialty {
+        &.wide {
+            max-width: 984px;
+        }
+
+        .section-container {
+            .specialty-body-main1 {
+                .section-custome {
+                    .specialty-info {
+                        .specialty-name-info-container {
+                            .specialty-title {
+                                font-size: 1.4em;
+                            }
+
+                            .btn-view-more {
+                                margin-top: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .specialty-body-main2 {
+                .section-custome {
+                    .specialty-info {
+                        .specialty-name-info-container {
+                            .specialty-title {
+                                font-size: 1.4em;
+                            }
+
+                            .btn-view-more {
+                                margin-top: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .specialty-body-sub-sevrice {
+                flex-wrap: wrap;
+
+                .sub-service-container {
+                    width: 50%;
+                }
+
+            }
+
+        }
+    }
+}
+
+// Tablet
+@media (min-width: 740px) and (max-width: 1023px) {
+    .section-specialty {
+        &.wide {
+            max-width: 644px;
+        }
+
+        .section-container {
+            .specialty-body-main1 {
+                margin-top    : 40px;
+                padding       : 20px;
+                display       : flex;
+                flex-direction: column;
+
+                .section-custome {
+                    height: unset;
+                    width : 100%;
+
+                    .specialty-info {
+                        .specialty-name-info-container {
+                            .btn-view-more {
+                                margin-left: 20px;
+                                text-align : unset;
+                            }
+                        }
+                    }
+                }
+
+                .statistic {
+                    display: none;
+                }
+            }
+
+            .specialty-body-main2 {
+
+                .section-custome {
+                    height: unset;
+                    width : 100%;
+
+                    .specialty-info {
+                        .specialty-name-info-container {
+                            .btn-view-more {
+                                text-align: unset;
+                            }
+                        }
+                    }
+                }
+
+                .specialty-content {
+                    display: none;
+                }
+            }
+
+            .specialty-body-sub-sevrice {
+                flex-wrap: wrap;
+
+                .sub-service-container {
+                    width: 50%;
+                }
+
+            }
+
+        }
+    }
+}
+
+// Phone
+@media (max-width: 739px) {
+    .section-specialty {
+        &.wide {
+            max-width: 500px;
+        }
+
+        .section-container {
+            .section-header {
+                .title-section {
+                    font-size: 2.5em !important;
+                }
+            }
+
+            .specialty-body-main1 {
+                margin-top: 10px;
+
+                .section-custome {
+                    height: unset;
+                    width : 100%;
+
+                    .specialty-info {
+                        flex-direction: column;
+                        width         : 100%;
+
+                        .specialty-image {
+                            width : 100%;
+                            height: 30vh;
+                        }
+
+                        .specialty-name-info-container {
+                            margin-top: 20px;
+                            width     : 100%;
+
+                            .btn-view-more {
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+
+                .statistic {
+                    display: none;
+                }
+            }
+
+            .specialty-body-main2 {
+                .section-custome {
+                    height: unset;
+                    width : 100%;
+
+                    .specialty-info {
+                        flex-direction: column;
+
+                        .specialty-image {
+                            width : 100%;
+                            height: 30vh;
+                        }
+
+                        .specialty-name-info-container {
+                            width: 100%;
+
+                            .btn-view-more {
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+
+                .specialty-content {
+                    display: none;
+                }
+            }
+
+            .specialty-body-sub-sevrice {
+                flex-direction: column;
+
+                .sub-service-container {
+                    .service-content {
+                        .info-sub-serive {
+                            .btn-view-more {
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
     }
 }

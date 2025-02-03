@@ -1,65 +1,144 @@
-.all-product-container{
+.all-product-container {
+    .all-product-border {
+        background: linear-gradient(88deg,
+                #1a6541 0%,
+                #43dfb0 50%,
+                #1a6541 100%);
 
-    .search-section{
-        display: flex;
-        margin-top: 20px;
-        padding-left: 128px;
-        align-items: center;
-        gap: 20px;
-        .title-search{
-            font-size: 18px;
-            font-weight: 600;
-        }
-        select{
-            width: 250px;
-            height: 40px;
-            font-size: 16px;
-            padding: 10px;
-        }
-    }
-    .product-container{
-        padding: 20px 100px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px; 
-        justify-content: space-evenly;
-        .each-product{
-            width: 40vw;
-            height: 40vh;
-            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.45);
-            border-radius: 10px;
-            display: flex;
-            .content-left{
-                display: flex;
-                width: 50%;
-                padding: 20px;
-                .product-image{
-                    height: 100%;
-                    width: 100%;
-                    background: center center no-repeat;
-                    background-size: cover;
-                    border-radius: 10px;
-                }
+        min-height    : 100vh;
+        display       : flex;
+        flex-direction: column;
+
+        .search-section {
+            display     : flex;
+            margin-top  : 60px;
+            padding-left: 128px;
+            padding-top : 20px;
+            align-items : center;
+            gap         : 20px;
+            color       : white;
+
+            .title-search {
+                font-size  : 18px;
+                font-weight: 600;
             }
 
-            .content-right{
-                .name-product{
-                    color: rgb(0, 75, 17);
-                    padding-top: 10px;
-                    margin-left: 20px;
-                    font-size: 30px;
-                    font-weight: 600;
-                    font-family: "Pacifico", sans-serif;
-                }
+            select {
+                width    : 250px;
+                height   : 40px;
+                font-size: 16px;
+                padding  : 10px;
             }
         }
 
-        .text-sorry{
-            font-size: 25px;
-            color: red;
-            font-weight: 600;
-            margin-top: 50px;
-            text-align: center;
+        .product-container {
+            display  : flex;
+            flex-wrap: wrap;
+
+            &.wide {
+                width : 1200px;
+                margin: 0 auto;
+            }
+
+            .section-custome {
+                margin-top: 20px;
+                padding   : 10px 10px;
+                width     : 25%;
+
+                .product-boder {
+                    background-color: white;
+                    box-shadow      : 0 1px 6px rgba(32, 33, 36, 0.45);
+                    border-radius   : 15px;
+                    display         : flex;
+                    flex-direction  : column;
+
+                    .border-product {
+                        width        : 100%;
+                        border-radius: 5px;
+                        padding      : 10px;
+
+                        .bg-image {
+                            background     : center center no-repeat;
+                            background-size: cover;
+                            border-radius  : 0 20px 0 20px !important;
+                            justify-self   : center;
+                            margin-top     : unset;
+                            width          : 100%;
+                            height         : 30vh;
+                            box-shadow     : 2px 2px 2px rgba(132, 165, 130, 0.8);
+                        }
+                    }
+
+                    .info-product {
+                        width         : 100%;
+                        padding-left  : 10px;
+                        display       : flex;
+                        flex-direction: column;
+
+                        .name-product {
+                            color         : rgb(88, 47, 2);
+                            font-size     : 1.3em;
+                            font-weight   : 600;
+                            padding-bottom: 1px;
+                        }
+
+                        .price-product {
+                            color      : rgb(88, 47, 2);
+                            font-size  : 1em;
+                            font-weight: 400;
+                            display    : flex;
+                            gap        : 10px;
+                            align-items: center;
+
+                            .currency {
+                                color      : rgb(16, 93, 21);
+                                font-weight: 800;
+                                font-size  : 1.2em;
+                            }
+                        }
+
+                        .type-product {
+                            color    : rgb(88, 47, 2);
+                            font-size: 1em;
+                        }
+
+                        .btn-detail {
+                            align-self      : center;
+                            font-size       : 1.1em;
+                            border          : none;
+                            outline         : none;
+                            margin-top      : 20px;
+                            padding         : 8px 20px;
+                            border-radius   : 10px;
+                            font-weight     : 600;
+                            background-color: rgb(255, 255, 255);
+                            color           : rgb(16, 93, 21);
+                            transition      : all 0.2s ease;
+
+                            &:hover {
+                                scale : 1.1;
+                                filter: brightness(1.2);
+                                box-shadow:
+                                    0 0 2px rgba(0, 255, 128, 0.6),
+                                    0 0 5px rgba(0, 255, 128, 0.5),
+                                    0 0 8px rgba(0, 255, 128, 0.4),
+                                    0 0 10px rgba(0, 255, 128, 0.3),
+                                    0 0 15px rgba(0, 255, 128, 0.2),
+                                    0 0 20px rgba(0, 255, 128, 0.1),
+                                    0 0 25px rgba(0, 255, 128, 0.1);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .text-sorry {
+                margin     : 50px auto;
+                font-size  : 25px;
+                color      : red;
+                font-weight: 600;
+            }
         }
     }
+
 }

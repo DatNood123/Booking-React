@@ -131,69 +131,30 @@ class DetailSpecialty extends Component {
     }
 
     render() {
-        let { arrDoctorId, dataDetailSpecialty } = this.state
+        let { arrDoctorId, dataDetailSpecialty } = this.state;
+        console.log(dataDetailSpecialty)
         return (
             <div className='detail-specialty-container'>
                 <HomeHeader />
-                <div className='detail-specialty-body'>
-                    <div className='description-specialty'>
-                        {dataDetailSpecialty && !_.isEmpty(dataDetailSpecialty) &&
-                            < div dangerouslySetInnerHTML={{ __html: dataDetailSpecialty.descriptionHTML }}></div>
-                        }
+                {/* grid */}
+                <div className='detail-specialty-boder'>
+                    <div className='detail-specialty-body wide'>
+                        <div className='description-specialty' style={{ backgroundImage: `url(${dataDetailSpecialty.image})` }}>
+                            <div className='content-description-title'>
+                                {dataDetailSpecialty && !_.isEmpty(dataDetailSpecialty) &&
+                                    <div dangerouslySetInnerHTML={{ __html: dataDetailSpecialty.descriptionHTML }}></div>
+                                }
+                            </div>
+                        </div>
+
+                        <div className='feature'>
+                            {dataDetailSpecialty && !_.isEmpty(dataDetailSpecialty) &&
+                                <div id='content-feature' className='content-feature' dangerouslySetInnerHTML={{ __html: dataDetailSpecialty.descriptionHTML }}></div>
+                            }
+                        </div>
                     </div>
-
-                    <div className='search-specialty-doctor'>
-                        <Select
-                            value={this.state.selectedProvince}
-                            onChange={this.handleChangeSelected}
-                            options={this.state.listProvince}
-                        />
-                    </div>
-
-                    <div className='list-doctor'>
-                        {arrDoctorId && arrDoctorId.length > 0 ?
-                            arrDoctorId.map((item, index) => {
-                                return (
-                                    <div className='each-doctor' key={index}>
-                                        <div className='detail-content-left'>
-                                            <div className='profile-doctor'>
-                                                <ProfileDoctor
-                                                    doctorIdFromParent={item}
-                                                    isShowInfoFromParent={false}
-                                                />
-
-                                                isLoadingFromParent
-                                            </div>
-                                        </div>
-
-                                        <div className='detail-content-right'>
-                                            <div className='doctor-schedule'>
-                                                <DoctorSchedule
-                                                    doctorIdFromParent={item}
-                                                />
-                                            </div>
-                                            <div className='doctor-extra-info'>
-                                                <DoctorExtraInfo
-                                                    doctorIdFromParent={item}
-                                                />
-                                            </div>
-
-
-                                        </div>
-                                    </div>
-
-                                )
-                            })
-                            :
-                            <div className='text-no-doctor'>Không có bác sĩ thuộc khu vực này, vui lòng chọn khu vực khác!!!</div>
-                        }
-
-
-
-                    </div>
-
-
                 </div>
+
             </div >
         );
     }

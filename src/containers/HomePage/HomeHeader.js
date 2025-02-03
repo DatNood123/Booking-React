@@ -13,23 +13,37 @@ class HomeHeader extends Component {
         this.state = {
             activeIndex: 0,
         };
+
+        this.sadecRef = React.createRef(); // Tạo tham chiếu đến phần tử DOM
+        this.observer = null; // Biến lưu trữ Intersection Observer
     }
 
     componentDidMount() {
-        this.createFallingLeaves();
+        // Tạo một Intersection Observer
+        this.observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const element = this.sadecRef.current;
+                        element.classList.remove('tracking'); // Reset animation
+                        void element.offsetWidth; // Buộc reflow
+                        element.classList.add('tracking'); // Kích hoạt lại animation
+                    }
+                });
+            },
+            { threshold: 0.5 } // Tỷ lệ hiển thị cần thiết để kích hoạt
+        );
+
+        // Gắn Observer vào phần tử
+        if (this.sadecRef.current) {
+            this.observer.observe(this.sadecRef.current);
+        }
     }
 
-    createFallingLeaves = () => {
-        let numberOfLeaves = 10;
-        let leavesContainer = document.querySelector('.falling-leaves');
-
-        for (let i = 0; i < numberOfLeaves; i++) {
-            let leaf = document.createElement('div');
-            leaf.classList.add('leaf');
-            leaf.style.left = `${Math.random() * 100}vw`; // Vị trí ngẫu nhiên từ 0 đến 100% chiều ngang
-            leaf.style.animationDuration = `${Math.random() * 3 + 4}s`; // Thời gian rơi ngẫu nhiên từ 4s đến 7s
-            leaf.style.animationDelay = `${Math.random() * 5}s`; // Độ trễ ngẫu nhiên từ 0 đến 5s
-            leavesContainer.appendChild(leaf);
+    componentWillUnmount() {
+        // Hủy Observer khi component bị unmount
+        if (this.observer && this.sadecRef.current) {
+            this.observer.unobserve(this.sadecRef.current);
         }
     }
 
@@ -52,7 +66,7 @@ class HomeHeader extends Component {
             return;
         }
 
-        const sections = ["homeHeader", "specialty", "product", "staff"];
+        let sections = ["homeHeader", "specialty", "product", "staff"];
         onNavigate(sections[index]);
     };
 
@@ -93,7 +107,10 @@ class HomeHeader extends Component {
                     }
 
                     <div className="right-content">
-                        <button className="contact-btn">Liên hệ</button>
+                        <button class="button">
+                            <span class="button-content">Liên hệ</span>
+                        </button>
+
                         <div className="change-language">
                             <div
                                 className={language === LANGUAGES.VI ? 'language-vi active' : 'language-vi'}
@@ -114,18 +131,22 @@ class HomeHeader extends Component {
 
                 {isShowBanner === true &&
                     <div className="hero-page-container">
-                        <div className="falling-leaves"></div>
                         <div className='grid wide'>
                             <div className="main-hero-content">
                                 <div className="hero-content-left">
                                     <div className='logo'>
                                         <div className='chau'>CHAU</div>
-                                        <div className='sadec'>SA DEC</div>
+                                        <div ref={this.sadecRef} className='sadec'>SA DEC</div>
                                         <span>Chuyên cung cấp hoa kiểng chất lượng
                                             và dịch vụ thi công sân vườn chuyên nghiệp,
                                             mang đến không gian xanh hoàn hảo cho ngôi nhà của bạn.
                                         </span>
-                                        <button className='btn-contact'>Liên hệ ngay</button>
+                                        <button className='btn-contact'>
+                                            Làm Đẹp Sân Vườn
+                                            <div className="hoverEffect">
+                                                <div></div>
+                                            </div>
+                                        </button>
                                     </div>
                                 </div>
 
@@ -136,7 +157,7 @@ class HomeHeader extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="fish-effect"></div>
+                        {/* <div className="fish-effect"></div> */}
                         <div className="water-effect"></div>
                     </div>
                 }
